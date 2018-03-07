@@ -1,0 +1,14 @@
+{
+    "name": "178192389/testgit",
+    "description": "a test composer project",
+    "type": "project",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "洪苇",
+            "email": "Jianghonwei@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
