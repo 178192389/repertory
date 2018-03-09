@@ -35,7 +35,7 @@ Git基本常用命令如下：
 
 　　git checkout -- XX  把XX文件在工作区的修改全部撤销。 也可恢复
 
-　　git rm XX          删除XX文件
+　　git rm XX          删除XX文件 -r删除dir --cached 保留本地  
 
 　　git remote add origin https://github.com/tugenhua0707/testgit 关联一个远程库
 
@@ -75,6 +75,11 @@ Git基本常用命令如下：
 
 
     vim .gitignore 添加git忽略文件  git add 想提交
+	（1）快捷键       按 Shift + zz  ——保存退出       按 Shift + zq   ——不保存退出（q 表示放弃）
+
+	（2）命令行:q ——不保存退出   :q! ——不保存强制退出  :wq ——保存退出（w 表示写入，无论是否修改，时间戳更改）    :x  ——保存退出（若内容未改，时间戳不变）
+
+ 
     ssh-keygen -t rsa -C "username" (注：username为你git上的用户名)
 
 通常合并分支时，git一般使用”Fast forward”模式。删除分支后，会丢掉分支信息 git merge --no-ff  -m “注释” 分支名
