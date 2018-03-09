@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/page.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/page.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.all.js"></script>
+  <style type="text/css">
+    table th,table td{text-align: center;}
+    table.table{width:100%;margin:0 auto;}
+    div.hide_sheet{padding:30px;}
+    /*.hide_sheet{height: 1000px;}*/
+  </style>
+</head>
+<body>
+<div class="container biaoti">
+  <span>产品管理列表</span>
+</div>
+<div class="container">
+所属系列：<span class="red">{$series_name}</span>
+<table class="table table-bordered">
+    <tr>
+      <th>产品ID</th>
+      <th>产品型号</th>
+      <th>输入电压</th>
+      <th>输出电压</th>
+      <th>输出电流</th>
+      <th>规格书</th>
+      <th>操作</th>
+    </tr>
+    <volist name="list" id="vol">
+    <tr>
+      <td><input type="checkbox" class="proid" value="{$vol.id}">{$vol.id}</td>
+      <td>{$vol.type}</td>
+      <td>{$vol.vin}</td>
+      <td>{$vol.vout}</td>
+      <td>{$vol.iout}</td>
+      <td>
+        <if condition="is_file($vol['guigeshu'])">
+        <a href="__ROOT__/{$vol.guigeshu}">下载</a>
+        </if>
+      </td>
+      <td>
+<input type="button" class="update btn btn-primary" value="修改">
+<!-- 遮罩层开始 -->
+<div class="hide_sheet">
+  <form action="__URL__/updateProduct?id={$vol.id}" method="post" enctype="multipart/form-data">
+  <table class="table table-bordered">
+    <tr>
+          <td colspan="4">
+          <span class="close_sheet glyphicon glyphicon-remove pull-right"></span>
+          </td>
+    </tr>
+    <tr>
+        <td class="align_right"><span class="red">*</span>产品型号：</td>
+        <td class="align_left" colspan="3">
+          <input required="required" type="text" name="type" value="{$vol.type}">
+        </td>
+      </tr>
+      <tr>
+        <td class="align_right">输入电压：</td>
+        <td class="align_left">
+          <input type="text" name="vin" value="{$vol.vin}">
+        </td>       
+        <td class="align_right">输出电压：</td>
+        <td class="align_left">
+          <input type="text" name="vout" value="{$vol.vout}">
+        </td>
+      </tr>
+      <tr>
+        <td class="align_right">输出电流：</td>
+        <td class="align_left">
+          <input type="text" name="iout" value="{$vol.iout}">
+        </td>       
+        <td class="align_right">静态功耗：</td>
+        <td class="align_left">
+          <input type="text" name="jingtai" value="{$vol.jingtai}" value="{$vol.vin}">
+        </td>
+      </tr>
+      <tr>
+        <td class="align_right">频率：</td>
+        <td class="align_left">
+          <input type="text" name="rate" value="{$vol.rate}">
+        </td>       
+        <td class="align_right">精度：</td>
+        <td class="align_left">
+          <input type="text" name="jingdu" value="{$vol.jingdu}">
+        </td>
+      </tr>
+      <tr>
+        <td class="align_right">封装：</td>
+        <td class="align_left">
+          <input type="text" name="fengz"  value="{$vol.fengz}">
+        </td>       
+        <td class="align_right">内阻：</td>
+        <td class="align_left">
+          <input type="text" name="neizu" value="{$vol.neizu}">
+        </td>
+      </tr>
+      <tr>
+        <td class="align_right">过充电压保护阀值：</td>
+        <td class="align_left">
+          <input type="text" name="guocong"  value="{$vol.guocong}">
+        </td>       
+        <td class="align_right">过放电压保护阀值：</td>
+        <td class="align_left">
+          <input type="text" name="guofang" value="{$vol.guofang}">
+        </td>
+      </tr>
+      <tr>
+        <td class="align_right">电量指示：</td>
+        <td class="align_left">
+          <input type="text" name="dianliang"  value="{$vol.dianliang}">
+        </td>       
+        <td class="align_right">规格书：</td>
+        <td class="align_left">
+          <input type="file" name="guigeshu">
+        </td>
+      </tr>
+      <tr>
+        <td class="align_right">备注：</td>
+        <td class="align_left" colspan="3">
+          <input type="text" name="beizhu"  value="{$vol.beizhu}">
+        </td>       
+      </tr>
+      <tr>
+        <td colspan="6" class="align_center">
+        <input type="submit" name="submit" value="修改" class="btn btn-primary">
+        </td>
+      </tr>
+  </table>
+</form>
+</div>
+<!-- 遮罩层结束 -->
+<input type="button" class="delete btn btn-danger" value="删除">
+<input type="hidden" value="{$vol.id}" class="productID">
+      </td>
+    </tr>
+    </volist>
+    <tr>
+    <td colspan="7" class="pager" style="text-align: left;">
+        <input type="button" value="全选" id="selectall" class="btn btn-primary btn-sm">
+        <input type="button" value="反选" id="inverse" class="btn btn-primary btn-sm">
+        <input type="button" value="不选" id="noselect" class="btn btn-primary btn-sm">
+        <input type="button" value="删除" id="deletePro" class="btn btn-danger btn-sm">
+    </td>
+  </tr>
+    <tr>
+    	<td class="pager" colspan="7">{$page_show}</td>
+    </tr>
+</table>
+</div>	
+<script type="text/javascript">
+$(function(){
+    //全选
+  $('#selectall').click(function(){
+    var i = $('.proid').length;
+    for(var j=0;j<i;j++){
+      if ($('.proid').eq(j).prop('checked')==false) {
+        $('.proid').eq(j).prop('checked',true);
+      }
+    }
+  })
+  //反选
+  $('#inverse').click(function(){
+    var i = $('.proid').length;
+    for(var j=0;j<i;j++){
+      if ($('.proid').eq(j).prop('checked')==false) {
+        $('.proid').eq(j).prop('checked',true);
+      }else{
+        $('.proid').eq(j).prop('checked',false);
+      }
+    }
+  })
+  //不选
+  $('#noselect').click(function(){
+    var i = $('.proid').length;
+    for(var j=0;j<i;j++){
+      if ($('.proid').eq(j).prop('checked')==true) {
+        $('.proid').eq(j).prop('checked',false);
+      }
+    }
+  })
+  //批量删除
+  $('#deletePro').click(function(){
+    if (confirm('确认删除所选?')) {
+      var i = $('.proid').length;
+      var arr = new Array();
+      for(var j=0;j<i;j++){
+        if ($('.proid').eq(j).prop('checked')==true) {
+          var value = $('.proid').eq(j).val();
+          arr.push(value);
+        }
+      }
+      var str = JSON.stringify(arr);
+        $.ajax({
+          type:'get',
+          dataType:'text',
+          url:'__URL__/deletePro?str='+str,
+          success:function(data){
+            if (data==1) {
+              location.reload();
+            }else{
+              alert('删除失败');
+            }
+          }
+        })
+    }
+  })
+
+  $('.update').click(function(){
+    $(this).next('.hide_sheet').show();
+  })
+  $('.hide_sheet').find('.close_sheet').click(function(){
+      $('.hide_sheet').hide();
+  });
+
+	$('.delete').click(function(){
+		if (confirm('确认删除?')) {
+			var id = $(this).next('.productID').val();
+			$.ajax({
+				type:'get',
+				dataType:'text',
+				url:'__URL__/delProduct/id/'+id,
+				success:function(data){
+					if (data==1) {
+						location.reload();
+					}else{
+						alert('参数错误');
+					}
+				}
+			})
+		}
+	})
+	
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.all.js"></script>
+	<style type="text/css">
+	table.table{width:100%;margin:0 auto;}
+	td.align_left input[type$='text']{width:200px;}
+	</style>
+</head>
+<body>
+<div class="container biaoti">
+	<span>添加解决方案</span>
+</div>
+<div class="container">
+<form action="__URL__/addSolutionCheck" method="post">
+	<table class="table table-bordered">
+		<tr>
+			<td width="100" class="align_right">方案名称：</td>
+			<td width="400" class="align_left">
+				<input type="text" name="maintitle" required="required">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">副标题：</td>
+			<td class="align_left">
+				<input type="text" name="subtitle" id="subtitle" required="required">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">方案简介：</td>
+			<td class="align_left">
+			<textarea required="" name="content" cols="60" rows="3"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">关键字：</td>
+			<td class="align_left">
+			<textarea placeholder="关键字之间使用英文逗号分隔开" name="keywords" cols="60" rows="3"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">描述：</td>
+			<td class="align_left">
+			<textarea placeholder="" name="miaoshu" cols="60" rows="3"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">方案文章：</td>
+			<td class="align_left">
+		<script style="width: 830px;height: 400px;" id="container" name="passage" type="text/plain">
+        </script>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="align_left">
+				<input type="submit" name="submit" value="添加" class="btn btn-primary">
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+<script type="text/javascript">
+      var editor = UE.getEditor('container')
+</script>
+</body>
+</html>

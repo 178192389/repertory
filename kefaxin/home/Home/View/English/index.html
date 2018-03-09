@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home-{$site_info.sitename}</title>
+<meta charset="UTF-8">
+<!-- <meta name="viewport" content="initial-scale=1.0"> -->
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" /> -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="{$site_info.keywords}">
+<meta name="description" content="{$site_info.miaoshu}">
+<link href="__PUBLIC__/css/index.css" rel='stylesheet' type='text/css' />
+<link href="__PUBLIC__/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="__PUBLIC__/css/head_foot.css" rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/slider.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/setHolder.js"></script>
+
+<!-- <script type="text/javascript" src="__PUBLIC__/js/zepto_min.js"></script> -->
+<script type="text/javascript" src="__PUBLIC__/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/TouchSlide.1.1.js"></script>
+<style type="text/css">
+input{font-size:14px;}
+.after p{letter-spacing:0px;}
+</style>
+</head>
+<body>
+<include file="Public/template/header_en.html"/>
+<!-- 导航结束 -->
+<span id="position" style="display: none;">Home</span>
+<div class="banner" id="banner">
+<ul id="banimg" class="banimg">
+<volist name="ban" id="vol">
+	<li><img src="__ROOT__/Uploads/banner_imgs/{$vol.image}"></li>
+</volist>
+</ul>
+	<div class="container">
+		<volist name="title" id="tt">
+		<div class="slide" style="display: none;">
+			<h1 class="hwhite">{$tt.maintitle}</h1>
+			<h3 class="hblue">{$tt.subtitle}</h3>
+			<p class="sp1">
+			{$tt.content}
+			</p>
+			<p class="sp2 pull-left"><!--   -->
+				<a title="Learn more" class="ak" href="__APP__/Home/English/solution?id={$tt.id}">Learn more</a>
+			</p>
+		</div>
+		</volist>		
+	</div>
+	<ol class="point">
+		<li><img class="cc" src="__PUBLIC__/images/circle1.png"></li>
+		<li><img class="cc" src="__PUBLIC__/images/circle2.png"></li>
+		<li><img class="cc" src="__PUBLIC__/images/circle2.png"></li>
+		<li><img class="cc" src="__PUBLIC__/images/circle2.png"></li>
+		<li><img class="cc" src="__PUBLIC__/images/circle2.png"></li>
+	</ol>
+</div>
+
+<div class="follow">
+	<volist name="title" id="tt">
+	<a title="{$tt.maintitle}" href="__APP__/Home/English/solution?id={$tt.id}">
+	<div class="ban">
+		<h3>{$tt.maintitle}</h3>
+		<p>{$tt.content}
+		</p>
+	</div>
+	</a>
+	</volist>
+</div>
+
+<div class="about">
+	<div class="begin">
+		<h1>About Kefaxin</h1>
+		<p>ABOUT US</p>
+	</div>
+	<div class="container after">
+		<div class="row">
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<img src="__PUBLIC__/images/kfx.gif" width="100%">
+			</div>
+			<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+				<p>Shenzhen Branch of the Xin Electronics Co., Ltd. is an integrated circuit software and hardware research and development-oriented high-tech enterprises.
+Focusing on consumer electronics, wireless charging, wearing equipment, health care, mobile terminals and other emerging areas to provide high-end chip and power solutions, the company has accumulated strong technical, professional production / sales power management IC, wireless charging transmitter / Pressure LDO, boost IC, step-down IC, LED driver IC, voltage detection IC, lithium battery charge management IC, MOS tube, and other products.</p><!-- 
+<p>产品种类广泛，为客户提供一站式电源解决方案。 
+<p>公司产品主要面向消费类、电子类客户，
+广泛应用手机、通信、医疗、智能家居、智能穿戴、数码产品、玩具、车载、适配器、LED照明类产品，
+众多产品已经远销欧美，赢得客户一致赞许。 </p>
+<p>科发鑫电子本着“品质第一，信守承诺，永续经营”的企业宗旨，努力为便携电子行业，
+汽车电子行业、医疗用品行业，电动玩具行业，照明行业提供高性价比的集成电路产品。
+我们向用户提供到位的产品售前、售后服务。</p> -->
+<p>Embodies a vibrant, positive and progressive, innovative R & D and management team, most of its engineering and technical personnel in the integrated circuit industry has more than 10 years of experience, at any time to provide professional services to customers. </p><p> Our goal is to be a high-quality product, efficient service, to meet the growing needs of customers, and strive to become the industry's leading supplier of integrated circuits.
+<p class="pk pull-right">
+	<a class="more" href="__APP__/Home/English/aboutus" title="More">More</a>
+</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="fuxing">
+<img src="__PUBLIC__/images/fuxing_32.jpg" class="img-responsive">
+</div>
+
+<div class="container inform">
+	<div class="row">
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<h3>Technical information</h3>
+			<volist name="news_list" id="vol">
+			<p class="black"><a title="{$vol.title}" href="__APP__/Home/English/content/id/{$vol.id}">{$vol.title}</a></p>
+			<p class="gray">
+			{:msubstr(strip_tags($vol['content']),0,80)}
+			</p>
+			</volist>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<h3>Latest information</h3>
+			<volist name="zixun_list" id="vol">
+			<p class="black"><a title="{$vol.title}" href="__APP__/Home/English/content/id/{$vol.id}">{$vol.title}</a></p>
+			<p class="gray">
+			{:msubstr(strip_tags($vol['content']),0,40)}
+			</p>
+			</volist>
+		</div>
+	</div>
+</div>
+<div class="partners">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h1>Cooperative partner</h1>
+				<h1>OUR PARTERS</h1>
+			</div>
+		</div>
+		<div class="row">
+			<volist name="flink" id="vol">
+				<div class="flink col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<img src="__ROOT__/{$vol.logo}" title="{$vol.website}" class="img-responsive">
+				</div>
+			</volist>
+		</div>
+	</div>
+</div>
+
+<!-- 底部开始 -->
+<include file="Public/template/footer_en.html"/>
+<script type="text/javascript">
+    $("input").placeholder();
+$(function(){
+	// var str = {$banner};
+	// var arr = eval(str);//
+	// //alert(arr[1]['image']);
+	// var img_str = "url(__ROOT__/Uploads/banner_imgs/"+arr[0]['image']+"),url(__ROOT__/Uploads/banner_imgs/"+arr[1]['image']+"),url(__ROOT__/Uploads/banner_imgs/"+arr[2]['image']+"),url(__ROOT__/Uploads/banner_imgs/"+arr[3]['image']+"),url(__ROOT__/Uploads/banner_imgs/"+arr[4]['image']+")";
+ //  $(".banner").css('backgroundImage',img_str);
+  // var img1 = 
+})
+</script>
+</body>
+</html>

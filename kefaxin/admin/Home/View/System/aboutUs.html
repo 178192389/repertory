@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.all.js"></script>
+	<style type="text/css">
+	table.table{width:100%;margin:0 auto;}
+	td.align_left input[type$='text']{width:350px;}
+	td.align_right{font-weight: bold;}
+	</style>
+</head>
+<body>
+<div class="container biaoti">
+	<span>关于我们内容设置</span>
+</div>
+<div class="container">
+<form action="__URL__/aboutUsUpdate?id={$list.id}" method="post" enctype="multipart/form-data">
+	<table class="table table-bordered">
+		<tr>
+			<td class="align_right">内容:</td>
+			<td class="align_left">
+			<script style="width:900px;" id="container" name="content" type="text/plain">{$list.content}
+       		</script>
+				<!-- <textarea name="content" required cols="90" rows="6">{$list.content}</textarea> -->
+			</td>
+		</tr>
+		<!-- <tr>
+			<td class="align_right">原图:</td>
+			<td class="align_left">
+				<img src="__ROOT__/{$list.image}" width='290' height="220">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">新图:</td>
+			<td class="align_left">
+				<input type="file" name="image">
+			</td>
+		</tr> -->
+		<tr>
+			<td class="align_center" colspan="2">
+				<input class="btn btn-primary" type="submit" value="修改" name="submit">
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+<script type="text/javascript">
+var editor = UE.getEditor('container');
+</script>
+</body>
+</html>

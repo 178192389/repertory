@@ -1,0 +1,147 @@
+<div class="head">
+	<div class="container">
+		<div class="row">
+			<div class="hidden-xs col-sm-12 col-md-12 col-lg-12">
+				<span class="pull-right">
+				<a href="http://wpa.qq.com/msgrd?v=3&uin=119533941&site=qq&menu=yes" target="_blank" >
+				<img border="0" src="__PUBLIC__/images/qq.png" width="15" alt="点击这里给我发消息" title="点击这里给我发消息" />
+				<span class="mail">QQ交流</span>
+				</a>
+				<img class="weixin" src="__PUBLIC__/images/weixin.png">
+				<span class="tel guanzhu">
+					关注科发鑫
+					<img class="hidden-xs contact_weixin" src="__PUBLIC__/images/contact_weixin.gif">
+				</span>
+				<span class="tel zongji"><img src="__PUBLIC__/images/tel.png">
+				0755-86130872</span>
+				<select id="banben">
+					<option>中文版</option>
+					<option>English</option>
+			    </select>
+				</span>
+			</div>
+			<div class="lianxi visible-xs pull-left">				
+			<div class="dropdown">
+			    <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">联系我们
+			        <span class="caret"></span>
+			    </button>
+			    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+			        <li role="presentation">
+			            <a role="menuitem" tabindex="-1" href="http://wpa.qq.com/msgrd?v=3&uin=119533941&site=qq&menu=yes" target="_blank">QQ交流
+			            </a>
+			        </li>
+			        <li class="divider"></li>
+			        <li role="presentation"  class="gzkfx"  data-toggle="modal" data-target="#myModal">
+			            <a role="menuitem" tabindex="-1">关注科发鑫</a>
+			        </li>
+			        <li class="divider"></li>
+			        <li role="presentation">
+			            <a role="menuitem" tabindex="-1" href="tel: 0755-86130872">0755-86130872</a>
+			        </li>			       
+			    </ul>
+			</div>
+			    <select id="banben" class="pull-right">
+					<option>中文版</option>
+					<option>English</option>
+			    </select>	
+			</div>
+		</div>
+	</div>
+</div>
+<div class="cate">
+<div class="container">
+	<div class="con">
+			<div class="first">
+				<a href="__URL__/index"><img src="__PUBLIC__/images/logo.gif"></a>	
+			</div>
+			<div class="second hidden-xs">
+				<ul class="menu">
+			         <li><a class="link" href="__URL__/index">网站首页</a></li>
+			         <li><a class="link" href="__URL__/aboutus">关于我们</a></li> 
+			         <li><a class="link" href="__URL__/service">产品</a></li> 
+			         <li><a class="link" href="__URL__/solution">解决方案</a></li> 
+			         <li><a class="link" href="__URL__/technology">技术资讯</a></li> 
+			         <!-- <li><a class="link" href="__URL__/news">新闻动态</a></li> --> 
+			         <li><a class="link" href="__URL__/contactus">联系我们</a></li> 
+			    </ul>
+			</div>
+			<div class="second visible-xs">
+			<div class="dropdown">
+			    <button type="button" class="btn btn-primary dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">导航
+			        <span class="caret"></span>
+			    </button>
+			    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu">
+			        <li role="presentation">
+			            <a role="menuitem" tabindex="-1" href="__URL__/index">网站首页</a>
+			        </li>
+			        <li role="presentation">
+			            <a role="menuitem" tabindex="-1" href="__URL__/aboutus">关于我们</a>
+			        </li><li role="presentation">
+			            <a role="menuitem" tabindex="-1" href="__URL__/service">产品服务</a>
+			        </li>
+			        <li role="presentation">
+			            <a role="menuitem" tabindex="-1" href="__URL__/solution">解决方案</a>
+			        </li>
+			        
+			        <li role="presentation">
+			            <a role="menuitem" tabindex="-1" href="__URL__/technology">技术资讯</a>
+			        </li>
+			        <!-- <li role="presentation">
+			            <a role="menuitem" tabindex="-1" href="__URL__/news">新闻动态</a>
+			        </li> -->
+			        <li role="presentation">
+			            <a role="menuitem" tabindex="-1" href="__URL__/contactus">联系我们</a>
+			        </li>
+			    </ul>
+			</div>				
+		</div>
+	</div>
+	</div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					扫一扫，关注科发鑫
+				</h4>
+			</div>
+			<div class="modal-body" style="text-align: center;">
+				<img src="__PUBLIC__/images/contact_weixin.gif">
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+
+<script type="text/javascript">
+$(function(){
+	$('.guanzhu').mouseover(function(){
+		$('.contact_weixin').slideDown();
+	})
+	$('.guanzhu').mouseout(function(){
+		$('.contact_weixin').fadeOut(100);
+		$('.contact_weixin').stop(false,true);
+	})
+	$('.link').eq(0).addClass('active')
+	var len = $('.link').length;
+	var kk;
+	var position = $('#position').text();
+	for(var i=0;i<len;i++){
+		var text = $('.link').eq(i).text();
+		if (text==position) {
+			kk = i;
+		}
+	}
+	if (kk!=0) {
+		$('.link').eq(0).removeClass('active');
+		$('.link').eq(kk).addClass('active').siblings('.link').removeClass('active');
+	}else{
+		$('.link').removeClass('active');
+		$('.link').eq(0).addClass('active');
+	}
+})
+</script>

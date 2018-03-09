@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">	
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/md5.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+	<style type="text/css">
+	.tbmanage{width:550px;}
+	</style>
+</head>
+<body>
+<div class="container biaoti">
+<span>管理员管理</span>
+</div>
+<div class="container">
+<form id="form1" action="__URL__/addAdmin" method="post" enctype="multipart/form-data" onsubmit="return check();">
+<table class="table table-bordered" style="width:550px;height:160px;margin:0 auto;">
+	<tr>
+		<td align="right">管理员账号:</td>
+		<td width="400">
+			<input type="text" name="ad_name" id="ad_name">
+			<span class="gray">3-16位数字、字母、下划线的组合</span>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">管理员密码:</td>
+		<td>
+			<input type="password" name="ad_pwd" id="ad_pwd">
+			<span class="gray">6-18位字符的组合(不包含空格)</span>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">确认密码:</td>
+		<td>
+			<input type="password" name="con_pwd" id="con_pwd">
+			<span id="afterpwd"></span>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center"><!-- class="datainp" -->
+			<input type="submit" value="确认添加" class="btn btn-primary">
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+
+<div class="container biaoti" style="margin-top:50px;">
+<span>管理员管理</span>
+</div>
+<div class="container">
+<table class="tbmanage table table-bordered">
+	<tr>
+		<th>管理员账号</th>
+		<th>管理员密码</th>
+		<th>操作</th>
+	</tr>
+	<volist name="res" id='admin'>
+	<tr>
+		<td>{$admin.ad_name}</td>
+		<td>{$admin.ad_pwd}</td>
+		<td>
+			<a title="{$admin.ad_id}" class="updateAd btn btn-primary btn-xs">修改密码</a>
+			<!-- 遮罩层开始 -->
+			<div class="hide_sheet">
+				<div class="container">
+<form class="form1" id="form{$admin.ad_id}" action="__URL__/updateAdmin/ad_id/{$admin.ad_id}" method="post" onsubmit="return checkForm(this.id);">
+<table class="table table-bordered" style="width:500px;height:160px;margin:100px auto;">
+	<tr>
+		<td colspan="2">
+		<span class="pull-center"></span>
+		<span style="font-size:18px;" class="close_sheet glyphicon glyphicon-remove pull-right"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="align_right">管理员账号:</td>
+		<td class="align_left">
+			{$admin.ad_name}
+		</td>
+	</tr>
+	<tr>
+		<td class="align_right">旧密码:</td>
+		<td class="align_left">
+			<input type="password" name="old_pwd" class="old_pwd">
+			<span class="ch_old_pwd"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="align_right">新密码:</td>
+		<td class="align_left">
+			<input type="password" name="new_pwd" class="new_pwd">
+			<span class="ch_new_pwd"></span>
+		</td>
+	</tr>
+	<tr>
+		<td class="align_right">确认密码:</td>
+		<td class="align_left">
+			<input type="password" name="con_pwd" class="con_pwd">
+			<span class="ch_con_pwd"></span>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" align="center"><!-- class="datainp" -->
+			<input type="submit" value="确认修改" class="btn btn-primary">
+			<input type="hidden" class="mima" value="{$admin.ad_pwd}">
+		</td>
+	</tr>
+</table>
+</form>
+
+</div>
+			</div>
+			<!-- 遮罩层结束 -->
+			<a href="__URL__/delAdmin/ad_id/{$admin.ad_id}" class="delAd btn btn-danger btn-xs">删除</a>
+		</td>
+	</tr>
+	</volist>
+</table>
+</div>
+<script type="text/javascript">
+function check(){
+	var reg_name = /^[a-zA-Z0-9_]{3,16}$/;
+	var reg_pwd = /^[\S]{6,18}$/;
+	var ad_name = $("#ad_name").val();
+	var ad_pwd = $("#ad_pwd").val();
+	var con_pwd = $("#con_pwd").val();
+	if(ad_pwd != con_pwd){
+		$("#afterpwd").html('两次密码输入不一致').css('color','red');
+		return false;
+	}else{
+		$("#afterpwd").html('');
+	}
+	if (!reg_name.test(ad_name)) {
+		$("#ad_name").next('.gray').css('color','red');
+		return false;
+	}else{
+		$("#ad_name").next('.gray').css('color','gray');
+	}
+	if (!reg_pwd.test(ad_pwd)) {
+		$("#ad_pwd").next('.gray').css('color','red');
+		return false;
+	}else{
+		$("#ad_pwd").next('.gray').css('color','gray');
+	}
+	if (reg_name.test(ad_name) && reg_pwd.test(ad_pwd)) {
+		return true;
+	}
+	// if (reg_name.test(ad_name) && reg_pwd.test(ad_pwd)) {
+	// 	return true;
+	// }
+	// else{
+
+	// 	return false;
+	// }
+}
+function checkForm(id){
+	var reg_pwd = /^[\S]{6,18}$/;
+	var old_pwd = $('#'+id+' .old_pwd').val();
+	var new_pwd = $('#'+id+' .new_pwd').val();
+	var con_pwd = $('#'+id+' .con_pwd').val();
+	var mima = $('#'+id+' .mima').val();
+	if ($.md5(old_pwd) != mima) {
+		$('#'+id+' .ch_old_pwd').html('密码不正确');
+		return false;
+	}else{
+		$('#'+id+' .ch_old_pwd').html('');
+	}
+	//验证新密码
+	if (!reg_pwd.test(new_pwd)) {
+		$('#'+id+' .ch_new_pwd').html('6-18位字符的组合(不包含空格)');
+		return false;
+	}else{
+		$('#'+id+' .ch_new_pwd').html('');
+	}
+	//验证密码一致性
+	if (new_pwd != con_pwd) {
+		$('#'+id+' .ch_con_pwd').html('两次密码输入不一致');
+		return false;
+	}else{
+		$('#'+id+' .ch_con_pwd').html('');
+	}
+	return true;
+}
+$(function(){
+	//删除操作
+	$('.delAd').click(function(){
+		if (confirm('确认删除？')) {
+			return true;
+		}else{
+			return false;
+		}
+	});
+	//修改操作
+	$('.updateAd').click(function(){
+    	$(this).next('.hide_sheet').show();    
+	});
+	$('.hide_sheet').find('.close_sheet').click(function(){
+	    $('.hide_sheet').hide();
+	})
+})
+</script>
+</body>
+</html>

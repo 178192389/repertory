@@ -1,0 +1,224 @@
+<div class="foot">
+</div>
+<div class="footer">
+		<div class="container">
+		<!-- visible-xs小屏幕不可见__开始 -->
+			<div class="hidden-xs">
+				<div class="col-sm-2 col-md-2 info1">
+				<figure>
+                    <h4>信息</h4>
+                    <ul>
+	                    <li><a href="__URL__/service">产品中心</a></li>
+	                    <li><a href="__URL__/solution">应用方案</a></li>
+	                    <li><a href="__URL__/technology">最新资讯</a></li>
+	                    <li><a href="__URL__/contactus">联系我们</a></li>
+                    </ul>
+                </figure>
+				</div>
+				<div class="col-sm-2 col-md-2 info2">
+					<figure>
+                    <h4>产品系列</h4>
+                    <ul>
+	                    <volist name="btm_list" id="vol">
+	                    	<li>
+	                    	<a href="__URL__/service?id={$vol.id}&zl={$vol.zilei}">
+	                    			{$vol.name}
+	                    		</a>
+	                    	</li>
+	                    </volist>
+                    </ul>
+                </figure>
+				</div>
+				<div class="col-sm-2 col-md-2 info3">
+					<figure>
+                <h4>产品方案</h4>
+                <ul>
+                    <volist name="solution_list" id="vol">
+	                    	<li>
+	                    		<a href="__URL__/solution/id/{$vol.id}">
+	                    			{$vol.maintitle}
+	                    		</a>
+	                    	</li>
+	                </volist>
+                </ul>
+            </figure>    
+				</div>	
+				<div class="col-sm-3 col-md-3 info4">
+			<figure>
+                <h4>联系我们</h4>
+                <ul>
+                    <li><a href="###">
+                    <img src="__PUBLIC__/images/mail.png">&nbsp;：sales@123.cn </a></li>
+                    <li><a href="###">
+                    <img src="__PUBLIC__/images/tel.png">&nbsp;：0755-8613 0872 </a></li>
+                    <li><a class="show_code" href="###" class="show_code">
+                    <img src="__PUBLIC__/images/weixin.png">&nbsp;：科发鑫 </a></li>
+                    <li class="btm_wx" style="display:none;">
+                    	<img src="__PUBLIC__/images/contact_weixin.gif">
+                    </li>
+                </ul>
+            </figure>    
+				</div>
+				<div class="col-sm-3 col-md-3 info5">
+			<figure>
+                <h4>给我们留言</h4>
+                <form action="__URL__/addLiuYan" method="post" onsubmit="return checkForm();">
+                <ul id="liuyan">
+                    <li><input id="name" name="name" type="text" placeholder="称呼(必填)"></li>
+                    <li><input id="phone" name="phone" type="tel" placeholder="电话(必填)"></li>
+                    <li><textarea id="content" placeholder="您的留言" name="content"></textarea></li>
+                    <li><input type="submit" class="btn btn-primary" value="提交"></li>
+                </ul>
+                </form>
+            </figure>    
+				</div>	
+			<div class="clearfix"></div>
+			</div>
+		</div>
+<!-- visible-xs小屏幕不可见__结束 -->
+<!-- visible-xs小屏幕可见__开始 -->
+		<div class="visible-xs">
+			<div class="row xinxi">
+				<div class="col-xs-12">
+					<figure>
+                    <h4>信息</h4>
+                    <ul>
+	                    <li>
+		                    <a href="__URL__/service">产品中心</a>
+	                    </li>
+	                    <li>
+		                    <a href="__URL__/solution">应用方案</a>
+	                    </li>
+	                    <li>
+		                    <a href="__URL__/technology">最新资讯</a>
+	                    </li>
+	                    <li>
+		                    <a href="__URL__/contactus">联系我们</a>
+	                    </li>
+                    </ul>
+                	</figure>
+				</div>
+			</div>
+			<div class="row chanpin">
+				<div class="col-xs-12">
+					<figure>
+                    <h4>产品系列</h4>
+                    <ul>
+	                    <volist name="btm_list" id="vol">
+	                    	<li>
+	                    		<a href="__URL__/service/id/{$vol.id}">
+	                    			{$vol.name}
+	                    		</a>
+	                    	</li>
+	                    </volist>
+                    </ul>
+                </figure>
+				</div>
+			</div>
+			<div class="row chanpin">
+				<div class="col-xs-12">
+					<figure>
+		                <h4>产品方案</h4>
+		                <ul>
+		               <volist name="solution_list" id="vol">
+	                    	<li>
+	                    		<a href="__URL__/solution/id/{$vol.id}">
+	                    			{$vol.maintitle}
+	                    		</a>
+	                    	</li>
+	                	</volist>
+		                </ul>
+		            </figure>    
+				</div>
+			</div>	
+			<div class="row chanpin contact_us">
+				<div class="col-xs-12">
+					<figure>
+		                <h4>联系我们</h4>
+		                <ul>
+		                    <li><a href="###">
+		                    <img src="__PUBLIC__/images/mail.png">&nbsp;：sales@123.cn </a></li>
+		                    <li><a href="###">
+		                    <img src="__PUBLIC__/images/tel.png">&nbsp;：0755-8613 0872 </a></li>
+		                    <li><a href="###">
+		                    <img src="__PUBLIC__/images/weixin.png">&nbsp;：科发鑫 </a></li>
+		                </ul>
+		            </figure>    
+				</div>
+			</div>
+			<div class="row" id="liuyan">
+				<div class="col-xs-12">
+					<figure class="pull-center">
+		                <h4>给我们留言</h4>
+		                <form action="__URL__/addLiuYan" method="post" onsubmit="return checkFormTwo();">
+                <ul id="liuyan">
+                    <li><input id="nametwo" name="name" type="text" placeholder="称呼(必填)"></li>
+                    <li><input id="phonetwo" name="phone" type="tel" placeholder="电话(必填)"></li>
+                    <li><textarea id="contenttwo" placeholder="您的留言" name="content"></textarea></li>
+                    <li><input type="submit" class="btn btn-primary" value="提交"></li>
+                </ul>
+                </form>
+		            </figure>    
+				</div>	
+			</div>
+			<div class="clearfix"></div>
+			</div>
+		</div>
+</div>
+<script type="text/javascript">
+$('.show_code').mouseover(function(){
+	$('.btm_wx').slideDown();
+})
+$('.show_code').mouseout(function(){
+	$('.btm_wx').fadeOut(100);
+	$('.btm_wx').stop(false,true);
+})
+function checkForm(){
+	var name = $('#name').val();
+	var phone = $('#phone').val();
+	var content = $('#content').val();
+	var reg_tel = /^1[34578]\d{9}$/;
+	var con_len = content.trim();
+	var name_len = name.trim();
+	if (name_len.length == 0) {
+		alert('称呼不能为空');
+		$('#name').focus();
+		return false;
+	}
+	if (!reg_tel.test(phone)) {
+		alert('手机号格式不正确');
+		$('#phone').focus();
+		return false;
+	}
+	if (con_len.length <= 0) {
+		alert('留言内容不能为空');
+		$('#content').focus();
+		return false;
+	}
+	return true;
+}
+function checkFormTwo(){
+	var name = $('#nametwo').val();
+	var phone = $('#phonetwo').val();
+	var content = $('#contenttwo').val();
+	var reg_tel = /^1[34578]\d{9}$/;
+	var con_len = content.trim();
+	var name_len = name.trim();
+	if (name_len.length == 0) {
+		alert('称呼不能为空');
+		$('#nametwo').focus();
+		return false;
+	}
+	if (!reg_tel.test(phone)) {
+		alert('手机号格式不正确');
+		$('#phonetwo').focus();
+		return false;
+	}
+	if (con_len.length <= 0) {
+		alert('留言内容不能为空');
+		$('#contenttwo').focus();
+		return false;
+	}
+	return true;
+}
+</script>

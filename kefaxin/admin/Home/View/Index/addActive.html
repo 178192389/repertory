@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+  	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/page.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+	<style type="text/css">
+    table th,table td{text-align: center;}
+    table.table{width:100%;margin: 0 auto;}
+    #container{width:800px;}
+    input[name='title']{width:400px;}
+    input[name='submit']{width:100px;}
+  	</style>
+</head>
+<body>
+<div class="container biaoti">
+	<span>添加技术资讯</span>
+</div>
+<div class="container">
+	<form method="post" action="__URL__/activeAdd" onsubmit="return checkForm();">
+		<table class="table table-bordered">
+			<tr>
+				<td width="150" class="align_right">资讯标题：</td>
+				<td class="align_left">
+					<input type="text" name="title" id="title">
+					<span id="ch_title" class="red"></span>
+				</td>
+			</tr>
+			<tr>
+				<td class="align_right">关键字：</td>
+				<td class="align_left">
+				<textarea placeholder="关键字之间使用英文逗号分隔开" name="keywords" cols="60" rows="3"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td class="align_right">描述：</td>
+				<td class="align_left">
+				<textarea placeholder="" name="miaoshu" cols="60" rows="3"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td class="align_right">内容：</td>
+				<td>
+			<script id="container" name="content" type="text/plain">
+        	</script>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<input type="submit" name="submit" value="添加" class="btn btn-primary">
+				<input type="hidden" value="1" name="type">
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.all.js"></script>
+    <!-- 实例化编辑器 -->
+<script type="text/javascript">
+    var editor = UE.getEditor('container');
+</script>
+<script type="text/javascript">
+function checkForm(){
+	//var con_len = $('#container').text().length;
+	var title_len = ($('#title').val()).trim().length;
+	if (title_len <= 0) {
+		$('#ch_title').text('标题不能为空');
+		$('#title').focus();
+		return false;
+	}else{
+		$('#ch_title').text('');
+		return true;
+	}
+}
+$(function(){
+
+})
+</script>
+</body>
+</html>

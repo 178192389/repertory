@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="{$site_info.keywords}">
+	<meta name="description" content="{$site_info.miaoshu}">
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+	<title>技术资讯-{$site_info.sitename}</title>
+	
+	<link href="__PUBLIC__/css/page.css" rel='stylesheet' type='text/css' />
+	<link href="__PUBLIC__/css/technology.css" rel='stylesheet' type='text/css' />
+	<link href="__PUBLIC__/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="__PUBLIC__/css/head_foot.css" rel='stylesheet' type='text/css' />
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/setHolder.js"></script>
+	<style type="text/css">
+	
+	</style>
+</head>
+<body>
+<include file="Public/template/header.html"/>
+<!-- 头部结束 -->
+<div class="tech">
+</div>
+<div class="position">
+	<div class="container">
+		<div class="content">
+			当前位置：<a title="首页" href="__URL__/index">首页</a>&nbsp;-&nbsp;<span id="position">技术资讯</span>
+		</div>
+	</div>
+</div>
+<div class="container zixun">
+	<div class="row">
+		<div class="hidden-xs col-sm-4 col-md-3 col-lg-3 left_nav">
+			<h3 class="h3">产品系列</h3>	
+			<ul class="list-group">			
+				<volist name="result" id="vol">
+				<li class="list-group-item">
+<if condition="count($vol['son']) gt 0">
+	<h4 class="has_zilei">
+	<img src="__PUBLIC__/images/left_decorate.png">
+	{$vol['name']}
+	<span class="pull-right glyphicon glyphicon-chevron-right"></span>
+	</h4>
+		<ul class="name_list">
+			<for start="0" end="count($vol['son'])">
+			<li style="font-size: 14px;">
+			<a title="{$vol['son'][$i]['name']}" href="__URL__/service?id={$vol['son'][$i]['id']}">
+				<img src="__PUBLIC__/images/left_decorate_2.png">
+				{$vol['son'][$i]['name']}
+			</a>
+			</li>
+			</for>
+		</ul>
+<else/>
+	<a title="{$vol['name']}" href="__URL__/service?id={$vol['id']}">
+	<h4 class="no_zilei">
+	<img src="__PUBLIC__/images/left_decorate.png">
+	{$vol['name']}
+	</h4>
+	</a>
+</if>
+				</li>
+				</volist>
+				<li id="down_dir" type="none">
+				<img id="point" src="__PUBLIC__/images/down_dir.png">
+				</li>
+			</ul>
+			<h3 class="h3">联系我们</h3>
+			<ul class="contact">
+				<li>{$res.company}</li>
+				<li>联系人：{$res.person}</li>
+				<li>手 机：{$res.phone}</li>
+				<li>电 话：{$res.zongji}</li>
+				<li>QQ：{$res.qq}</li>
+				<li>邮 箱：{$res.email}</li>
+				<li>地 址：{$res.address}</li>
+			</ul>
+		</div>
+		<div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 right_nav">
+			<h3>最新资讯</h3>
+			<ul>
+			<volist name="news_list" id="vol">
+				<li>
+					<h4><a title="{$vol.title}" href="__URL__/content/id/{$vol.id}">
+					{$vol.title}</a></h4>
+					{:msubstr(strip_tags($vol['content']),0,80)}
+					<span class="fabu">[&nbsp;{$vol.addtime}&nbsp;]</span>
+				</li>
+			</volist>
+			</ul>
+			<div class="pager">
+				{$page_show}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 底部开始 -->
+<include file="Public/template/footer.html"/>
+<script type="text/javascript">
+$("input").placeholder();
+$(function(){
+	$('.name_list').hide()
+	$('.list-group-item:gt(6)').hide();
+	var i=0;
+	$('#down_dir').click(function(){
+		$('.list-group-item:gt(6)').slideToggle('fast');
+		if (i%2==0) {
+			$("#point").prop('src','__PUBLIC__/images/up_dir.png');
+		}else{
+			$("#point").prop('src','__PUBLIC__/images/down_dir.png');
+		}
+		i++;
+		if (i==4) {i=0;}
+	})
+	$('.has_zilei').click(function(){
+		$(this).next('.name_list').slideToggle('fast');
+	})
+})
+</script>
+</body>
+</html>

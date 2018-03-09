@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="{$site_info.keywords}">
+	<meta name="description" content="{$site_info.miaoshu}">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>产品服务-{$site_info.sitename}</title>
+	<link href="__PUBLIC__/csswap/head_foot.css" rel='stylesheet' type='text/css' />
+	<link href="__PUBLIC__/csswap/service.css" rel='stylesheet' type='text/css' />
+	<link href="__PUBLIC__/csswap/bootstrap.css" rel='stylesheet' type='text/css' />
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/setHolder.js"></script>
+	<style type="text/css">
+	.seriesID{display: none;}
+	body,html{overflow: visible;}
+	.table td,.table th{border:1px solid #ccc;}
+	.table th{font-size: 16px;}
+	.dropdown-menu{width:100%;text-align: center;}
+	.dropdown-menu li{border-bottom: 1px solid #ccc}
+	#table td{padding-top:5px;padding-bottom:5px;text-align: left;font-size: 16px;}
+	#table{padding:0;width: 750px;}
+	#table th{background:#4BCDD9;font-weight:normal;};
+	.tcenter{vertical-align: middle;text-align: center;}
+	</style>
+</head>
+<body>
+<include file="Public/template/header_wap.html"/>
+<!-- 头部结束 -->
+<div class="service">
+</div>
+<div class="position">
+	<div class="container">
+		<div class="content">
+			当前位置：<a href="__URL__/index">首页</a>&nbsp;-&nbsp;<span id="position">产品服务</span>
+		</div>
+	</div>
+</div>
+<div class="container zixun">
+	<div class="row">
+	<div class="col-sm-12">
+		<div class="dropdown visible-xs">
+			    <!-- <button type="button" class="btn btn-block btn-primary dropdown-toggle" id="dropdownMenu5" data-toggle="dropdown">产品系列
+			        <span class="caret"></span>
+			    </button> -->
+			   <ul class="list-group" style="padding:0;">
+				<volist name="result" id="vol">
+				<li class="list-group-item" style="padding-left:5px;background-color:#aaa;margin-bottom: 3px;">
+<if condition="count($vol['son']) gt 0">
+	<h4 class="has_zilei">
+	<img src="__PUBLIC__/images/left_decorate.png">
+	<span style="font-size: 14px;">{$vol['name']}</span>
+	<span class="pull-right glyphicon glyphicon-chevron-right" style="margin-right: 5px;"></span>
+	</h4>
+		<ul class="name_list" style="background:#fff;">
+			<for start="0" end="count($vol['son'])">
+			<li>
+			<a style="color:#333;" title="{$vol['son'][$i]['name']}" href="__URL__/service?id={$vol['son'][$i]['id']}">
+				<img src="__PUBLIC__/images/left_decorate_2.png">
+				{$vol['son'][$i]['name']}
+				<input type="hidden" value="{$vol['son'][$i]['id']}" class="showID">
+			</a>
+			</li>
+			</for>
+		</ul>
+<else/>
+	<a style="color:#333;" title="{$vol['name']}" href="__URL__/service?id={$vol['id']}">
+	<h4 class="no_zilei">
+	<img src="__PUBLIC__/images/left_decorate.png">
+	<span style="font-size: 14px;">{$vol['name']}</span>
+	</h4>
+	</a>
+</if>
+				</li>
+				</volist>
+			</ul>
+			</div>
+		</div>	
+	</div>	
+	<div class="row">
+	<div class="col-sm-12">
+	<h3 class="h3" id="list_name"">{$series_name}</h3>
+	<table class="table table-bordered table-striped" id="table">
+    <tr>
+    <if condition="count($col_list) gt 0">
+    <volist name="col_list" id="vol">	
+      <th class="tcenter" style="text-align: center;">{$vol.col_name}</th>     
+    </volist>
+    <else/>
+      <th class="tcenter" style="text-align: center;">产品型号</th>
+      <th class="tcenter" style="text-align: center;">输入电压</th>
+      <th class="tcenter" style="text-align: center;">输出电压</th>
+      <th class="tcenter" style="text-align: center;">输出电流</th>
+      <th class="tcenter" style="text-align: center;">静态功耗</th>
+      <th class="tcenter" style="text-align: center;">频率</th>
+      <th class="tcenter" style="text-align: center;">精度</th>
+      <th class="tcenter" style="text-align: center;">封装</th>
+    </if>      
+      <th class="tcenter" style="text-align: center;">规格书</th>
+    </tr>
+<volist name="pro_list" id="vol">
+    <tr>
+      <for start="0" end="count($vol['ziduan'])">
+      <td class="tcenter" style="text-align: center;vertical-align: middle;">      	
+      	<if condition="strlen($vol['ziduan'][$i]['value']) gt 0">
+			{$vol['ziduan'][$i]['value']}
+		<else/>-
+		</if>
+      </td> 
+      </for>
+      <td style="vertical-align: middle;padding:3px;text-align: center;">
+      <if condition="is_file($vol['guigeshu'])">
+	  <a title="规格书下载" href="__ROOT__/{$vol['guigeshu']}" target="_blank">下载</a>
+	  <else/>暂无
+	  </if>
+      </td>
+    </tr>
+</volist>
+</table>
+	</div></div>
+</div>
+<!-- 底部开始 -->
+<include file="Public/template/footer_wap.html"/>
+<script type="text/javascript">
+$("input").placeholder();
+$(function(){
+	$('#table tr:odd td').css('background','#ccc');
+	$('#table tr:even td').css('background','white');
+	$('#table td').css({'paddingTop':'5px','paddingBottom':'5px'});
+	
+	$('.has_zilei').click(function(){	
+		$(this).next('.name_list').slideToggle('fast');
+	})
+	// $('#dropdownMenu5').click(function(){	
+	// 	$(this).next('ul').slideToggle('fast');
+	// })
+	var url = window.location.href;
+	var pid = url.match(/\d{1,}$/);
+	var len = $('.showID').length;
+	for(var i=0;i<len;i++){
+		var sid = $('.name_list li').eq(i).find('.showID').val();
+		if (sid==pid) {
+			$('.name_list li').eq(i).parent('.name_list').css('display','block');
+		}
+	}	
+})
+</script>
+</body>
+</html>

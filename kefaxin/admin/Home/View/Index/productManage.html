@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/page.css">
+  <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+  <!-- <script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.config.js"></script>
+    编辑器源码文件
+<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.all.js"></script> -->
+  <style type="text/css">
+    table th,table td{text-align: center;}
+    .table{width:90%;margin:0 auto;}
+    .hide_sheet .table{
+      margin-top:20px;width:90%;
+    }
+    .special{color:red;font-weight:bold;font-size: 16px;}
+    input[type="text"]{width:250px;}
+    </style>
+</head>
+<body>
+<div class="container biaoti">
+  <span><span style="color:#337AB7;">{$ser_list.name}</span>产品列表</span>
+</div>
+<div>
+<table class="table table-bordered">
+    <tr>
+      <volist name="col_list" id="vol">
+      <th>{$vol.col_name}</th>
+      </volist>
+      <th>规格书</th>
+      <th>备注</th>      
+      <th>排序</th>
+      <th>操作</th>
+    </tr>
+  <tbody>
+  <volist name="pro_list" id="vol">  
+  <tr>
+
+      <for start="0" end="count($ziduan)">
+      <td>{$vol[$ziduan[$i]]}</td> 
+      </for>
+      <td>
+      <if condition="is_file($vol['guigeshu'])">
+      <a href="__ROOT__/{$vol.guigeshu}" target="_blank">下载</a>
+      <else/>
+      --
+      </if>
+      </td>
+      <td>{$vol.beizhu}</td>
+      <td>{$vol.recomend}</td>
+      <td>
+<input type="button" class="update btn btn-primary btn-xs" value="修改">
+<!-- 遮罩层开始 -->
+<div class="hide_sheet">
+  <form action="__URL__/updateProduct?id={$vol.id}" method="post" enctype="multipart/form-data">？？
+  <table class="table table-bordered">
+    <tr>
+          <td colspan="2">
+          <span >注：如需换行请使用<span class="special">&lt;br&gt;</span>分开</span>
+          <span class="close_sheet glyphicon glyphicon-remove pull-right"></span>
+          </td>
+    </tr>
+    <for start="0" end="count($vol['ziduan'])">
+      <tr>
+        <td class="align_right">{$vol['ziduan'][$i]['col_name']}</td>
+        <td class="align_left">
+          <input type="text" name="{$vol['ziduan'][$i]['ziduan']}" value="{$vol['ziduan'][$i]['value']}">
+        </td>
+      </tr>
+    </for>
+      <tr>              
+        <td class="align_right">规格书：</td>
+        <td class="align_left">
+          <input type="file" name="guigeshu">
+        </td>
+      </tr>
+      <tr>
+        <td class="align_right">备注：</td>
+        <td class="align_left">
+          <input type="text" name="beizhu" value="{$vol.beizhu}">
+        </td>
+      </tr>
+      <tr>
+        <td class="align_right">排序：</td>
+        <td class="align_left">
+          <input type="text" name="recomend" value="{$vol.recomend}">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="align_center">
+        <input type="submit" name="submit" value="修改" class="btn btn-primary">
+        </td>
+      </tr>
+  </table>
+</form>
+</div>
+
+<!-- 遮罩层结束 -->
+<input type="button" class="delete btn btn-danger btn-xs" value="删除">
+<input type="hidden" value="{$vol.id}" class="productID">
+
+      </td>
+  </tr>
+  </volist>
+  </tbody>
+</table>
+</div>
+<script type="text/javascript">
+$(function(){
+  $('.mycenter').css('textAlign','center');
+  $('.myright').css('textAlign','right');
+  $('.update').click(function(){
+    $(this).next('.hide_sheet').show();
+  })
+  $('.hide_sheet').find('.close_sheet').click(function(){
+      $('.hide_sheet').hide();
+    });
+  $('.delete').click(function(){
+    if (confirm('确认删除?')) {
+      var id = $(this).next('.productID').val();
+      $.ajax({
+        type:'get',
+        dataType:'text',
+        url:'__URL__/deleteProduct?id='+id,
+        success:function(data){
+          if (data==1) {
+            alert('删除成功');
+            location.reload();
+          }else{
+            alert('参数错误');
+          }
+        }
+      })
+    }
+  })  
+})
+</script>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$site_info.sitename}</title>
+<meta charset="UTF-8">
+<!-- <meta name="viewport" content="initial-scale=1.0"> -->
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" /> -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="{$site_info.keywords}">
+<meta name="description" content="{$site_info.miaoshu}">
+<link href="__PUBLIC__/css/index.css" rel='stylesheet' type='text/css' />
+<link href="__PUBLIC__/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="__PUBLIC__/css/head_foot.css" rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/slider.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/setHolder.js"></script>
+
+<!-- <script type="text/javascript" src="__PUBLIC__/js/zepto_min.js"></script> -->
+<script type="text/javascript" src="__PUBLIC__/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/TouchSlide.1.1.js"></script>
+<style type="text/css">
+input{font-size:14px;}
+</style>
+</head>
+<body>
+<include file="Public/template/header.html"/>
+<!-- 导航结束 -->
+<span id="position" style="display: none;">网站首页</span>
+<div class="banner" id="banner">
+
+<ul id="banimg" class="banimg">
+<volist name="ban" id="vol">
+	<li><img src="__ROOT__/Uploads/banner_imgs/{$vol.image}"></li>
+</volist>
+</ul>
+	<div class="container">
+		<volist name="title" id="tt">
+		<div class="slide" style="display: none;">
+			<h1 class="hwhite">{$tt.maintitle}</h1>
+			<h3 class="hblue">{$tt.subtitle}</h3>
+			<p class="sp1">
+			{$tt.content}
+			</p>
+			<p class="sp2 pull-left"><!--   -->
+				<a title="了解更多" class="ak" href="__URL__/solution?id={$tt.id}">了解更多</a>
+			</p>
+		</div>
+		</volist>		
+	</div>
+	<ol class="point">
+		<li><img class="cc" src="__PUBLIC__/images/circle1.png"></li>
+		<li><img class="cc" src="__PUBLIC__/images/circle2.png"></li>
+		<li><img class="cc" src="__PUBLIC__/images/circle2.png"></li>
+		<li><img class="cc" src="__PUBLIC__/images/circle2.png"></li>
+		<li><img class="cc" src="__PUBLIC__/images/circle2.png"></li>
+	</ol>
+</div>
+
+<div class="follow">
+	<volist name="title" id="tt">
+	<a title="{$tt.content}" href="__URL__/solution?id={$tt.id}">
+	<div class="ban">
+		<h3>{$tt.maintitle}</h3>
+		<p>{$tt.content}
+		</p>
+	</div>
+	</a>
+	</volist>
+</div>
+
+<div class="fuxing">
+<img src="__PUBLIC__/images/fuxing_32.jpg" class="img-responsive">
+</div>
+
+<div class="container inform">
+	<div class="row">
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<h3>技术资讯</h3>
+			<volist name="news_list" id="vol">
+			<p class="black"><a title="{$vol.title}" href="__URL__/content/id/{$vol.id}">{$vol.title}</a></p>
+			<p class="gray">
+			{:msubstr(strip_tags($vol['content']),0,80)}
+			</p>
+			</volist>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<h3>最新动态</h3>
+			<volist name="zixun_list" id="vol">
+			<p class="black"><a title="{$vol.title}" href="__URL__/content/id/{$vol.id}">{$vol.title}</a></p>
+			<p class="gray">
+			{:msubstr(strip_tags($vol['content']),0,40)}
+			</p>
+			</volist>
+		</div>
+	</div>
+</div>
+<div class="partners">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h1>合作伙伴</h1>
+				<h1>OUR PARTERS</h1>
+			</div>
+		</div>
+		<div class="row">
+			<volist name="flink" id="vol">
+				<div class="flink col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<img src="__ROOT__/{$vol.logo}" title="{$vol.website}" class="img-responsive">
+				</div>
+			</volist>
+		</div>
+	</div>
+</div>
+
+<!-- 底部开始 -->
+<include file="Public/template/footer.html"/>
+<script type="text/javascript">
+    $("input").placeholder();
+$(function(){
+	//alert($('.ban').length)
+	//background:url(../images/ban_bg2.jpg) center center no-repeat;
+	// $('.ban').eq(0).css('background','#ffbb00');
+	// $('.ban').eq(2).css('background','#ffbb00');
+	// $('.ban').eq(4).css('background','#ffbb00');
+	// var str = {$banner};//
+	// var arr = eval(str);//
+	// //alert(arr[1]['image']);
+	// var img_str = "url(__ROOT__/Uploads/banner_imgs/"+arr[0]['image']+"),url(__ROOT__/Uploads/banner_imgs/"+arr[1]['image']+"),url(__ROOT__/Uploads/banner_imgs/"+arr[2]['image']+"),url(__ROOT__/Uploads/banner_imgs/"+arr[3]['image']+"),url(__ROOT__/Uploads/banner_imgs/"+arr[4]['image']+")";
+ //  $(".banner").css('backgroundImage',img_str);
+  // var img1 = 
+})
+</script>
+</body>
+</html>

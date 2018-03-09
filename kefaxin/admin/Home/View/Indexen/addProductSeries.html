@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.all.js"></script>
+	<style type="text/css">
+	table.table{width:100%;margin:0 auto;}
+	td.align_left input[type$='text']{width:200px;}
+	label{margin-left:20px;}
+	#container{width:800px;}
+	</style>
+</head>
+<body>
+<div class="container biaoti">
+	<span>添加产品系列</span>
+</div>
+<div class="container">
+<form action="__URL__/addSeries" method="post" onsubmit="return checkForm();" enctype="multipart/form-data">
+	<table class="table table-bordered">
+		<tr>
+			<td width="10%" class="align_right">所属系列：</td>
+			<td width="90%" class="align_left">
+				<select name="pid">
+					<option value="0">--作为一级分类--</option>
+					<volist name="result" id="vol">
+					<option value="{$vol.id}">{$vol.name}</option>
+					</volist>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">系列名称：</td>
+			<td class="align_left">
+				<input type="text" name="name" id="name" required>
+				<span class="red" id="tip"></span>
+			</td>
+		</tr>
+		<tr>
+				<td class="align_right">关键字：</td>
+				<td class="align_left">
+				<textarea placeholder="关键字之间使用英文逗号分隔开" name="keywords" cols="60" rows="3"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td class="align_right">描述：</td>
+				<td class="align_left">
+				<textarea placeholder="" name="miaoshu" cols="60" rows="3"></textarea>
+				</td>
+			</tr>
+		<tr>
+			<td></td>
+			<td class="align_left">
+				<input type="submit" name="submit" value="添加" class="btn btn-primary">
+				<input type="hidden" id="unique" value='0'>
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+<script type="text/javascript">
+ //var hh = $("input[type='radio']:checked").val();
+
+
+function checkForm(){
+	// var name = $('#name').val();
+	// var unique = $('#unique').val();
+	// var name_len = name.trim().length;
+	// if(name_len<=0){
+	// 	$('#tip').text('系列名称不能为空');
+	// 	return false;
+	// }else if(unique==1){
+	// 	$('#tip').text('此系列名称已被添加过');
+	// 	return false;
+	// }else{
+	// 	$('#tip').text('');
+	// 	return true;
+	// }
+}
+$(function(){
+	// $('.jieshao').css('display','none');
+	//  $("input[type='radio']").change(function(){
+	//  	var th = $(this).val();
+ // 		if (th=='yes') {
+ // 			$('.jieshao').css('display','none');
+ // 		}else if(th=='no'){
+ // 			$('.jieshao').css('display','table-row');
+ // 		}
+ // 	})
+	// $('#name').keyup(function(){
+	// 	var name = $(this).val();
+	// 	$.ajax({
+	// 			type:'get',
+	// 			dataType:'text',
+	// 			url:'__URL__/uniqueSeries/name/'+name,
+	// 			success:function(data){
+	// 				if (data==1) {}
+	// 				$('#unique').val(data);
+	// 			}
+	// 	})
+	// })
+})
+</script>
+
+</body>
+</html>

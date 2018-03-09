@@ -1,0 +1,13 @@
+/*首页 上一页 下一页 尾页*/
+.pager{text-align: center;}
+.pager .first,.pager .prev,.pager .next,.pager .end{
+	display: inline-block;float: left;
+	width:50px;border:1px solid skyblue;
+}
+.pager .number,.pager .currency{
+	display: inline-block;float: left;
+	width:35px;border:1px solid skyblue;
+}
+.pager .pages,.pager .total{
+	display: inline-block;float: left;margin:0px 10px;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+  	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/page.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+	<style type="text/css">
+    table.table{width:100%;margin: 0 auto;}
+    input[type='submit']{width:100px;}
+  	</style>
+</head>
+<body>
+<div class="container biaoti">
+	<span>添加产品</span>
+</div>
+<div class="container">
+	<form method="post" action="__URL__/productAdd" onsubmit="return checkForm();" enctype="multipart/form-data">
+		<table class="table table-bordered">
+			<tr>
+				<td class="align_right">
+				<span class="red">*</span>所属系列：</td>
+				<td class="align_left">
+					<select name="fk_pid" id="sid" required="required">
+						<option value="0">--请选择系产品系列--</option>
+						<volist name="series" id="vol">	
+						<option value="{$vol.id}">{$vol.name}</option>	
+						</volist>
+					</select>
+				</td>
+				<td class="align_right"><span class="red">*</span>产品型号：</td>
+				<td class="align_left">
+					<input required="required" type="text" name="type">
+				</td>
+			</tr>
+			<tr>
+				<td class="align_right">输入电压：</td>
+				<td class="align_left">
+					<input type="text" name="vin" >
+				</td>				
+				<td class="align_right">输出电压：</td>
+				<td class="align_left">
+					<input type="text" name="vout">
+				</td>
+			</tr>
+			<tr>
+				<td class="align_right">输出电流：</td>
+				<td class="align_left">
+					<input type="text" name="iout" >
+				</td>				
+				<td class="align_right">静态功耗：</td>
+				<td class="align_left">
+					<input type="text" name="jingtai">
+				</td>
+			</tr>
+			<tr>
+				<td class="align_right">频率：</td>
+				<td class="align_left">
+					<input type="text" name="rate">
+				</td>				
+				<td class="align_right">精度：</td>
+				<td class="align_left">
+					<input type="text" name="jingdu">
+				</td>
+			</tr>
+			<tr>
+				<td class="align_right">封装：</td>
+				<td class="align_left">
+					<input type="text" name="fengz" >
+				</td>				
+				<td class="align_right">内阻：</td>
+				<td class="align_left">
+					<input type="text" name="neizu">
+				</td>
+			</tr>
+			<tr>
+				<td class="align_right">过充电压保护阀值：</td>
+				<td class="align_left">
+					<input type="text" name="guocong" >
+				</td>				
+				<td class="align_right">过放电压保护阀值：</td>
+				<td class="align_left">
+					<input type="text" name="guofang">
+				</td>
+			</tr>
+			<tr>
+				<td class="align_right">电量指示：</td>
+				<td class="align_left">
+					<input type="text" name="dianliang" >
+				</td>				
+				<td class="align_right">规格书：</td>
+				<td class="align_left">
+					<input type="file" name="guigeshu">
+				</td>
+			</tr>
+			<tr>
+				<td class="align_right">备注：</td>
+				<td class="align_left" colspan="3">
+					<input type="text" name="beizhu" >
+				</td>				
+			</tr>
+			<!-- <tr>
+				<td class="align_right">文档：</td>
+				<td class="align_left" colspan="3">
+			<script style="width: 800px;" id="container" name="wendang" type="text/plain">
+        	</script>
+			</td>
+			</tr> -->
+			<tr>
+				<td colspan="4" class="align_center">
+				<input type="submit" name="submit" value="添加" class="btn btn-primary">
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<script type="text/javascript">
+function checkForm(){
+	var sid = $('#sid').val()
+	if (sid==0) {
+		alert('请选择系产品系列');
+		return false;
+	}
+	return true;
+}
+$(function(){
+
+})
+</script>
+<!-- <script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.config.js">
+</script>
+<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.all.js">
+</script>
+<script type="text/javascript">
+    var editor = UE.getEditor('container');
+</script> -->
+</body>
+</html>

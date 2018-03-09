@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+	<meta name="keywords" content="{$site_info.keywords}">
+	<meta name="description" content="{$site_info.miaoshu}"> 
+	<title>About Us-{$site_info.sitename}</title>
+	
+	<link href="__PUBLIC__/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="__PUBLIC__/css/aboutus.css" rel='stylesheet' type='text/css' />	
+	<link href="__PUBLIC__/css/head_foot.css" rel='stylesheet' type='text/css' />
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/setHolder.js"></script>
+	<style type="text/css">
+	#p1,#p2{display: none;}
+	</style>
+</head>
+<body>
+<include file="Public/template/header_en.html"/>
+<!-- 头部结束 -->
+<div class="about_top" style="background-image: url(__PUBLIC__/images/sub_about_top.jpg);">		
+</div>
+<div class="position">
+	<div class="container">
+		<div class="content">
+			Current Location：<a title="Home" href="__APP__/Home/English/index">Home</a>&nbsp;-&nbsp;<span id="position">About Us</span>
+		</div>
+	</div>
+</div>
+<div class="container intro">
+	<div class="row">
+		<div class="right_nav">
+			<!-- <div class="h3">
+				<h2>关于科发鑫</h2>
+				<h3>ABOUT US</h3>
+			</div> -->
+			{$about.content}
+<!-- <p id="p">
+<p id="p1">{$about.content}</p>
+<p id="p2">{$about.image}</p>
+</p> -->
+		</div>
+	</div>		
+</div>
+<!-- 底部开始 -->
+<include file="Public/template/footer_en.html"/>
+<script type="text/javascript">
+$("input").placeholder();
+$(function(){
+	var p1 = $('#p1').text();
+	var p2 = $('#p2').text();
+	var arr = p1.split('\n');
+	var len = arr.length;
+	var str='';
+	for(var i=0;i<len;i++){
+		if (i==2) {
+			str += "<p><img src='__ROOT__/"+p2+"' class='pull-left'>"+arr[i]+'</p>';
+		}else{
+			str += '<p>'+arr[i]+'</p>';
+		}
+	}
+	$('#p').html(str);
+})
+</script>
+</body>
+</html>

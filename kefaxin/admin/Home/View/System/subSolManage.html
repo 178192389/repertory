@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/page.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.all.js"></script>
+	<style type="text/css">
+	table.table{width:98%;margin:0 auto;}
+	/*table.table td{text-align: center;}*/
+	table.table th{text-align: center; font-size: 16px;}
+	td.align_left input[type$='text']{width:350px;}
+	td.align_right{font-weight: bold;}
+	div.hide_sheet .table{width:96%;margin:20px auto;}
+	div.hide_sheet{height: 1000px;}
+	</style>
+</head>
+<body>
+<div class="container biaoti">
+	<span>二级解决方案管理</span>
+</div>
+<div class="" style="padding:10px;">
+<h5 class="red">所属方案：{$maintitle}</h5>
+<table class="table table-bordered">
+	<tr>
+		<th>ID</th>
+		<th>方案名称</th>
+		<th>方案副标题</th>
+		<th>图片</th>
+		<th>关键字</th>
+		<th>描述</th>
+		<th>操作</th>
+	</tr>
+	<volist name="page_list" id="tt">
+	<tr>
+		<th>{$tt.id}</th>
+		<td>{$tt.maintitle}</td>
+		<td>{$tt.subtitle}</td>
+		<td><img src="__ROOT__/{$tt.image}" width="120"></td>
+		<td>{$tt.keywords}</td>
+		<td>{$tt.miaoshu}</td>
+		<td>
+<input type="button" value="修改" class="updateSol btn-sm btn btn-primary">
+<!-- 遮罩层开始 -->
+<div class="hide_sheet">
+  <form action="__URL__/updateSubSolution?id={$tt.id}" method="post" onsubmit="return checkForm();" enctype="multipart/form-data">
+	<table class="table table-bordered">
+		<tr>
+	        <td colspan="5">
+	        <span class="close_sheet glyphicon glyphicon-remove pull-right"></span>
+	        </td>
+      	</tr>
+		<tr>
+			<td class="align_right">方案名称：</td>
+			<td class="align_left">
+				<input type="text" value="{$tt.maintitle}" name="maintitle" required="required">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">副标题：</td>
+			<td class="align_left">
+				<input type="text" value="{$tt.subtitle}" name="subtitle" required="required">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">图片：</td>
+			<td class="align_left">
+				<input type="file" name="image">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">关键字：</td>
+			<td class="align_left">
+			<textarea placeholder="关键字之间使用英文逗号分隔开" name="keywords" cols="60" rows="3">{$tt.keywords}</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">描述：</td>
+			<td class="align_left">
+			<textarea placeholder="" name="miaoshu" cols="60" rows="3">{$tt.miaoshu}</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">方案文章：</td>
+			<td class="align_left">
+		<script style="width: 830px;" id="container{$tt.id}" name="passage" type="text/plain">
+		{$tt.passage}
+        </script>
+        <script type="text/javascript">
+			var editor = UE.getEditor('container{$tt.id}');
+		</script>
+			</td>
+		</tr>
+		
+		<tr>
+			<td></td>
+			<td class="align_left">
+				<input type="submit" name="submit" value="确认修改" class="btn btn-primary">
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+<!-- 遮罩层结束 -->
+<input type="button" title="{$tt.id}" value="删除" class="deleteSol btn btn-danger btn-sm">
+		</td>
+	</tr>
+	</volist>
+
+	<tr class="pager">
+		<td colspan="8" class="pager">
+        		{$page_show}
+    </td>
+	</tr>
+</table>
+</div>
+<script type="text/javascript">
+$(function(){
+  $('.updateSol').click(function(){
+    $(this).next('.hide_sheet').show();
+  })
+  $('.hide_sheet').find('.close_sheet').click(function(){
+      $('.hide_sheet').hide();
+  });
+  $('.deleteSol').click(function(){
+  	var tit = $(this).prop('title');
+  	if (confirm('确认删除？')) {
+  		$.ajax({
+	  		type:'get',
+	  		dataType:'text',
+	  		url:'__URL__/deleteSolution/id/'+tit,
+	  		success:function(data){
+	  			if (data==1) {
+	  				alert('删除成功');
+	  				location.reload();
+	  			}else{
+	  				alert(data);
+	  			}
+	  		}
+  		})
+  	}  	
+  });
+})
+</script>
+</body>
+</html>

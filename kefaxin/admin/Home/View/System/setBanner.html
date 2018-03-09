@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Document</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+	<style type="text/css">
+	table th,table td{text-align: center;}
+    table.table{width:80%;margin: 0 auto;}
+    .hide_sheet{padding:150px;}
+	</style>
+</head>
+<body>
+<div class="container biaoti">
+	<span>
+		首页banner设置
+	</span>
+</div>
+
+<div class="container" style="text-align: center;">
+	<table class="table table-bordered">
+    <tr>
+      <th>ID</th>
+      <th>图片</th>
+      <th>操作</th>
+    </tr>
+  <tbody>
+  <volist name="banner" id="vol" empty="暂无记录">
+    <tr>
+      <td>{$vol.id}</td>
+      <td><img src="__ROOT__/Uploads/banner_imgs/{$vol.image}" width="300"></td>
+      <td>
+          <button class="update btn btn-primary">
+          修改
+          </button>
+<!-- 遮罩层开始 -->
+<div class="hide_sheet">
+  <form action="__URL__/bannerSet/id/{$vol.id}" method="post" enctype="multipart/form-data" onsubmit="">
+    <table class="hide_table table table-bordered">
+      <tr>
+        <td colspan="2">
+        <span class="close_sheet glyphicon glyphicon-remove pull-right"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="align_right">图片ID：</td>
+        <td class="align_left"><span>{$vol.id}</span></td>
+      </tr>
+      <tr>
+        <td class="align_right">新图片：</td>
+        <td class="align_left"><input required="required" type="file" name="image"></td>
+      </tr>
+      <tr>
+        <td class="align_center" colspan="2">
+          <input type="submit" name="submit" value="确认修改" class="btn btn-primary">
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+<!-- 遮罩层结束 -->
+      </td>
+    </tr>
+  </volist>
+  </tbody>
+</table>
+</div>
+<script type="text/javascript">
+$(function(){
+    $('.update').click(function(){
+    $(this).next('.hide_sheet').show();
+    })
+    $('.hide_sheet').find('.close_sheet').click(function(){
+      $('.hide_sheet').hide();
+    });
+})
+    // function checkForm(){
+    // 	var len = $("#doc").val().length;
+    // 	if (len>0) {
+    // 		return true;
+    // 	}else{
+    // 		alert('请选择上传图片');
+    // 		return false;
+    // 	}    	
+    // }
+</script>
+</body>
+</html>

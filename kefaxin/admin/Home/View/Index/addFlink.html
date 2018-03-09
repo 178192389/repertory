@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+	<style type="text/css">
+	table.table{width:50%;margin:0 auto;}
+	td.align_left input[name$='addr']{width:200px;}
+	td.align_left input[type$='file']{width:200px;float: left;}
+	</style>
+</head>
+<body>
+<div class="container biaoti">
+	<span>添加友情链接</span>
+</div>
+<div class="container">
+<form action="__URL__/flinkAdd" method="post" onsubmit="return checkForm();" enctype="multipart/form-data">
+	<table class="table table-bordered">
+		<tr>
+			<td width="100" class="align_right">LOGO图片</td>
+			<td width="400" class="align_left">
+				<input type="file" name="logo" id="logo">			
+				<span class="red" id="tip"></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">链接网址：</td>
+			<td class="align_left">
+				<input type="text" name="addr" id="name" value="#">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">网站名称：</td>
+			<td class="align_left">
+				<input type="text" name="website">
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="align_left">
+				<input type="submit" name="submit" value="添加" class="btn btn-primary">
+				<input type="hidden" id="unique" value='0'>
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+<script type="text/javascript">
+function checkForm(){
+	var logo = $('#logo').val();
+	if(logo==''){
+		$('#tip').text('请选择LOGO图片');
+		$('#logo').css('border','1px solid red');
+		return false;
+	}else{
+		return true;
+	}
+}
+$(function(){
+	$('#logo').change(function(){
+		if ($(this).val()!='') {
+			$(this).css('border','none');
+			$('#tip').text('');
+		}else{
+			$(this).css('border','1px solid red');
+		}
+	})
+})
+</script>
+</body>
+</html>

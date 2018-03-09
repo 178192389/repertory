@@ -1,0 +1,35 @@
+div.position{
+	height: 42px;
+	border-bottom:1px solid #ccc;
+	margin-bottom: 10px;
+	padding-left:0%;font-size:16px;
+	/*background: url(../images/top_bg.gif);*/
+}
+div.content{/*border:1px solid red;*/
+	line-height: 42px;padding-left:0px;color:#333;font-size:16px;
+}
+div.content a{
+	color:#333;text-decoration: none;font-size:16px;
+}
+div.content a:hover{
+	color:#05A6B3;
+}
+div.service{
+	height: 200px;
+	background-size:100% 100%;
+	background-image: url(../images/service.jpg);
+	background-position: center center;
+}
+div.right_nav .h3{
+	font-family: '微软雅黑';color:#333;
+}
+li#down_dir{
+	background: #fbfbfb;text-align: center;
+	padding-top: 0px;margin-top: 0;
+	height: 26px;border:1px solid #ccc;
+	list-style-type: none;
+}
+.has_zilei,.no_zilei{
+	
+}
+.left_nav{width:21%;}

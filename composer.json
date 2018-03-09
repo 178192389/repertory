@@ -10,5 +10,13 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "barryvdh/laravel-ide-helper": "^2.3@dev"
+    },
+    "repositories": {
+	  "packagist": {
+		"type": "composer",
+		"url": "https://packagist.phpcomposer.com"
+	 }
+     }
 }

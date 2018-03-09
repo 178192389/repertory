@@ -1,0 +1,113 @@
+.main-sidebar {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	min-height: 100%;
+	width: 150px;
+	display:none;
+	background-color: #f5f5f5;
+	border-right:1px solid #d1d1d1;
+	z-index: 99;
+}
+@media (min-width: 1500px) {	
+	.main-sidebar {
+	display:block;
+	}
+}
+.sidebar{
+	padding-top:70px;
+}
+.sidebar-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
+}
+.sidebar-menu .menu-icon0{
+	background:url(../images/menu-icon0.png) no-repeat 16px center;	
+}
+.sidebar-menu .menu-icon0:hover{	
+	background:url(../images/menu-icon0-hover.png) no-repeat 16px center;
+	background-color:#eb4f4f;
+}
+.sidebar-menu .menu-icon01{
+	background:url(../images/menu-icon01.png) no-repeat 16px center;	
+}
+.sidebar-menu .menu-icon01:hover{	
+	background:url(../images/menu-icon01-hover.png) no-repeat 16px center;
+	background-color:#eb4f4f;
+}
+.sidebar-menu .menu-icon02{
+	background:url(../images/menu-icon02.png) no-repeat 16px center;	
+}
+.sidebar-menu .menu-icon02:hover{	
+	background:url(../images/menu-icon02-hover.png) no-repeat 16px center;
+	background-color:#eb4f4f;
+}
+.sidebar-menu .menu-icon03{
+	background:url(../images/menu-icon03.png) no-repeat 16px center;	
+}
+.sidebar-menu .menu-icon03:hover{	
+	background:url(../images/menu-icon03-hover.png) no-repeat 16px center;
+	background-color:#eb4f4f;
+}
+.sidebar-menu .menu-icon04{
+	background:url(../images/menu-icon04.png) no-repeat 16px center;	
+}
+.sidebar-menu .menu-icon04:hover{	
+	background:url(../images/menu-icon04-hover.png) no-repeat 16px center;
+	background-color:#eb4f4f;
+}
+.sidebar-menu .menu-icon05{
+	background:url(../images/menu-icon05.png) no-repeat 16px center;	
+}
+.sidebar-menu .menu-icon05:hover{	
+	background:url(../images/menu-icon05-hover.png) no-repeat 16px center;
+	background-color:#eb4f4f;
+}
+.sidebar-menu > li {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.sidebar-menu > li > a {
+	padding-left:50px;
+	height:46px;
+	line-height:46px;
+	display: block;
+	font-size:15px;
+	color: #333;
+	border-bottom:1px solid #d5d5d5;
+}
+
+.sidebar-menu > li > .treeview-menu {
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:50px;
+	background:#fff;
+	border-bottom:1px solid #d5d5d5;
+}
+.sidebar-menu li.active > .treeview-menu {
+	display: block;
+}
+.sidebar-menu a {
+	color: #b8c7ce;
+	text-decoration: none;
+}
+.sidebar-menu .treeview-menu {
+	display: none;
+	padding: 0;
+	margin: 0;
+}
+.sidebar-menu .treeview-menu > li > a {
+	height:32px;
+	line-height:32px;
+	display: block;
+	padding-left:25px;
+	font-size: 14px;
+	color: #666;
+	background:url(../images/platform-menu-icon.png) no-repeat left center;
+}
+.sidebar-menu .treeview-menu > li > a:hover {
+	color: #e44242;
+}

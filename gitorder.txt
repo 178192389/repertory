@@ -1,0 +1,80 @@
+Git基本常用命令如下：
+
+　　mkdir：         XX (创建一个空目录 XX指目录名)
+
+　　pwd：          显示当前目录的路径。
+
+　　git init          把当前的目录变成可以管理的git仓库，生成隐藏.git文件。
+
+　　git add XX       把xx文件添加到暂存区去。  touch
+
+　　git commit –m “XX”  提交文件 –m 后面的是注释。
+
+　　git status        查看仓库状态
+
+　　git diff  XX      查看XX文件修改了那些内容
+
+　　git log          查看历史记录     git log --pretty=oneline
+	-p 按补丁格式显示每个更新之间的差异。
+	--stat 显示每次更新的文件修改统计信息。
+	--shortstat 只显示 --stat 中最后的行数修改添加移除统计。
+	--name-only 仅在提交信息后显示已修改的文件清单。
+	--name-status 显示新增、修改、删除的文件清单。
+	--abbrev-commit 仅显示 SHA-1 的前几个字符，而非所有的 40 个字符。
+	--relative-date 使用较短的相对时间显示（比如，“2 weeks ago”）。
+	--graph 显示 ASCII 图形表示的分支合并历史。
+	--pretty 使用其他格式显示历史提交信息。可用的选项包括 oneline，short，full，fuller 和 format（后跟指定格式）。
+
+　　git reset  --hard HEAD^ 或者 git reset  --hard HEAD~ 回退到上一个版本
+
+　　(如果想回退到100个版本，使用git reset –hard HEAD~100 )
+
+　　cat XX         查看XX文件内容
+
+　　git reflog       查看历史记录的版本号id
+
+　　git checkout -- XX  把XX文件在工作区的修改全部撤销。 也可恢复
+
+　　git rm XX          删除XX文件
+
+　　git remote add origin https://github.com/tugenhua0707/testgit 关联一个远程库
+
+　　git push –u(第一次要用-u 以后不需要) origin master 把当前master分支推送到远程库
+
+　　git clone https://github.com/tugenhua0707/testgit  从远程库中克隆
+
+　　git checkout –b dev  创建dev分支 并切换到dev分支上
+
+　　git branch  查看当前所有的分支
+
+　　git checkout master 切换回master分支
+
+　　git merge dev    在当前的分支上合并dev分支
+
+　　git branch –d dev 删除dev分支
+
+　　git branch name  创建分支
+    git pull 抓取最新 
+    git beanch --set -upstream 分支 origin/分支   合并
+
+　　git stash 把当前的工作隐藏起来 等以后恢复现场后继续工作
+
+　　git stash list 查看所有被隐藏的文件列表
+
+　　git stash apply 恢复被隐藏的文件，但是内容不删除
+
+　　git stash drop 删除文件
+
+　　git stash pop 恢复文件的同时 也删除文件
+
+　　git remote 查看远程库的信息
+
+　　git remote –v 查看远程库的详细信息
+
+　　git push origin master  Git会把master分支推送到远程库对应的远程分支上
+
+
+    vim .gitignore 添加git忽略文件  git add 想提交
+    ssh-keygen -t rsa -C "username" (注：username为你git上的用户名)
+
+通常合并分支时，git一般使用”Fast forward”模式。删除分支后，会丢掉分支信息 git merge --no-ff  -m “注释” 分支名

@@ -1,0 +1,39 @@
+17-12-01 22:00:48 | D:\phpStudy\WWW\g1\web\app\app.php(113) : ini_set(): Cannot find save handler 'redis' (err:2)
+17-12-01 22:00:48 | D:\phpStudy\WWW\g1\web\app\app.php(118) : session_start(): open(tcp://127.0.0.1:6379?auth=\sess_tnkvcq2agoj2mt5n4gcpujr5b7, O_RDWR) failed: Invalid argument (22) (err:2)
+17-12-01 22:00:48 | Extension(redis) not loaded!
+17-12-01 22:03:09 | D:\phpStudy\WWW\g1\web\app\app.php(113) : ini_set(): Cannot find save handler 'redis' (err:2)
+17-12-01 22:03:09 | D:\phpStudy\WWW\g1\web\app\app.php(118) : session_start(): open(tcp://127.0.0.1:?auth=\sess_tnkvcq2agoj2mt5n4gcpujr5b7, O_RDWR) failed: Invalid argument (22) (err:2)
+17-12-01 22:03:09 | Extension(redis) not loaded!
+17-12-01 22:03:09 | D:\phpStudy\WWW\g1\web\app\app.php(113) : ini_set(): Cannot find save handler 'redis' (err:2)
+17-12-01 22:03:09 | D:\phpStudy\WWW\g1\web\app\app.php(118) : session_start(): open(tcp://127.0.0.1:?auth=\sess_tnkvcq2agoj2mt5n4gcpujr5b7, O_RDWR) failed: Invalid argument (22) (err:2)
+17-12-01 22:03:09 | Extension(redis) not loaded!
+17-12-01 22:03:10 | D:\phpStudy\WWW\g1\web\app\app.php(113) : ini_set(): Cannot find save handler 'redis' (err:2)
+17-12-01 22:03:10 | D:\phpStudy\WWW\g1\web\app\app.php(118) : session_start(): open(tcp://127.0.0.1:?auth=\sess_tnkvcq2agoj2mt5n4gcpujr5b7, O_RDWR) failed: Invalid argument (22) (err:2)
+17-12-01 22:03:10 | Extension(redis) not loaded!
+17-12-01 22:03:10 | D:\phpStudy\WWW\g1\web\app\app.php(113) : ini_set(): Cannot find save handler 'redis' (err:2)
+17-12-01 22:03:10 | D:\phpStudy\WWW\g1\web\app\app.php(118) : session_start(): open(tcp://127.0.0.1:?auth=\sess_tnkvcq2agoj2mt5n4gcpujr5b7, O_RDWR) failed: Invalid argument (22) (err:2)
+17-12-01 22:03:10 | Extension(redis) not loaded!
+17-12-01 22:03:10 | D:\phpStudy\WWW\g1\web\app\app.php(113) : ini_set(): Cannot find save handler 'redis' (err:2)
+17-12-01 22:03:10 | D:\phpStudy\WWW\g1\web\app\app.php(118) : session_start(): open(tcp://127.0.0.1:?auth=\sess_tnkvcq2agoj2mt5n4gcpujr5b7, O_RDWR) failed: Invalid argument (22) (err:2)
+17-12-01 22:03:10 | Extension(redis) not loaded!
+17-12-01 22:03:11 | D:\phpStudy\WWW\g1\web\app\app.php(113) : ini_set(): Cannot find save handler 'redis' (err:2)
+17-12-01 22:03:11 | D:\phpStudy\WWW\g1\web\app\app.php(118) : session_start(): open(tcp://127.0.0.1:?auth=\sess_tnkvcq2agoj2mt5n4gcpujr5b7, O_RDWR) failed: Invalid argument (22) (err:2)
+17-12-01 22:03:11 | Extension(redis) not loaded!
+17-12-01 22:03:11 | D:\phpStudy\WWW\g1\web\app\app.php(113) : ini_set(): Cannot find save handler 'redis' (err:2)
+17-12-01 22:03:11 | D:\phpStudy\WWW\g1\web\app\app.php(118) : session_start(): open(tcp://127.0.0.1:?auth=\sess_tnkvcq2agoj2mt5n4gcpujr5b7, O_RDWR) failed: Invalid argument (22) (err:2)
+17-12-01 22:03:11 | Extension(redis) not loaded!
+17-12-01 22:03:19 | D:\phpStudy\WWW\g1\web\app\app.php(113) : ini_set(): Cannot find save handler 'redis' (err:2)
+17-12-01 22:03:19 | D:\phpStudy\WWW\g1\web\app\app.php(118) : session_start(): open(tcp://127.0.0.1:?auth=\sess_tnkvcq2agoj2mt5n4gcpujr5b7, O_RDWR) failed: Invalid argument (22) (err:2)
+17-12-01 22:03:19 | Extension(redis) not loaded!
+17-12-01 22:03:19 | D:\phpStudy\WWW\g1\web\app\app.php(113) : ini_set(): Cannot find save handler 'redis' (err:2)
+17-12-01 22:03:19 | D:\phpStudy\WWW\g1\web\app\app.php(118) : session_start(): open(tcp://127.0.0.1:?auth=\sess_tnkvcq2agoj2mt5n4gcpujr5b7, O_RDWR) failed: Invalid argument (22) (err:2)
+17-12-01 22:03:19 | Extension(redis) not loaded!
+17-12-01 22:03:20 | D:\phpStudy\WWW\g1\web\app\app.php(113) : ini_set(): Cannot find save handler 'redis' (err:2)
+17-12-01 22:03:20 | D:\phpStudy\WWW\g1\web\app\app.php(118) : session_start(): open(tcp://127.0.0.1:?auth=\sess_tnkvcq2agoj2mt5n4gcpujr5b7, O_RDWR) failed: Invalid argument (22) (err:2)
+17-12-01 22:03:20 | Extension(redis) not loaded!
+17-12-01 22:03:21 | D:\phpStudy\WWW\g1\web\app\app.php(113) : ini_set(): Cannot find save handler 'redis' (err:2)
+17-12-01 22:03:21 | D:\phpStudy\WWW\g1\web\app\app.php(118) : session_start(): open(tcp://127.0.0.1:?auth=\sess_tnkvcq2agoj2mt5n4gcpujr5b7, O_RDWR) failed: Invalid argument (22) (err:2)
+17-12-01 22:03:21 | Extension(redis) not loaded!
+17-12-01 22:03:21 | D:\phpStudy\WWW\g1\web\app\app.php(113) : ini_set(): Cannot find save handler 'redis' (err:2)
+17-12-01 22:03:21 | D:\phpStudy\WWW\g1\web\app\app.php(118) : session_start(): open(tcp://127.0.0.1:?auth=\sess_tnkvcq2agoj2mt5n4gcpujr5b7, O_RDWR) failed: Invalid argument (22) (err:2)
+17-12-01 22:03:21 | Extension(redis) not loaded!

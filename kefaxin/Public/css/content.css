@@ -1,0 +1,59 @@
+div.position{
+	height: 42px;
+	border-bottom:1px solid #ccc;
+	margin-bottom: 10px;
+	padding-left:0%;font-size:16px;
+	/*background: url(../images/top_bg.gif);*/
+}
+div.content{/*border:1px solid red;*/
+	line-height: 42px;padding-left:0px;color:#333;font-size:16px;
+}
+div.content a{
+	color:#333;text-decoration: none;font-size:16px;
+}
+div.content a:hover{
+	color:#05A6B3;
+}
+div.tech{
+	height: 200px;
+	background-image: url(../images/tech.jpg);
+	background-position: center top;
+}
+div.zixun .contact{
+	list-style-image: url(../images/decorate.png);
+	padding:0px 20px;border:1px solid #ddd;
+	border-radius:5px;
+}
+div.zixun .contact li{
+	margin:10px;border-bottom:1px dashed #05A6B3;
+}
+li#down_dir{
+	background: #ddd;text-align: center;
+	padding-top: 0px;margin-top: 0;
+	height: 26px;border:1px solid #ccc;
+}
+div.zixun .contact li{
+	margin:10px;border-bottom:1px dashed #05A6B3;
+	padding-bottom:3px;
+}
+div.zixun .right_nav .title{
+	text-align: center;padding-bottom: 20px;
+	border-bottom:1px solid #ddd;
+}
+div.zixun .right_nav .title h3{
+	font-size:22px;height: 24px;padding-top:3px;
+}
+div.zixun .right_nav .soltitle{
+	text-align: center;
+	border-bottom:1px solid #ddd;
+}
+div.zixun .right_nav .soltitle h3{
+	font-size:22px;height: 24px;padding-top:3px;
+}
+div.right_nav .paragraph{
+	margin-top: 20px;
+}
+div.right_nav .paragraph p{
+	font-size:16px;color:#555;text-indent:2em;
+	line-height: 25px;
+}

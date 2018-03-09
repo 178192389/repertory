@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页-{$site_info.sitename}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0" /> -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="{$site_info.keywords}">
+<meta name="description" content="{$site_info.miaoshu}">
+<link href="__PUBLIC__/csswap/index.css" rel='stylesheet' type='text/css' />
+<link href="__PUBLIC__/csswap/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="__PUBLIC__/csswap/head_foot.css" rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/slider.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/setHolder.js"></script>
+
+<script type="text/javascript" src="__PUBLIC__/js/zepto_min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/TouchSlide.1.1.js"></script>
+<style type="text/css">
+input{font-size:14px;}
+</style>
+</head>
+<body>
+{$site_info.Keywords}
+<include file="Public/template/header_wap.html"/>
+<!-- 导航结束 -->
+<span id="position" style="display: none;">网站首页</span>
+
+
+<div class="banner hidden-xs" id="banner">
+	<div class="container">
+		<volist name="title" id="tt">
+		<div class="slide" style="display: none;">
+			<h1 class="hwhite">{$tt.maintitle}</h1>
+			<h1 class="hblue">{$tt.subtitle}</h1>
+			<p class="sp1">
+			{$tt.content}
+			</p>
+			<p class="sp2 pull-left">
+				<a class="ak" href="__URL__/solution?id={$tt.id}">了解更多</a>
+			</p>
+		</div>
+		</volist>		
+	</div>
+	<ol class="point">
+		<li><img class="cc" src="__PUBLIC__/images/circle1.png"></li>
+		<li><img class="cc" src="__PUBLIC__/images/circle2.png"></li>
+		<li><img class="cc" src="__PUBLIC__/images/circle2.png"></li>
+		<li><img class="cc" src="__PUBLIC__/images/circle2.png"></li>
+		<li><img class="cc" src="__PUBLIC__/images/circle2.png"></li>
+	</ol>
+</div>
+
+<div id="focus" class="focus visible-xs">
+      <div class="hd">
+        <ul>
+        </ul>
+      </div>
+      <div class="bd">
+        <ul>
+		<for start="0" end="count($ban)">
+		<li>
+		<p class="wenzi">
+		{$title[$i]['maintitle']}
+		<br><br>
+		<span class="green">{$title[$i]['subtitle']}</span>		
+		</p>
+<img name="ad_img" class="img-responsive" src="__ROOT__/Uploads/banner_imgs/{$ban[$i]['image']}" height="100%">
+		</li>
+		</for>
+	</ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+	TouchSlide({ 
+		slideCell:"#focus",
+		titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+		mainCell:".bd ul",
+		delayTime:600,
+		interTime:4000,
+		effect:"leftLoop", 
+		autoPlay:true,//自动播放
+		autoPage:true, //自动分页
+		switchLoad:"_src" //切换加载，真实图片路径为"_src" 
+	});
+	</script>
+
+
+
+<div class="follow">
+	<volist name="title" id="tt">
+	<a href="__URL__/solution?id={$tt.id}">
+	<div class="ban">
+		<h2>{$tt.maintitle}</h2>
+		<p class="hidden-xs">{$tt.content}
+		</p>
+	</div>
+	</a>
+	</volist>
+</div>
+
+<div class="fuxing">
+</div>
+
+<div class="container inform">
+	<div class="row">
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+			<h3>技术资讯</h3>
+			<volist name="news_list" id="vol">
+			<p class="black"><a href="__URL__/content/id/{$vol.id}">{$vol.title}</a></p>
+			<p class="gray">
+			{:msubstr(strip_tags($vol['content']),0,80)}
+			</p>
+			</volist>
+		</div>
+		<div class="hidden-xs col-sm-4 col-md-4 col-lg-4">
+			<h3>最新动态</h3>
+			<volist name="zixun_list" id="vol">
+			<p class="black"><a href="__URL__/content/id/{$vol.id}">{$vol.title}</a></p>
+			<p class="gray">
+			{:msubstr(strip_tags($vol['content']),0,40)}
+			</p>
+			</volist>
+		</div>
+	</div>
+</div>
+<!-- visible-xs -->
+<div class="container visible-xs">
+	<!-- <div class="row"> -->
+		<div class="move">
+			<h3>最新动态</h3>
+			<volist name="zixun_list" id="vol">
+			<p class="black"><a href="__URL__/content/id/{$vol.id}">{$vol.title}</a></p>
+			<p class="gray">
+			<!-- {:mb_substr(strip_tags($vol['content']),0,20)}...... -->
+			{:msubstr(strip_tags($vol['content']),0,20)}
+			</p>
+			</volist>
+		</div>
+</div>
+<div class="partners">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>合作伙伴</h1>
+				<h1>OUR PARTERS</h1>
+			</div>
+		</div>
+		<div class="row hidden-xs">
+			<volist name="flink" id="vol">
+				<div class="col-sm-2 col-md-2 col-lg-2">
+					<img src="__ROOT__/{$vol.logo}" title="{$vol.website}">
+				</div>
+			</volist>
+		</div>
+		<div class="row visible-xs">
+			<foreach name="flink" item="vol">
+			<if condition="$key lt 3">
+			<div class="col-xs-4">
+				<img src="__ROOT__/{$vol.logo}" title="{$vol.website}">
+			</div>
+			</if>
+			</foreach>
+		</div>
+		<div class="row visible-xs flink">
+			<foreach name="flink" item="vol">
+			<if condition="$key egt 3">
+			<div class="col-xs-4">
+				<img src="__ROOT__/{$vol.logo}" title="{$vol.website}">
+			</div>
+			</if>
+			</foreach>
+		</div>
+	</div>
+</div>
+
+<!-- 底部开始 -->
+<include file="Public/template/footer_wap.html"/>
+<script type="text/javascript">
+    $("input").placeholder();
+$(function(){
+	var str = {$banner};
+	var arr = eval(str);//
+	//alert(arr[1]['image']);
+	var img_str = "url(__ROOT__/Uploads/banner_imgs/"+arr[0]['image']+"),url(__ROOT__/Uploads/banner_imgs/"+arr[1]['image']+"),url(__ROOT__/Uploads/banner_imgs/"+arr[2]['image']+"),url(__ROOT__/Uploads/banner_imgs/"+arr[3]['image']+"),url(__ROOT__/Uploads/banner_imgs/"+arr[4]['image']+")";
+  $(".banner").css('backgroundImage',img_str);
+})
+</script>
+</body>
+</html>

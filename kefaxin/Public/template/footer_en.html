@@ -1,0 +1,185 @@
+<!-- <script src="__PUBLIC__/js/sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/sweetalert.css"> -->
+<div class="foot"  style="background-image: url(__PUBLIC__/images/sub_footer_bgd.jpg);">
+</div>
+<div class="footer">
+		<div class="container">
+		<!-- visible-xs小屏幕不可见__开始 -->
+			<div class="row">
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 info1">
+				<figure>
+                    <h4>Information</h4>
+                    <ul>
+	                    <li><a title="Products" href="__APP__/Home/English/service">Products</a></li>
+	                    <li><a title="Application Solution" href="__APP__/Home/English/solution">Application Solution</a></li>
+	                    <li><a title="News" href="__APP__/Home/English/technology">News</a></li>
+	                    <li><a title="Contact Us" href="__APP__/Home/English/contactus">Contact Us</a></li>
+                    </ul>
+                </figure>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 info2">
+					<figure>
+                    <h4>Product Line</h4>
+                    <ul>
+	                    <volist name="btm_list" id="vol">
+	                    	<li>
+	                    	<a title="{$vol.name}" href="__APP__/Home/English/service?id={$vol.id}">
+	                    			<!-- {$vol.name} -->
+	                    			{:msubstr($vol['name'],0,10)}
+	                    		</a>
+	                    	</li>
+	                    </volist>
+                    </ul>
+                </figure>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 info3">
+					<figure>
+                <h4>Solutions</h4>
+                <ul>
+                    <volist name="solution_list" id="vol">
+	                    	<li>
+	                    		<a title="{$vol.maintitle}" href="__APP__/Home/English/solution/id/{$vol.id}">
+	                    			{:msubstr($vol['maintitle'],0,10)}
+	                    		</a>
+	                    	</li>
+	                </volist>
+                </ul>
+            </figure>    
+				</div>	
+				<div class="col-xs-3 col-md-3 col-sm-3 col-lg-3 info4">
+			<figure>
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a title="">
+                    Tel：{$site_info.zongji}</a></li>
+                    <li><a title="">
+                    VIP-Tel：{$site_info.phone}</a></li>
+                    <li><a title="">
+                    Mail:{$site_info.email}</a></li>
+                    <li><a title="">
+		            QQ：{$site_info.qq}</a></li>
+                    <li><a title="" class="show_code" class="show_code">
+                    WeChat&nbsp;：kefaxin </a></li>
+                    <li class="btm_wx" style="display:none;">
+                    	<img src="__PUBLIC__/images/contact_weixin.gif">
+                    </li>
+                </ul>
+            </figure>    
+				</div>
+				<div class="col-xs-3 col-md-3 col-sm-3 col-lg-3 info5">
+			<figure>
+                <h4>Leave word</h4>
+                <!-- <form action="__URL__/addLiuYan" method="post" onsubmit="return checkForm();"> -->
+                <ul id="liuyan">
+                    <li><input id="name" name="name" type="text" placeholder="name" required></li>
+                    <li><input id="phone" name="phone" type="tel" placeholder="phone number" required></li>
+                    <li><textarea id="content" placeholder="your words" name="content" required></textarea></li>
+                    <li><input type="button" class="btn btn-primary" value="submit" id="submit"></li>
+                </ul>
+                <!-- </form> -->
+            </figure>    
+				</div>	
+			<div class="clearfix"></div>
+			</div>
+		</div>
+</div> 
+<script type="text/javascript">
+// $('.show_code').mouseover(function(){
+// 	$('.btm_wx').slideDown();
+// })
+// $('.show_code').mouseout(function(){
+// 	$('.btm_wx').fadeOut(100);
+// 	$('.btm_wx').stop(false,true);
+// })
+// function checkForm(){
+// 	var name = $('#name').val();
+// 	var phone = $('#phone').val();
+// 	var content = $('#content').val();
+// 	var reg_tel = /^1[34578]\d{9}$/;
+// 	var con_len = content.trim();
+// 	var name_len = name.trim();
+// 	if (name_len.length == 0) {
+// 		alert('name cannot be empty');
+// 		$('#name').focus();
+// 		return false;
+// 	}
+// 	if (!reg_tel.test(phone)) {
+// 		alert('phone number format is incorrect');
+// 		$('#phone').focus();
+// 		return false;
+// 	}
+// 	if (con_len.length <= 0) {
+// 		alert('leave words cannot be empty');
+// 		$('#content').focus();
+// 		return false;
+// 	}
+// 	return true;
+// }
+$(function(){
+	$('#submit').click(function(){
+		var name = $('#name').val();
+		var phone = $('#phone').val();
+		var content = $('#content').val();
+		var reg_tel = /^1[34578]\d{9}$/;
+		var con_len = content.trim();
+		var name_len = name.trim();
+		if (name_len.length == 0) {
+			alert('name cannot be empty');
+			$('#name').focus();
+			return false;
+		}
+		if (!reg_tel.test(phone)) {
+			alert('phone number format is incorrect');
+			$('#phone').focus();
+			return false;
+		}
+		if (con_len.length <= 0) {
+			alert('leave words cannot be empty');
+			$('#content').focus();
+			return false;
+		}
+		var info = [phone,name,content];
+		var json = JSON.stringify(info);
+		// alert(info);
+		// return false;
+		$.ajax({
+			type:'get',
+			dataType:'text',
+			url:'__APP__/Home/English/addLiuYan?json='+json,
+			success:function(data){
+				if (data==1) {
+					alert('Thanks for your words');
+					// swal('Success','Thanks for your words','success');//
+				}else{
+					alert('Unknown error,Please contact us');
+					// swal('Unknown error','Please contact us','error');//
+				}
+			}
+		})
+	})
+})
+// function checkFormTwo(){
+// 	var name = $('#nametwo').val();
+// 	var phone = $('#phonetwo').val();
+// 	var content = $('#contenttwo').val();
+// 	var reg_tel = /^1[34578]\d{9}$/;
+// 	var con_len = content.trim();
+// 	var name_len = name.trim();
+// 	if (name_len.length == 0) {
+// 		alert('称呼不能为空');
+// 		$('#nametwo').focus();
+// 		return false;
+// 	}
+// 	if (!reg_tel.test(phone)) {
+// 		alert('手机号格式不正确');
+// 		$('#phonetwo').focus();
+// 		return false;
+// 	}
+// 	if (con_len.length <= 0) {
+// 		alert('留言内容不能为空');
+// 		$('#contenttwo').focus();
+// 		return false;
+// 	}
+// 	return true;
+// }
+</script>

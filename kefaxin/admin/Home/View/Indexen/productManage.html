@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/page.css">
+  <script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+  <!-- <script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.config.js"></script>
+    编辑器源码文件
+<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.all.js"></script> -->
+  <style type="text/css">
+    table th,table td{text-align: center;}
+    .table{width:700px;margin:0 auto;}
+    </style>
+</head>
+<body>
+<div class="container biaoti">
+  <span>产品管理列表</span>
+</div>
+<div class="container">
+<table class="table table-bordered">
+    <tr>
+      <th>系列ID</th>
+      <th>系列名称</th>  
+      <th>产品数量</th>
+    </tr>
+  <tbody>
+  <volist name="page_list" id="vol">
+    <!--  -->
+    <tr>
+      <td>{$vol.id}</td>
+      <td>{$vol.name}</td>
+      <td>
+      共<span class="red">{$vol.total}</span>个&nbsp;/&nbsp;
+      <if condition="$vol['total'] gt 0">
+      <a href="__URL__/productUpdate?id={$vol.id}">管理</a>
+      <else/>管理
+      </if>
+      </td>
+    </tr>
+    <!-- </if> -->
+  </volist>
+  
+  <tr>
+    <td colspan="4" class="pager align_center">
+        {$page_show}
+      </td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<script type="text/javascript">
+$(function(){
+  $('.mycenter').css('textAlign','center');
+  $('.myright').css('textAlign','right');
+  $('.update').click(function(){
+    $(this).next('.hide_sheet').show();
+  })
+  $('.hide_sheet').find('.close_sheet').click(function(){
+      $('.hide_sheet').hide();
+    });
+
+  $('.delseries').click(function(){
+    if (confirm('确认删除?')) {
+      var id = $(this).next('.seriesID').val();
+      $.ajax({
+        type:'get',
+        dataType:'text',
+        url:'__URL__/delSeries/id/'+id,
+        success:function(data){
+          //alert(data)
+          if (data==1) {
+            location.reload();
+          }else{
+            alert('参数错误');
+          }
+        }
+      })
+    }
+  })  
+})
+</script>
+
+</body>
+</html>

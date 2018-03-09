@@ -1,0 +1,269 @@
+/* 
+body{
+  margin: 0;
+  padding: 0;
+}
+ .sidebar {
+    
+            margin-top: 51px;
+    z-index: 1000;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #F5F5F5;
+ border-right: 12px solid #eee;
+ 
+ }
+
+ .col-md-2,.col-sm-3{
+  position: relative;
+    min-height: 1px;
+    padding-right: 0px;
+    padding-left: 15px; 
+
+}
+
+
+ .sidebar  .nav > li > a {
+  line-height: 20px;
+  padding: 15px 15px;
+  color: #999;
+   font-weight:bold;
+   background:none;
+   text-decoration: none;
+   border-top:0px;
+   font-weight:bold;
+   border-bottom: dashed 1px #ffe;
+   border-bottom: 1px dashed rgba(107, 108, 109, 0.19);
+ }
+
+.sidebar  .nav-offset > li > a{
+   padding: 15px 30px !important;
+}
+ .sidebar .active  a:hover, .sidebar .nav-offset a:hover{
+  background: #fff;
+  color: #555;
+  border-bottom:0px;
+ }
+
+ .sidebar > .active  {
+  color: #fff;
+  background-color: #428bca;
+ }
+ 
+ 
+ .breadcrumb{
+  border-radius: 0;
+  width: 100%;
+ }
+ 
+ a:hover{
+  text-decoration: none;
+ }
+
+.none{
+  display:none;
+}
+
+
+.height em{
+    position: relative;
+    top:290px;
+}
+<div class="height" style="width:13px; background:#f5f5fe; float:right; "><em class="glyphicon glyphicon-chevron-right"></em></div>
+
+
+
+@media(max-width: 900px){
+      aside{
+        display:none;
+      }
+    .col-sm-9 .col-md-10{
+      padding-top:60px;
+      width: 100%;
+    }
+
+  } 
+  
+ */
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================================
+    Authour URI: www.binarycart.com
+    License: Commons Attribution 3.0
+
+    http://creativecommons.org/licenses/by/3.0/
+
+    100% To use For Personal And Commercial Use.
+    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
+   
+    ========================================================  */
+/*==============================================
+    GENERAL  STYLES    
+    =============================================*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height:30px;
+}
+
+ #wrapper {
+    width: 100%;
+    margin-top:50px;
+}
+
+#page-wrapper {
+    padding: 15px 15px;
+    min-height: 600px;
+    background:#F3F3F3;
+   
+}
+#page-inner {
+    width:100%;
+    margin:10px 20px 10px 0px;
+    background-color:#fff!important;
+    padding:10px;
+    min-height:1050px;
+}
+.pad-top {
+    padding-top:15px;
+}
+/*==============================================
+    MENU STYLES    
+    =============================================*/
+
+.sidebar-collapse > .nav {
+    padding:0;
+    padding-top:50px;
+}
+
+.sidebar-collapse  .nav  li  a {
+  padding:15px 15px;
+    color: #214761;
+  font-weight: 900;
+  font-size: 16px;
+}
+ .sidebar-collapse .nav-offset  li a{
+   padding: 15px 35px !important;
+}
+
+.active-li{
+    background-color: #F3F3F3!important;
+}
+ 
+
+.sidebar-collapse  .nav  li a{
+  border-bottom:1px solid #e1e1e1;
+}
+.sidebar-collapse .nav > li > a:hover,
+.sidebar-collapse .nav > li > a:focus {
+  
+  background:#F3F3F3;
+  outline:0;
+}
+
+.navbar-side {
+  border:none;
+  background-color: #fff;
+  
+}
+.navbar-inverse {
+
+background-color: #214761;
+border-color: #F0F0F0;
+min-height: 80px;
+} 
+
+
+.nav > li > a > i {
+    margin-right:10px;
+}
+.logout-spn {
+    float:right;
+    color:#fff;
+    font-size:25px;
+    font-weight:800;
+    margin:20px;
+    margin: 10px 25px 10px 50px;
+}
+    .logout-spn a {
+        text-decoration:none;
+    }
+.active-link {
+    background-color:#f3f3f3;
+}
+    
+/*==============================================
+    DASHBOARD STYLES    
+    =============================================*/
+.div-square {
+    padding:5px;
+    border:3px double #e1e1e1;
+    -webkit-border-radius:8px;
+   -moz-border-radius:8px;
+    border-radius:8px;
+    margin:5px;
+
+}
+
+.div-square> a,.div-square> a:hover {
+    color:#808080;
+     text-decoration:none;
+}
+/*==============================================
+    FOOTER STYLES     
+    =============================================*/
+.footer {
+    background-color:#214761;
+    width:100%;
+    color:#fff;
+    padding:20px 50px 20px 50px;
+     padding-left:20px;
+}
+
+
+    .footer > a, .footer>a:hover {
+       
+        color:#fff;
+    }
+
+/*==============================================
+    MEDIA QUERIES     
+    =============================================*/
+ 
+ @media(min-width:768px) {
+     #page-wrapper{
+               margin: 0 0 0 260px;
+        padding: 15px 30px;
+        min-height: 1050px;
+    
+    }
+  
+  
+    .navbar-side {
+        z-index: 1;
+        position: absolute;
+        width: 260px;
+       
+    }
+
+ 
+}
+
+
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(http://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}

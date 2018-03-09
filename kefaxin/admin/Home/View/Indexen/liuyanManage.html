@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/page.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+  <style type="text/css">
+    table th,table td{text-align: center;}
+  </style>
+</head>
+<body>
+<div class="container biaoti">
+  <span>留言管理列表</span>
+</div>
+<div class="container">
+<table class="table table-bordered">
+    <tr>
+      <td colspan="4">
+        <form action="__URL__/liuyanManage" method="post">
+          <input type="text" name="content">
+          <select name="column">
+          	<option value="">请选择条件</option>
+          	<option value="name">按称呼</option>
+          	<option value="phone">按手机</option>
+          	<option value="content">按内容</option>
+          </select>
+          <input type="submit" name="submit" value="查询">
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <th>称呼</th>
+      <th>手机</th>
+      <th>留言内容</th>
+      <th>留言时间</th>
+      <th>操作</th>
+    </tr>
+  <tbody>
+  <volist name="page_list" id="vol" empty="暂无记录">
+    <tr>
+      <td>{$vol.name}</td>
+      <td>{$vol.phone}</td>
+      <td>{$vol.content}</td>
+      <td>{$vol.time}</td>
+      <td>
+	      <button class="delliuyan btn btn-primary">
+	      删除
+	      </button>
+	      <input type="hidden" class="liuyanID" value="{$vol.id}">
+      </td>
+    </tr>
+  </volist>
+  <tr>
+    <td colspan="5">
+    <div class="pager align_center">
+        {$page_show}
+    </div>
+      </td>
+  </tr>
+  </tbody>
+</table>
+</div>	
+<script type="text/javascript">
+$(function(){
+	$('.delliuyan').click(function(){
+		if (confirm('确认删除?')) {
+			var id = $(this).next('.liuyanID').val();
+			$.ajax({
+				type:'get',
+				dataType:'text',
+				url:'__URL__/delLiuyan/id/'+id,
+				success:function(data){
+					if (data==1) {
+						location.reload();
+					}else{
+						alert('参数错误');
+					}
+				}
+			})
+		}
+	})
+	
+})
+</script>
+</body>
+</html>

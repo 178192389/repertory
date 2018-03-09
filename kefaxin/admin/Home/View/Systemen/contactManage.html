@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+	<style type="text/css">
+	table.table{width:80%;margin:0 auto;}
+	td.align_left input[type$='text']{width:350px;}
+	td.align_right{font-weight: bold;}
+	</style>
+</head>
+<body>
+<div class="container biaoti">
+	<span>联系信息设置</span>
+</div>
+<div class="container">
+<form action="__URL__/updateContact?id={$res.id}" method="post">
+	<table class="table table-bordered">
+		<tr>
+			<td class="align_right">公司名称:</td>
+			<td class="align_left">
+				<input type="text" name="company" value="{$res.company}">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">网站名称:</td>
+			<td class="align_left">
+				<input type="text" name="sitename" value="{$res.sitename}">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">联系人：</td>
+			<td class="align_left">
+				<input type="text" name="person" value="{$res.person}">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">手机：</td>
+			<td class="align_left">
+				<input type="text" name="phone" value="{$res.phone}">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">总机：</td>
+			<td class="align_left">
+				<input type="text" name="zongji" value="{$res.zongji}">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">座机1：</td>
+			<td class="align_left">
+				<input type="text" name="zuoji1" value="{$res.zuoji1}">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">座机2：</td>
+			<td class="align_left">
+				<input type="text" name="zuoji2" value="{$res.zuoji2}">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">QQ号码：</td>
+			<td class="align_left">
+				<input type="text" name="qq" value="{$res.qq}">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">网站网址：</td>
+			<td class="align_left">
+				<input type="text" name="url" value="{$res.url}">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">邮箱：</td>
+			<td class="align_left">
+				<input type="text" name="email" value="{$res.email}">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">公司地址：</td>
+			<td class="align_left">
+				<input type="text" name="address" value="{$res.address}">
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">网站关键字：</td>
+			<td class="align_left">
+				<textarea placeholder="网站关键字,关键字之间用英文逗号分隔" name="keywords" cols="60" rows="4">{$res.keywords}</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td class="align_right">网站描述：</td>
+			<td class="align_left">
+				<textarea placeholder="网站描述" name="miaoshu" cols="60" rows="8">{$res.miaoshu}</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td class="align_left">
+				<input type="submit" name="submit" value="确认修改" class="btn btn-primary">
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+<script type="text/javascript">
+function checkForm(){
+}
+$(function(){
+})
+</script>
+</body>
+</html>

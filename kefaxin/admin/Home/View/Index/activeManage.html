@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/mycss.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/page.css">
+	<script type="text/javascript" src="__PUBLIC__/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/js/bootstrap.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+<script type="text/javascript" src="__PUBLIC__/utf8_php/ueditor.all.js"></script>
+  <style type="text/css">
+    table th{text-align: center;}
+    table.table{width:90%;margin:0 auto;}
+    div.hide_sheet .table{margin-top:30px;width:90%;}
+    /*.hide_sheet{height: 1000px;}*/
+  </style>
+</head>
+<body>
+<div class="container biaoti">
+  <span>新闻动态文章管理</span>
+</div>
+<div class="container">
+<table class="table table-bordered">
+    <tr>
+      <th>ID</th>
+      <th>标题</th>
+      <!-- <th>内容</th> -->
+      <th>关键字</th>
+      <th>描述</th>
+      <th>添加时间</th>
+      <th>操作</th>
+    </tr>
+  <tbody>
+  <volist name="page_list" id="vol" empty="暂无记录">
+    <tr>
+      <td>{$vol.id}</td>
+      <td>{$vol.title}</td>
+      <td>{$vol.keywords}</td>
+     <td>{$vol.miaoshu}</td>
+      <td>{$vol.addtime}</td>
+      <td width="120">
+        <button class="update btn btn-primary btn-sm">
+        修改
+        </button>
+<!-- 遮罩层开始 -->
+<div class="hide_sheet">
+  <form action="__URL__/updateActive?id={$vol.id}" method="post" onsubmit="return checkForm();">
+  <table class="table table-bordered">
+    <tr>
+          <td colspan="2">
+          <span class="close_sheet glyphicon glyphicon-remove pull-right"></span>
+          </td>
+    </tr>
+    <tr>
+        <td class="align_right" width="150">资讯标题：</td>
+        <td class="align_left">
+          <input style="width:450px;" type="text" name="title" value="{$vol.title}">
+          <span id="ch_title" class="red"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="align_right">关键字：</td>
+        <td class="align_left">
+        <textarea placeholder="关键字之间使用英文逗号分隔开" name="keywords" cols="60" rows="3">{$vol.keywords}</textarea>
+        </td>
+      </tr>
+      <tr>
+        <td class="align_right">描述：</td>
+        <td class="align_left">
+        <textarea placeholder="" name="miaoshu" cols="60" rows="3">{$vol.miaoshu}</textarea>
+        </td>
+      </tr>
+      <tr>
+        <td class="align_right">内容：</td>
+        <td>
+      <script style="width: 830px;" id="container{$vol.id}" name="content" type="text/plain">
+      {$vol.content}
+      </script>
+      <script type="text/javascript">
+      var editor = UE.getEditor('container{$vol.id}')
+      </script>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" class="align_center">
+        <input type="submit" name="submit" value="修改" class="btn btn-primary">
+        <input type="hidden" value="0" name="type">
+        </td>
+      </tr>
+  </table>
+</form>
+</div>
+<!-- 遮罩层结束 -->
+	      <button class="delliuyan btn btn-danger btn-sm">
+	      删除
+	      </button>
+	      <input type="hidden" class="liuyanID" value="{$vol.id}">
+      </td>
+    </tr>
+  </volist>
+  <tr>
+    <td colspan="5">
+    <div class="pager align_center">
+        {$page_show}
+    </div>
+      </td>
+  </tr>
+  </tbody>
+</table>
+</div>	
+<script type="text/javascript">
+$(function(){
+  $('.update').click(function(){
+    $(this).next('.hide_sheet').show();
+  })
+  $('.hide_sheet').find('.close_sheet').click(function(){
+      $('.hide_sheet').hide();
+  });
+
+	$('.delliuyan').click(function(){
+		if (confirm('确认删除?')) {
+			var id = $(this).next('.liuyanID').val();
+			$.ajax({
+				type:'get',
+				dataType:'text',
+				url:'__URL__/deleteActive/id/'+id,
+				success:function(data){
+					if (data==1) {
+						location.reload();
+					}else{
+						alert('参数错误');
+					}
+				}
+			})
+		}
+	})
+	
+})
+</script>
+</body>
+</html>
