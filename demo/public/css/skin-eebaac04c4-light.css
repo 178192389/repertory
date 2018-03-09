@@ -1,0 +1,2272 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+$icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+
+.icon-home {
+  @include retina-sprite($icon-home-group);
+}
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+/*
+The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in SCSS
+
+@include retina-sprites($retina-groups);
+*/
+.StockTrade .arrow-right:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -156px -21px;
+  width: 9px;
+  height: 16px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .StockTrade .arrow-right:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.StockTrade .arrow-left:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -120px -97px;
+  width: 9px;
+  height: 16px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .StockTrade .arrow-left:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.StockTrade .arrow.arrow-left:hover:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -156px 0px;
+  width: 9px;
+  height: 16px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .StockTrade .arrow.arrow-left:hover:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.StockTrade .arrow.arrow-right:hover:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -156px -42px;
+  width: 9px;
+  height: 16px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .StockTrade .arrow.arrow-right:hover:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.StockTrade .Tabs.subtab > .Tabs-Bar {
+  background: #f4f9fd; }
+  .StockTrade .Tabs.subtab > .Tabs-Bar .Tabs-Bar-Item {
+    background: #f4f9fd;
+    border-color: #2c87f9;
+    color: #2c87f9; }
+    .StockTrade .Tabs.subtab > .Tabs-Bar .Tabs-Bar-Item.active {
+      background: #2c87f9;
+      color: #fff; }
+
+.credit-tabs .Tabs-Bar .Tabs-Bar-Item-Container > .Tabs-Bar-Item.Tab-7 {
+  border-top: 1px solid #dce6f3; }
+
+.general-order.repay.Buy {
+  background: #f7eee9; }
+
+.general-order.repay.Buy .content .doOrder {
+  background: #ef5b27; }
+
+.general-order.repay.Buy .content .rate.on {
+  border: 1px solid #dd5839;
+  color: #dd5839; }
+
+.general-order.repay.Buy .content .dark-normal {
+  border: 1px solid #ffb195;
+  background-color: #fff7f4;
+  color: #333333; }
+  .general-order.repay.Buy .content .dark-normal:focus {
+    border-color: #ef5b27; }
+
+.general-order.colla {
+  background: #e8f2fa; }
+
+.credit-inventory.trade-piece {
+  background-color: #ffffff; }
+
+.credit-inventory table.data-table td:first-child {
+  color: #748aa1; }
+
+.credit-order-panel .panel-main > div:first-child {
+  border-right: 1px solid #dce6f3; }
+
+.credit-finance-info,
+.credit-margin-info {
+  background-color: #ffffff; }
+  .credit-finance-info table.data-table td:first-child,
+  .credit-margin-info table.data-table td:first-child {
+    color: #748aa1; }
+
+.credit-repay {
+  background-color: #e8f2fa; }
+
+.credit-colla-record {
+  background-color: #ffffff; }
+
+.tab-colla-transfer .credit-colla-record .TodayDelegate table td {
+  border: 1px solid #e9f0f7; }
+
+.OpenFund .contentTop .OpenFund-FundDeal {
+  background-color: #c1d5ec; }
+
+.OpenFund .contentDown {
+  background: #ffffff; }
+
+.OpenFund .fundBlue {
+  color: #599afc; }
+
+.OpenFund .Tabs > .Tabs-Bar .Tabs-Bar-Item.active,
+.OpenFund .Tabs > .Tabs-Bar .Tabs-Bar-Item:hover {
+  background: #D2E2F2; }
+
+.ApplyFund .FundDeal-ApplyFund {
+  background-color: #f7eee9; }
+  .ApplyFund .FundDeal-ApplyFund .comment {
+    border-top: 1px solid #ffbfa9; }
+    .ApplyFund .FundDeal-ApplyFund .comment span {
+      color: #748aa1; }
+
+.ApplyFund .FundDeal-ApplyFund .Fundlist ul {
+  background-color: #f4f9fd;
+  border: 1px solid #dce6f3; }
+
+.ApplyFund .FundDealInputs input:active,
+.ApplyFund .FundDealInputs input:hover {
+  border: 1px solid #ef5b27 !important; }
+
+.ApplyFund .FundDeal-ApplyFund > ul li {
+  background-color: #f7eee9; }
+  .ApplyFund .FundDeal-ApplyFund > ul li input,
+  .ApplyFund .FundDeal-ApplyFund > ul li span {
+    background-color: #f7eee9; }
+  .ApplyFund .FundDeal-ApplyFund > ul li input {
+    border: 1px solid #ffb195; }
+  .ApplyFund .FundDeal-ApplyFund > ul li span.fundName,
+  .ApplyFund .FundDeal-ApplyFund > ul li span.fortune {
+    color: #748aa1; }
+
+.ApplyFund .btnGroup .half button {
+  color: #ffffff; }
+
+.ApplyFund .btnGroup button.btnSubscribe {
+  background-color: #ef5b27; }
+
+.ApplyFund .buyFund .btnBuyFund {
+  background-color: #ef5b27; }
+
+.ApplyFund .buyFund span {
+  color: #ef5b27; }
+
+.ApplyFund .fixedInvestment .btnFixedInvestment {
+  background-color: #f68931; }
+
+.ApplyFund .fixedInvestment span {
+  color: #f68931; }
+
+.RedeemFund {
+  background: #e8f2fa; }
+  .RedeemFund .FundDeal-RedeemFund > ul li {
+    background-color: #F0F8FF; }
+    .RedeemFund .FundDeal-RedeemFund > ul li input,
+    .RedeemFund .FundDeal-RedeemFund > ul li span {
+      background-color: #F0F8FF; }
+    .RedeemFund .FundDeal-RedeemFund > ul li input {
+      border: 1px solid #8CC2EE; }
+    .RedeemFund .FundDeal-RedeemFund > ul li input:hover,
+    .RedeemFund .FundDeal-RedeemFund > ul li input:active {
+      border: 1px solid #599afc !important; }
+    .RedeemFund .FundDeal-RedeemFund > ul li span.fundName {
+      color: #655f5f; }
+    .RedeemFund .FundDeal-RedeemFund > ul li span.fortune {
+      color: #748aa1; }
+    .RedeemFund .FundDeal-RedeemFund > ul li span.limitshare {
+      color: #748aa1; }
+  .RedeemFund .holdDownSelect:hover .DownSelect,
+  .RedeemFund .holdDownSelect:hover .DownSelect .options,
+  .RedeemFund .holdDownSelect:active .DownSelect,
+  .RedeemFund .holdDownSelect:active .DownSelect .options {
+    border-color: #599afc; }
+  .RedeemFund .DownSelect.fundShiftOption {
+    border: 1px solid #8CC2EE; }
+    .RedeemFund .DownSelect.fundShiftOption .active {
+      background-color: #F0F8FF; }
+    .RedeemFund .DownSelect.fundShiftOption ul.options {
+      background-color: #F0F8FF;
+      border: 1px solid #8CC2EE;
+      border-top: none; }
+  .RedeemFund .FundDeal-RedeemFund .comment span {
+    color: #748aa1; }
+  .RedeemFund .btnRedeemFund {
+    background-color: #599afc; }
+  .RedeemFund .fundWarning {
+    background-color: #f4f9fd; }
+
+.TransformFund {
+  background-color: #e8f2fa; }
+
+.FundDeal-TransformFund {
+  background-color: #e8f2fa; }
+  .FundDeal-TransformFund ul.inputsGroup button.fundsTransfer {
+    background-color: #599afc; }
+  .FundDeal-TransformFund ul.inputsGroup > li input {
+    background-color: #F0F8FF;
+    border: 1px solid #8CC2EE; }
+  .FundDeal-TransformFund ul.inputsGroup > li input:hover,
+  .FundDeal-TransformFund ul.inputsGroup > li input:active {
+    border: 1px solid #599afc; }
+  .FundDeal-TransformFund .liDownSelect:hover .DownSelect,
+  .FundDeal-TransformFund .liDownSelect:hover .DownSelect .options,
+  .FundDeal-TransformFund .liDownSelect:active .DownSelect,
+  .FundDeal-TransformFund .liDownSelect:active .DownSelect .options {
+    border-color: #599afc; }
+  .FundDeal-TransformFund .DownSelect.fundShiftOption {
+    border: 1px solid #8CC2EE;
+    background: #F0F8FF; }
+    .FundDeal-TransformFund .DownSelect.fundShiftOption ul.options {
+      background: #F0F8FF;
+      border: 1px solid #8CC2EE;
+      border-top: none; }
+  .FundDeal-TransformFund .fundWarning {
+    background-color: #f4f9fd; }
+  .FundDeal-TransformFund i.transformOutFundHoldShare {
+    color: #748aa1; }
+
+.OpenFund-SingleFundInfo .topTitle {
+  background-color: #c1d5ec;
+  color: #1f3c5c; }
+  .OpenFund-SingleFundInfo .topTitle .fundCode {
+    color: #748aa1; }
+
+.OpenFund-SingleFundInfo .SingleFundInfoDetail {
+  background-color: #ffffff; }
+  .OpenFund-SingleFundInfo .SingleFundInfoDetail .name,
+  .OpenFund-SingleFundInfo .SingleFundInfoDetail .title {
+    color: #748aa1; }
+  .OpenFund-SingleFundInfo .SingleFundInfoDetail .numDetail .detailUp {
+    border-bottom: 1px solid #dce6f3; }
+    .OpenFund-SingleFundInfo .SingleFundInfoDetail .numDetail .detailUp .detailLeft {
+      border-right: 1px solid #dce6f3; }
+  .OpenFund-SingleFundInfo .SingleFundInfoDetail .numDetail .detailDown {
+    border-bottom: 1px solid #dce6f3; }
+
+.OpenFund-SingleFundInfo .SingleFundGraph .netValueGraph,
+.OpenFund-SingleFundInfo .SingleFundGraph .netValueGrowRate {
+  background-color: #f4f9fd; }
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGraph .overlay,
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGrowRate .overlay {
+    fill: none; }
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGraph .axis path,
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGraph .axis line,
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGrowRate .axis path,
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGrowRate .axis line {
+    fill: none;
+    stroke: #dce6f3;
+    shape-rendering: crispEdges; }
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGraph .axis text,
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGrowRate .axis text {
+    fill: #748aa1; }
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGraph .line,
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGrowRate .line {
+    fill: none;
+    stroke: #f7413d; }
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGraph .indexLine,
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGrowRate .indexLine {
+    stroke: #936d1c; }
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGraph .bgLines,
+  .OpenFund-SingleFundInfo .SingleFundGraph .netValueGrowRate .bgLines {
+    stroke: #dce6f3; }
+
+.OpenFund-SingleFundInfo .SingleFundGraph .Tabs-Bar {
+  background: #d2e1f2; }
+  .OpenFund-SingleFundInfo .SingleFundGraph .Tabs-Bar .Tabs-Bar-Item.active {
+    background: #d2e1f2; }
+
+.OpenFund-SingleFundInfo .SingleFundGraph .fundsGraph span {
+  color: #748aa1; }
+
+.OpenFund-SingleFundInfo .SingleFundGraph .fundsGraph .graphTools .activeTool {
+  color: #599afc;
+  border-color: #599afc; }
+
+.OpenFund-SingleFundInfo .SingleFundGraph .fundsGraph .graphTools .names span.active {
+  color: #599afc;
+  border-color: #599afc; }
+
+.OpenFund-SingleFundInfo .SingleFundGraph .fundsGraph .graphTools .names .activeTool.indexName {
+  color: #936d1c;
+  border-color: #936d1c; }
+
+.OpenFund-SingleFundInfo .SingleFundGraph .fundsGraph .graphTools .names .activeTool.fundName {
+  color: #f7413d;
+  border-color: #f7413d; }
+
+.OpenFund-SingleFundInfo .SingleFundGraph .fundsGraph .graphTools .DigitTips {
+  border: 1px solid #748aa1;
+  background-color: #D2E2F2; }
+
+.OpenFund-SingleFundInfo .SingleFundGraph .fundsGraph .legend > span:after {
+  background-color: #748aa1; }
+
+.OpenFund-SingleFundInfo .SingleFundGraph .fundsGraph .legend > span.sz.activeTool {
+  color: #936d1c; }
+  .OpenFund-SingleFundInfo .SingleFundGraph .fundsGraph .legend > span.sz.activeTool:after {
+    background-color: #936d1c; }
+
+.OpenFund-SingleFundInfo .SingleFundGraph .fundsGraph .legend > span.fund.activeTool {
+  color: #f7413d; }
+  .OpenFund-SingleFundInfo .SingleFundGraph .fundsGraph .legend > span.fund.activeTool:after {
+    background-color: #f7413d; }
+
+.OpenFund-MyFundsInfo .FundHoldInfo,
+.OpenFund-MyFundsInfo .FundDealInfo,
+.OpenFund-MyFundsInfo .FundEntrustInfo,
+.OpenFund-MyFundsInfo .InvestmentQuotaInfo {
+  background-color: #ffffff; }
+  .OpenFund-MyFundsInfo .FundHoldInfo thead,
+  .OpenFund-MyFundsInfo .FundDealInfo thead,
+  .OpenFund-MyFundsInfo .FundEntrustInfo thead,
+  .OpenFund-MyFundsInfo .InvestmentQuotaInfo thead {
+    background: #f4f9fd;
+    color: #748aa1; }
+
+.OpenFund-MyFundsInfo .FundPositions .fundHoldEmpty {
+  background: url("../images/fundHoldEmpty.png") no-repeat center center; }
+
+.OpenFund-MyFundsInfo .Tabs-Bar {
+  background: #D2E2F2; }
+  .OpenFund-MyFundsInfo .Tabs-Bar .Tabs-Bar-Item.active {
+    background: #D2E2F2; }
+
+.contentMid {
+  background-color: #c1d5ec; }
+  .contentMid .OpenFund-AccountInfo .accountId {
+    background-color: #f4f9fd;
+    color: #748aa1; }
+  .contentMid .OpenFund-AccountInfo .tips .tipData .name {
+    color: #748aa1; }
+  .contentMid .OpenFund-AccountInfo .totalAsset {
+    color: #936d1c; }
+  .contentMid .OpenFund-AccountInfo button {
+    background-color: #2c87f9; }
+
+.TMPDOMRoot .OpenFundPopup .WriteDownInfo .everyPage input.deductMoneyDate {
+  background-color: #ffffff;
+  color: #000000; }
+
+.TMPDOMRoot .OpenFundPopup .WriteDownInfo .everyPage input.deductMoneyDate[placeholder],
+.TMPDOMRoot .OpenFundPopup .WriteDownInfo .everyPage input.deductMoneyDate[disabled] {
+  color: #748aa1; }
+
+.TMPDOMRoot .OpenFundPopup .WriteDownInfo .everyPage input.deductMoneyDate[placeholder]::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #748aa1; }
+
+.TMPDOMRoot .OpenFundPopup .WriteDownInfo .everyPage input.deductMoneyDate[placeholder]:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #748aa1;
+  opacity: 1; }
+
+.TMPDOMRoot .OpenFundPopup .WriteDownInfo .everyPage input.deductMoneyDate[placeholder]::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #748aa1;
+  opacity: 1; }
+
+.TMPDOMRoot .OpenFundPopup .WriteDownInfo .everyPage input.deductMoneyDate[placeholder]:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #748aa1; }
+
+.TMPDOMRoot .OpenFundPopup .WriteDownInfo .everyPage .DateField {
+  background-color: #ffffff;
+  border: 1px solid #cccccc; }
+
+.TMPDOMRoot .OpenFundPopup .WriteDownInfo .everyPage .pickUpKindCode .active {
+  border: 1px solid #cccccc; }
+
+.TMPDOMRoot .OpenFundPopup .WriteDownInfo .everyPage .pickUpKindCode ul.options {
+  border-color: #cccccc; }
+  .TMPDOMRoot .OpenFundPopup .WriteDownInfo .everyPage .pickUpKindCode ul.options .opt:hover {
+    background: #E6EEF6; }
+
+.TMPDOMRoot .OpenFundPopup .WriteDownInfo .everyPage ul li input {
+  border: 1px solid #cccccc; }
+
+.TMPDOMRoot .OpenFundPopup .everyPage .pickDateArrow {
+  border-color: #838383 transparent; }
+
+.TMPDOMRoot .OpenFundPopup .everyPage span.value {
+  color: #748aa1; }
+
+.TMPDOMRoot .OpenFundPopup .everyPage .pickDate {
+  border: 1px solid #cccccc;
+  border-top: none; }
+  .TMPDOMRoot .OpenFundPopup .everyPage .pickDate > ul {
+    background-color: #ffffff; }
+  .TMPDOMRoot .OpenFundPopup .everyPage .pickDate > ul li:hover {
+    background-color: #eeeeee; }
+
+.TMPDOMRoot .OpenFundPopup .detail table td {
+  border: 1px solid #dddddd; }
+
+.TMPDOMRoot .OpenFundPopup .referee > div .title {
+  border-right: 1px solid #EFF6FC; }
+
+.TMPDOMRoot .OpenFundPopup .Content table .name {
+  color: #748aa1; }
+
+.TMPDOMRoot .showFundDealDialog.OpenFundPopup .setDivideWayPopup .downSelectDivideWay .active {
+  background-color: #dddddd; }
+
+.TMPDOMRoot .showFundDealDialog.OpenFundPopup .setDivideWayPopup .downSelectDivideWay .options {
+  background-color: #dddddd; }
+
+.OpenFund-FundDeal .disabled {
+  color: #eeeeee;
+  background-color: #bbbbbb !important; }
+
+.OpenFund-FundDeal .fundWarning {
+  background-color: #f6d7c6; }
+  .OpenFund-FundDeal .fundWarning i {
+    background-image: url(../images/sprite-fa8fba196e.png);
+    background-position: -21px -97px;
+    width: 16px;
+    height: 16px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .OpenFund-FundDeal .fundWarning i {
+        background-image: url(../images/sprite@2x-9d3dc7b014.png);
+        background-size: 165px 150px; } }
+  .OpenFund-FundDeal .fundWarning span {
+    color: #655f5f; }
+
+.OpenFund-FundDeal .FundsListDownSelect .active {
+  background-color: #e9f0f7; }
+
+.OpenFund-FundDeal .Tabs-Bar .Tabs-Bar-Item-Container .Tabs-Bar-Item {
+  background: #CCDDF0;
+  color: #655f5f;
+  border-right: 1px solid #ffffff; }
+
+.OpenFund-FundDeal .Tabs-Bar-Item.Tab-0.active {
+  background-color: #f7eee9 !important;
+  color: #ef5b27 !important; }
+
+.OpenFund-FundDeal .Tabs-Bar-Item.Tab-1.active,
+.OpenFund-FundDeal .Tabs-Bar-Item.Tab-2.active {
+  color: #599afc !important;
+  background: #E5F0F9 !important; }
+
+.OpenFund-FundDeal .Tabs-Bar-Item.Tab-0:hove {
+  background-color: #f7eee9 !important; }
+
+.OpenFund-FundDeal .Tabs-Bar-Item.Tab-1:hover,
+.OpenFund-FundDeal .Tabs-Bar-Item.Tab-2:hover {
+  background: #E5F0F9 !important; }
+
+.TransformDetailShow .transformOutFundDetail .trans-title {
+  background-color: #c1d5ec; }
+
+.TransformDetailShow .transformInFundDetail {
+  background: #ffffff; }
+  .TransformDetailShow .transformInFundDetail .trans-title {
+    background-color: #B9CFE9; }
+  .TransformDetailShow .transformInFundDetail .SingleFundInfoDetail {
+    background-color: #ffffff; }
+
+.general-tabs table.data-table thead,
+.credit-tabs table.data-table thead {
+  background-color: #f4f9fd; }
+  .general-tabs table.data-table thead .white,
+  .credit-tabs table.data-table thead .white {
+    color: gray !important; }
+
+.tab-order .StockGraph .Tabs-Bar {
+  background-color: #c1d5ec; }
+
+.tab-order .flex-wrap {
+  height: inherit; }
+
+.tab-transfer > .left {
+  background: #e8f2fa;
+  border-right: 2px solid #EFF6FC; }
+  .tab-transfer > .left .Tabs-Content {
+    background: #e8f2fa; }
+    .tab-transfer > .left .Tabs-Content ul > li .title,
+    .tab-transfer > .left .Tabs-Content ul > li .title-color {
+      color: #748aa1; }
+    .tab-transfer > .left .Tabs-Content ul > li .data {
+      color: #999999; }
+  .tab-transfer > .left .general-banktransfer .data input.currency,
+  .tab-transfer > .left .TransferQuery .data input.currency {
+    color: #999999; }
+  .tab-transfer > .left .general-banktransfer .data.transfer-btn,
+  .tab-transfer > .left .TransferQuery .data.transfer-btn {
+    color: #ffffff; }
+  .tab-transfer > .left .TransferQuery {
+    border-top: 1px solid #EFF6FC; }
+
+.tab-entrust-query,
+.tab-deal-query,
+.tab-cash-flow,
+.tab-transfer > .right {
+  background-color: #ffffff; }
+  .tab-entrust-query .Tabs-Bar,
+  .tab-deal-query .Tabs-Bar,
+  .tab-cash-flow .Tabs-Bar,
+  .tab-transfer > .right .Tabs-Bar {
+    background-color: #c1d5ec; }
+
+.tab-change-pass {
+  background-color: #ffffff; }
+  .tab-change-pass .inner .remind {
+    color: #748aa1;
+    background-color: #f4f9fd; }
+
+.general-fund {
+  background-color: #ffffff; }
+  .general-fund .head {
+    background: #c1d5ec; }
+  .general-fund .refresh:after {
+    margin: 6px 0 0 6px; }
+  .general-fund .content span {
+    border-right: solid 1px #dce6f3;
+    border-bottom: solid 1px #dce6f3;
+    color: #748aa1; }
+  .general-fund .content b {
+    border-bottom: solid 1px #dce6f3; }
+
+.general-order .content .title {
+  color: #748aa1; }
+
+.general-order .content .qryTarget {
+  color: #599afc; }
+
+.general-order .content .code .stockName {
+  color: #748aa1; }
+
+.general-order .content .note {
+  color: red; }
+
+.general-order .content .bs-switch .switch-text.on {
+  color: #ef5b27; }
+
+.general-order .content .bs-switch .switch-text.off {
+  color: #0f6de2; }
+
+.general-order .foot .account-option {
+  color: #748aa1; }
+
+.general-order .foot .transfer {
+  color: #599afc;
+  border: solid 1px #599afc; }
+
+.general-order.Buy {
+  background: #f7eee9; }
+  .general-order.Buy .tab.active,
+  .general-order.Buy .tab.active:after {
+    background: #f7eee9;
+    color: #ef5b27; }
+  .general-order.Buy .content .rate.on {
+    color: #dd5839;
+    border: 1px solid #dd5839; }
+  .general-order.Buy .content .doOrder {
+    background: #ef5b27;
+    color: #ffffff; }
+    .general-order.Buy .content .doOrder.disabled {
+      color: white;
+      background-color: #bbb;
+      cursor: default; }
+    .general-order.Buy .content .doOrder.disabled:hover {
+      background: #bbb; }
+    .general-order.Buy .content .doOrder:hover {
+      background: #cf3b06; }
+  .general-order.Buy .content .code ul {
+    background: #fff7f4;
+    border: 1px solid #ffb195; }
+    .general-order.Buy .content .code ul li {
+      color: #748aa1; }
+    .general-order.Buy .content .code ul li:hover,
+    .general-order.Buy .content .code ul li.active {
+      background: #e9f0f7; }
+  .general-order.Buy .remind {
+    background-color: #f4f9fd; }
+  .general-order.Buy .foot {
+    background-color: #f6d7c6; }
+    .general-order.Buy .foot .account-option {
+      background: #fff7f4; }
+  .general-order.Buy .DownSelect .active,
+  .general-order.Buy .DownSelect .options {
+    background: #fff7f4; }
+
+.general-order.Sell {
+  background: #e8f2fa; }
+  .general-order.Sell .tab.active,
+  .general-order.Sell .tab.active:after {
+    background: #e8f2fa;
+    color: #599afc; }
+  .general-order.Sell .content .rate.on {
+    color: #599afc;
+    border: 1px solid #599afc; }
+  .general-order.Sell .content .doOrder {
+    background: #2c87f9;
+    color: #ffffff; }
+    .general-order.Sell .content .doOrder.disabled {
+      color: white;
+      background-color: #bbb;
+      cursor: default; }
+    .general-order.Sell .content .doOrder.disabled:hover {
+      background: #bbb; }
+    .general-order.Sell .content .doOrder:hover {
+      background: #0f6de2; }
+  .general-order.Sell .content .code ul {
+    background: #f2f9ff;
+    border: 1px solid #97c9f0; }
+    .general-order.Sell .content .code ul li {
+      color: #748aa1; }
+    .general-order.Sell .content .code ul li:hover,
+    .general-order.Sell .content .code ul li.active {
+      background: #e9f0f7; }
+  .general-order.Sell .foot {
+    background-color: #d2e1f2; }
+    .general-order.Sell .foot .account-option {
+      background: #f2f9ff; }
+  .general-order.Sell .DownSelect .active,
+  .general-order.Sell .DownSelect .options {
+    background: #f2f9ff; }
+
+.general-order .remind {
+  color: #748aa1;
+  background-color: #f4f9fd; }
+  .general-order .remind i {
+    background-image: url(../images/sprite-fa8fba196e.png);
+    background-position: -42px -97px;
+    width: 16px;
+    height: 16px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .general-order .remind i {
+        background-image: url(../images/sprite@2x-9d3dc7b014.png);
+        background-size: 165px 150px; } }
+
+.general-handicap .head {
+  background: #c1d5ec; }
+
+.general-handicap .headLeft .name {
+  color: #1f3c5c; }
+
+.general-handicap .headLeft .code {
+  color: #748aa1; }
+
+.general-handicap .StockTrade-Handicap .StockTickDuel {
+  background: #f4f9fd; }
+
+.general-handicap .StockTickFive {
+  background: #f7eee9; }
+  .general-handicap .StockTickFive .tick-sell {
+    background: #e8f2fa; }
+  .general-handicap .StockTickFive .tick-buy {
+    background: #f7eee9; }
+
+.general-handicap.mini .head {
+  background-color: #D2E2F2; }
+
+.general-entrust-board {
+  background-color: #ffffff; }
+  .general-entrust-board .op-area .btn {
+    border: solid 1px #599afc;
+    color: #599afc; }
+  .general-entrust-board .op-area .refresh:after {
+    margin: 6px 0 0 6px; }
+  .general-entrust-board .Tabs > .Tabs-Bar {
+    background: #c1d5ec; }
+  .general-entrust-board .tbody-wrap thead {
+    background: #f4f9fd;
+    color: #748aa1; }
+  .general-entrust-board .tbody-wrap th {
+    border: solid 1px #dce6f3; }
+  .general-entrust-board .tbody-wrap td {
+    border: solid 1px #e9f0f7; }
+
+.general-position-board {
+  background-color: #ffffff; }
+  .general-position-board .StockTrade-Position thead {
+    background: #f4f9fd;
+    color: #748aa1; }
+
+.general-inventory.trade-piece {
+  background-color: #e8f2fa; }
+
+.general-inventory .inner .total > span {
+  color: #748aa1; }
+
+.general-inventory .inner .total > b {
+  color: #f7413d; }
+
+.general-inventory .inner table td {
+  border: solid 1px #dce6f3; }
+  .general-inventory .inner table td:first-child {
+    color: #748aa1; }
+
+.general-inventory .inner ul li {
+  color: #748aa1; }
+  .general-inventory .inner ul li i {
+    color: #333; }
+  .general-inventory .inner ul li b {
+    color: #f41f21; }
+  .general-inventory .inner ul li::before {
+    background-color: #748aa1; }
+  .general-inventory .inner ul li.li-fund::before {
+    background-color: #3e7fe1; }
+  .general-inventory .inner ul li.li-market::before {
+    background-color: #f0c742; }
+  .general-inventory .inner ul li.li-opfund::before {
+    background-color: #2d68c0; }
+  .general-inventory .inner ul li.li-finance::before {
+    background-color: #d2a615; }
+
+.general-inventory .inner footer {
+  background-color: #f4f9fd;
+  color: #748aa1;
+  border-top: 1px solid #c1d5ec; }
+
+.general-banktransfer .TransferInOut .data input.currency {
+  color: #748aa1; }
+
+.general-banktransfer .TransferInOut .data.transfer-btn {
+  color: #4A75A8; }
+
+.general-banktransfer .TransferInOut .data.in {
+  background: #ef5b27; }
+  .general-banktransfer .TransferInOut .data.in:hover {
+    background: #cf3b06; }
+
+.general-banktransfer .TransferInOut .data.out, .general-banktransfer .TransferInOut .data.query {
+  background: #2c87f9; }
+  .general-banktransfer .TransferInOut .data.out:hover, .general-banktransfer .TransferInOut .data.query:hover {
+    background: #0f6de2; }
+
+.TradeOrdrConfig-Wrap.Popup .TradeOrdrConfig .data .DownSelect .active,
+.TradeOrdrConfig-Wrap.Popup .TradeOrdrConfig .data .DownSelect .options {
+  background: #fff;
+  border: 1px solid #cccccc; }
+
+.TradeOrdrConfig-Wrap.Popup .Footer button:first-child {
+  background: none;
+  border: none;
+  color: #599afc; }
+
+.OrderConfim-wrap.Popup .OrderConfim td {
+  border: solid 1px #dddddd; }
+
+.OrderConfim-wrap.Popup .OrderConfim .title, .OrderConfim-wrap.Popup .OrderConfim .text {
+  color: #748aa1; }
+
+.TargetInfo-Wrap.Popup .TargetInfo td {
+  border: solid 1px #dddddd; }
+
+.TargetInfo-Wrap.Popup .TargetInfo .title {
+  color: #748aa1; }
+
+.Confirm-Transfer.Popup .Content .imgbg,
+.Confirm-Cancel.Popup .Content .imgbg,
+.Hint.Popup .Content .imgbg {
+  background-image: url("../images/order_status.png"); }
+
+.Hint-Loading.Popup .Content #loader > div {
+  background-color: #c1d5ec; }
+
+.StockTrade-QuickOrder .general-fund {
+  border: 1px solid #dddddd;
+  background-color: transparent; }
+  .StockTrade-QuickOrder .general-fund .head {
+    background: #eeeeee;
+    border-bottom: 1px solid #dddddd; }
+  .StockTrade-QuickOrder .general-fund .fund-option .active,
+  .StockTrade-QuickOrder .general-fund .fund-option .options {
+    background: #F2F8FD;
+    border-color: #dddddd; }
+  .StockTrade-QuickOrder .general-fund .fund-option .opt:hover {
+    background: #E6EEF6; }
+  .StockTrade-QuickOrder .general-fund .content span {
+    border-color: #dddddd; }
+  .StockTrade-QuickOrder .general-fund .content b {
+    border-color: #dddddd; }
+
+.StockTrade-QuickOrder .general-order .head {
+  background: #ffffff; }
+
+.StockTrade-QuickOrder .general-order .tabs .tab {
+  color: #4A75A8;
+  border: 1px solid #cccccc;
+  border-bottom: none; }
+
+.StockTrade-QuickOrder .general-order .tabs .tab.active {
+  color: #000000; }
+
+.StockTrade-QuickOrder .general-order .content {
+  border: 1px solid #cccccc; }
+  .StockTrade-QuickOrder .general-order .content .title {
+    color: #000000; }
+  .StockTrade-QuickOrder .general-order .content .rate {
+    color: #777777; }
+  .StockTrade-QuickOrder .general-order .content .doOrder {
+    color: #ffffff; }
+
+.StockTrade-QuickOrder .general-order .foot {
+  background: #eeeeee;
+  border: 1px solid #cccccc;
+  border-top: none; }
+  .StockTrade-QuickOrder .general-order .foot .active,
+  .StockTrade-QuickOrder .general-order .foot .options {
+    background: #F2F8FD;
+    border-color: #dddddd; }
+  .StockTrade-QuickOrder .general-order .foot .opt:hover {
+    background: #E6EEF6; }
+  .StockTrade-QuickOrder .general-order .foot .account-option {
+    background: #fff7f4; }
+
+.StockTrade-QuickOrder .general-order input[type='text'].dark-red {
+  border-color: #f3b88d; }
+
+.StockTrade-QuickOrder .general-order input[type='text'].dark-normal {
+  border-color: #9cc1d2; }
+
+.StockTrade-QuickOrder .general-order.Buy .tab.active,
+.StockTrade-QuickOrder .general-order.Buy .content {
+  background: #ffefef; }
+
+.StockTrade-QuickOrder .general-order.Buy .content input {
+  background: #fff4e6;
+  color: #000000; }
+
+.StockTrade-QuickOrder .general-order.Buy .content .code,
+.StockTrade-QuickOrder .general-order.Buy .content .price,
+.StockTrade-QuickOrder .general-order.Buy .content .num {
+  background: #fff4e6;
+  border-color: #f3b88d; }
+
+.StockTrade-QuickOrder .general-order.Sell .tab.active,
+.StockTrade-QuickOrder .general-order.Sell .content {
+  background: #edf4ff; }
+
+.StockTrade-QuickOrder .general-order.Sell .content input {
+  background: #f4f8fb;
+  color: #000000; }
+
+.StockTrade-QuickOrder .general-order.Sell .content .code,
+.StockTrade-QuickOrder .general-order.Sell .content .price,
+.StockTrade-QuickOrder .general-order.Sell .content .num {
+  background: #f4f8fb;
+  border-color: #9cc1d2; }
+
+.StockTrade-QuickOrder .QuickPosition {
+  border: 1px solid #dddddd; }
+  .StockTrade-QuickOrder .QuickPosition .head {
+    background: #eeeeee; }
+  .StockTrade-QuickOrder .QuickPosition .StockTrade-Position thead {
+    background: #f8f8f8;
+    color: #748aa1; }
+  .StockTrade-QuickOrder .QuickPosition .StockTrade-Position th,
+  .StockTrade-QuickOrder .QuickPosition .StockTrade-Position td {
+    border: solid 1px #dddddd; }
+  .StockTrade-QuickOrder .QuickPosition .StockTrade-Position th:last-child,
+  .StockTrade-QuickOrder .QuickPosition .StockTrade-Position td:last-child {
+    border-right: none; }
+  .StockTrade-QuickOrder .QuickPosition .StockTrade-Position th:first-child,
+  .StockTrade-QuickOrder .QuickPosition .StockTrade-Position td:first-child {
+    border-left: none; }
+  .StockTrade-QuickOrder .QuickPosition .loadMore {
+    color: #838383;
+    border-top: 1px solid #dddddd; }
+  .StockTrade-QuickOrder .QuickPosition .disabled.loadMore {
+    color: #eeeeee; }
+
+.Tabs.Lever {
+  background-color: #eff6fc; }
+
+.lever-home .parent-share .share > i {
+  background-image: url(../images/remind_white.png); }
+
+.lever-home .parent-share .share > span p {
+  color: #666666;
+  background-color: #4A75A8; }
+
+.lever-home .parent-share .share > span p::before {
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid #4A75A8; }
+
+.lever-home .panels {
+  background-color: #ffffff; }
+  .lever-home .panels > div {
+    border-right: 1px solid #dce6f3;
+    color: #748aa1; }
+    .lever-home .panels > div b {
+      color: #333333; }
+      .lever-home .panels > div b.red {
+        color: #f41f21 !important; }
+
+.lever-home .assets-operate {
+  border-top: 1px solid #EFF6FC; }
+  .lever-home .assets-operate .purchase,
+  .lever-home .assets-operate .redemption {
+    background-color: #f7eee9; }
+    .lever-home .assets-operate .purchase .main .data > span,
+    .lever-home .assets-operate .redemption .main .data > span {
+      color: #666666; }
+    .lever-home .assets-operate .purchase .main input,
+    .lever-home .assets-operate .redemption .main input {
+      border: 1px solid #ffb195;
+      background-color: #fff7f4;
+      color: #333333; }
+      .lever-home .assets-operate .purchase .main input:focus,
+      .lever-home .assets-operate .redemption .main input:focus {
+        border-color: #ef5b27; }
+    .lever-home .assets-operate .purchase .main input::-webkit-input-placeholder,
+    .lever-home .assets-operate .redemption .main input::-webkit-input-placeholder {
+      color: #748aa1; }
+    .lever-home .assets-operate .purchase .main .button,
+    .lever-home .assets-operate .redemption .main .button {
+      background-color: #ef5b27; }
+      .lever-home .assets-operate .purchase .main .button:hover,
+      .lever-home .assets-operate .redemption .main .button:hover {
+        background-color: #cf3b06; }
+      .lever-home .assets-operate .purchase .main .button.disabled,
+      .lever-home .assets-operate .redemption .main .button.disabled {
+        color: #eeeeee;
+        background-color: #bbbbbb; }
+    .lever-home .assets-operate .purchase .main .remind,
+    .lever-home .assets-operate .redemption .main .remind {
+      color: #748aa1;
+      background-color: #f4f9fd; }
+      .lever-home .assets-operate .purchase .main .remind i,
+      .lever-home .assets-operate .redemption .main .remind i {
+        background-image: url(../images/sprite-fa8fba196e.png);
+        background-position: -42px -97px;
+        width: 16px;
+        height: 16px; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          .lever-home .assets-operate .purchase .main .remind i,
+          .lever-home .assets-operate .redemption .main .remind i {
+            background-image: url(../images/sprite@2x-9d3dc7b014.png);
+            background-size: 165px 150px; } }
+    .lever-home .assets-operate .purchase .tip,
+    .lever-home .assets-operate .redemption .tip {
+      color: #666666;
+      background-color: #f6d7c6; }
+      .lever-home .assets-operate .purchase .tip i,
+      .lever-home .assets-operate .redemption .tip i {
+        background-image: url(../images/sprite-fa8fba196e.png);
+        background-position: -21px -97px;
+        width: 16px;
+        height: 16px; }
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          .lever-home .assets-operate .purchase .tip i,
+          .lever-home .assets-operate .redemption .tip i {
+            background-image: url(../images/sprite@2x-9d3dc7b014.png);
+            background-size: 165px 150px; } }
+  .lever-home .assets-operate .redemption {
+    background-color: #e8f2fa; }
+    .lever-home .assets-operate .redemption .main .data input {
+      border: 1px solid #97c9f0;
+      background-color: #f2f9ff;
+      color: #333333; }
+      .lever-home .assets-operate .redemption .main .data input:focus {
+        border-color: #2c87f9; }
+    .lever-home .assets-operate .redemption .main .button {
+      background-color: #2c87f9; }
+      .lever-home .assets-operate .redemption .main .button:hover {
+        background-color: #0f6de2; }
+    .lever-home .assets-operate .redemption .main .remind {
+      background-color: #f4f9fd; }
+    .lever-home .assets-operate .redemption .tip {
+      background-color: #f4f9fd; }
+  .lever-home .assets-operate .inquire {
+    background-color: #ffffff; }
+    .lever-home .assets-operate .inquire table td.red {
+      color: #f41f21; }
+    .lever-home .assets-operate .inquire table td.green {
+      color: #008a00; }
+    .lever-home .assets-operate .inquire table td.gray {
+      color: #748aa1; }
+    .lever-home .assets-operate .inquire table td.blue {
+      color: #599afc; }
+  .lever-home .assets-operate.Rect.Tabs > .Tabs-Bar .Tabs-Bar-Item.Tab-0.active {
+    color: #2c87f9;
+    background-color: #e8f2fa; }
+  .lever-home .assets-operate.Rect.Tabs > .Tabs-Bar .Tabs-Bar-Item:hover {
+    color: #748aa1;
+    background-color: #f4f9fd; }
+
+.lever-home .parent-share-info {
+  background-color: #f4f9fd; }
+  .lever-home .parent-share-info .info {
+    color: #748aa1;
+    border-top: 1px solid #dce6f3; }
+    .lever-home .parent-share-info .info b {
+      color: #333; }
+  .lever-home .parent-share-info .bulletin {
+    border-top: 1px solid #c1d5ec;
+    border-bottom: 1px solid #c1d5ec; }
+    .lever-home .parent-share-info .bulletin h3 {
+      color: #1f3c5c; }
+      .lever-home .parent-share-info .bulletin h3 a {
+        color: #2c87f9; }
+      .lever-home .parent-share-info .bulletin h3::before {
+        background-color: #4A75A8; }
+    .lever-home .parent-share-info .bulletin ul li b {
+      color: #748aa1; }
+    .lever-home .parent-share-info .bulletin ul li::before {
+      background-color: #748aa1; }
+    .lever-home .parent-share-info .bulletin ul li.line {
+      background-color: #dce6f3; }
+  .lever-home .parent-share-info footer div {
+    border-right: 1px solid #dce6f3;
+    color: #333; }
+    .lever-home .parent-share-info footer div b {
+      color: #999999; }
+  .lever-home .parent-share-info footer a:nth-child(1) div i {
+    background-image: url(../images/primer.png); }
+  .lever-home .parent-share-info footer a:nth-child(1) div:hover i {
+    background-image: url(../images/primer_1.png); }
+  .lever-home .parent-share-info footer a:nth-child(2) div i {
+    background-image: url(../images/video.png); }
+  .lever-home .parent-share-info footer a:nth-child(2) div:hover i {
+    background-image: url(../images/video_1.png); }
+  .lever-home .parent-share-info footer a:nth-child(3) div i {
+    background-image: url(../images/trade.png); }
+  .lever-home .parent-share-info footer a:nth-child(3) div:hover i {
+    background-image: url(../images/trade_1.png); }
+
+.bulletin-detail .list {
+  background-color: #eeeeee; }
+  .bulletin-detail .list ul li b {
+    color: #748aa1; }
+  .bulletin-detail .list ul li::before {
+    background-color: #748aa1; }
+  .bulletin-detail .list ul li.active {
+    color: #4A75A8;
+    background-color: #599afc; }
+    .bulletin-detail .list ul li.active b {
+      color: #4A75A8; }
+  .bulletin-detail .list ul li:hover {
+    background-color: #dddddd; }
+  .bulletin-detail .list ul li.active:hover {
+    background-color: #599afc; }
+
+.bulletin-detail .content h3,
+.bulletin-detail .content h4 {
+  color: #333333; }
+
+.bulletin-detail .content h5 {
+  color: #999999; }
+
+.bulletin-detail .content a:link,
+.bulletin-detail .content a:visited {
+  color: #599afc; }
+
+.bulletin-detail .content .Scrollbar .handle {
+  background: #e0e0e8; }
+
+.bulletin-detail .footer {
+  border-top-color: #dddddd; }
+
+.new-bulletin .bulletin-detail .footer {
+  border-top-color: #dddddd; }
+
+.video-tip > span {
+  color: #666666; }
+
+.Lever .Tabs-Bar {
+  background-color: #c1d5ec; }
+
+.Lever table thead {
+  color: #748aa1;
+  background-color: #f4f9fd; }
+
+.primer-popup .primer {
+  color: #666666; }
+
+.Tabs.Lever > .Tabs-Bar {
+  background-color: #c1d5ec; }
+
+.TimeLineChart .crossModal {
+  background-color: white;
+  border: 1px solid #dddddd; }
+  .TimeLineChart .crossModal li > span {
+    color: #333333; }
+  .TimeLineChart .crossModal li > span:first-child {
+    color: #666666; }
+  .TimeLineChart .crossModal li:first-child {
+    border-bottom: 1px solid #cccccc;
+    color: #666666; }
+
+.LongShort-Main {
+  background-color: #ffffff; }
+
+.LongShort-Nav {
+  background: #f4f9fd; }
+  .LongShort-Nav li {
+    color: #1e3b5b; }
+    .LongShort-Nav li.cur, .LongShort-Nav li:hover {
+      color: #0156c0;
+      background-color: #dce9f7; }
+
+.Quick-Order-Head {
+  background-color: #d2e1f2; }
+  .Quick-Order-Head .ui-select .selected {
+    background-color: #d2e1f2;
+    color: #0156c0; }
+  .Quick-Order-Head .ui-select .arrow:after {
+    border-top-color: #d2e1f2; }
+  .Quick-Order-Head .line {
+    background-color: #98b8df; }
+  .Quick-Order-Head .data-text .tit {
+    color: #748aa1; }
+
+.Quick-Order-Item.right .Quick-Order-Head {
+  background: #d2e1f2; }
+  .Quick-Order-Item.right .Quick-Order-Head .ui-select .selected {
+    background-color: #d2e1f2; }
+  .Quick-Order-Item.right .Quick-Order-Head .ui-select .arrow:after {
+    border-top-color: #d2e1f2; }
+
+.Quick-Order-Body .transfer-wrap .transfer-in {
+  background-color: #f7eee9; }
+
+.Quick-Order-Body .transfer-wrap .transfer-out {
+  background-color: #e8f2fa; }
+
+.LongShort-Form .form-tit {
+  color: #748aa1; }
+
+.LongShort-Form .form-select {
+  color: #333; }
+
+.LongShort-Form .ui-input {
+  color: #748aa1;
+  border: 1px solid #8CC2EE;
+  background-color: #F0F8FF; }
+  .LongShort-Form .ui-input.focus {
+    border-color: #599afc; }
+
+.LongShort-Form .after-text {
+  color: #748aa1; }
+
+.LongShort-Form div.ui-input input {
+  color: #333; }
+
+.LongShort-Form div.ui-input .ui-input-options {
+  border: 1px solid #599afc;
+  background-color: #F0F8FF; }
+  .LongShort-Form div.ui-input .ui-input-options li {
+    color: #333; }
+    .LongShort-Form div.ui-input .ui-input-options li:hover, .LongShort-Form div.ui-input .ui-input-options li.on {
+      background-color: #599afc; }
+
+.LongShort-Form .form-input-wrap .available {
+  color: #748aa1; }
+
+.LongShort-Form .riskTips {
+  color: #599afc; }
+
+.transfer-in .ui-input.ui-input-select {
+  border-color: #ef5b27; }
+  .transfer-in .ui-input.ui-input-select input {
+    color: #333; }
+  .transfer-in .ui-input.ui-input-select .select {
+    border-color: #ef5b27;
+    background-color: #fff7f4; }
+    .transfer-in .ui-input.ui-input-select .select li:hover {
+      background: #ef5b27; }
+
+.transfer-in .ui-input {
+  background-color: #fff7f4;
+  border-color: #ffb195; }
+  .transfer-in .ui-input.focus {
+    border-color: #ef5b27; }
+  .transfer-in .ui-input ul.ui-input-options {
+    background-color: #fff7f4;
+    border-color: #ef5b27; }
+    .transfer-in .ui-input ul.ui-input-options li:hover, .transfer-in .ui-input ul.ui-input-options li.on {
+      background-color: #ef5b27; }
+
+.transfer-in .transfer-btn {
+  color: #fff;
+  background: #ef5b27; }
+  .transfer-in .transfer-btn:hover {
+    background: #cf3b06; }
+  .transfer-in .transfer-btn .transfer-price {
+    border-right: 1px solid #F6EBE6; }
+
+.transfer-in .ui-switch.on {
+  border-color: #dd5839;
+  color: #dd5839; }
+
+.transfer-out .ui-input.ui-input-select {
+  border-color: #F0F8FF; }
+  .transfer-out .ui-input.ui-input-select input {
+    color: #333; }
+  .transfer-out .ui-input.ui-input-select .select {
+    border-color: #F0F8FF;
+    background-color: #F0F8FF; }
+    .transfer-out .ui-input.ui-input-select .select li:hover {
+      background: #F0F8FF; }
+
+.transfer-out .ui-input {
+  background-color: #F0F8FF; }
+
+.transfer-out .transfer-btn {
+  color: #fff;
+  background: #599afc; }
+  .transfer-out .transfer-btn:hover {
+    background: #0f6de2; }
+  .transfer-out .transfer-btn .transfer-price {
+    border-right: 1px solid #E5F0F9; }
+
+.LongShort-Form.form-trans.transfer-in {
+  background-color: #f7eee9; }
+  .LongShort-Form.form-trans.transfer-in .ui-select .selected {
+    border-color: #ffb195;
+    background-color: #fff7f4; }
+  .LongShort-Form.form-trans.transfer-in .ui-select .options {
+    background-color: #fff7f4;
+    border-color: #ef5b27; }
+    .LongShort-Form.form-trans.transfer-in .ui-select .options .options-item:hover {
+      background-color: #ef5b27; }
+  .LongShort-Form.form-trans.transfer-in .ui-select .arrow:after {
+    border-top-color: #fff7f4; }
+  .LongShort-Form.form-trans.transfer-in .ui-select.active .selected {
+    border-color: #ef5b27; }
+  .LongShort-Form.form-trans.transfer-in .btn-longshort {
+    background: #ef5b27; }
+    .LongShort-Form.form-trans.transfer-in .btn-longshort:hover {
+      background: #cf3b06; }
+
+.LongShort-Form.form-trans.transfer-out .ui-select .selected {
+  border-color: #97c9f0;
+  background-color: #f2f9ff; }
+
+.LongShort-Form.form-trans.transfer-out .ui-select .options {
+  background-color: #f2f9ff;
+  border-color: #2c87f9; }
+  .LongShort-Form.form-trans.transfer-out .ui-select .options .options-item:hover {
+    background-color: #2c87f9; }
+
+.LongShort-Form.form-trans.transfer-out .ui-select .arrow:after {
+  border-top-color: #f2f9ff; }
+
+.LongShort-Form.form-trans.transfer-out .ui-select.active .selected {
+  border-color: #2c87f9; }
+
+.LongShort-Form.form-trans.transfer-out .btn-longshort {
+  background: #599afc; }
+  .LongShort-Form.form-trans.transfer-out .btn-longshort:hover {
+    background: #0f6de2; }
+
+.ui-input-select .select {
+  border: 1px solid #333;
+  background: #599afc; }
+  .ui-input-select .select li {
+    color: #333; }
+
+.ui-input-select.dark {
+  border-color: #F0F8FF; }
+  .ui-input-select.dark input {
+    color: #333; }
+  .ui-input-select.dark .select {
+    border-color: #F0F8FF;
+    background-color: #F0F8FF; }
+    .ui-input-select.dark .select li:hover {
+      background: #F0F8FF; }
+
+.UserInfo {
+  background-color: #c1d5ec; }
+  .UserInfo .tit {
+    color: #748aa1; }
+  .UserInfo .total .value {
+    color: #936d1c; }
+
+.LongShort-DataList-Wrap table thead th {
+  border-top: none; }
+
+.LongShort-DataList-Wrap table a {
+  color: #599afc; }
+
+.LongShort-DataList-Wrap .Loader {
+  background: rgba(0, 0, 0, 0.2); }
+
+.LongShort-DataList-Wrap .Pagination .more {
+  color: white;
+  background-color: #98b8df; }
+
+.LongShort-DataList-Wrap .Pagination .more:hover {
+  background-color: #8DAFDA; }
+
+.TableWrap .table-empty,
+.LongShort-DataList .table-empty {
+  color: #666666; }
+
+.TableContentEmpty {
+  color: #666666; }
+
+.Quote-Aside {
+  background: #ffffff;
+  color: #1f3c5c; }
+  .Quote-Aside .Quote-Aside-Head {
+    background-color: #c1d5ec; }
+  .Quote-Aside .LongShort-Quote .LongShort-Quote-Head h3 {
+    background-color: #d2e1f2; }
+  .Quote-Aside .LongShort-Quote .Stock-Info {
+    background-color: #d2e1f2; }
+  .Quote-Aside .LongShort-Quote .Stock-Chart .Tabs-Bar {
+    background: #d2e1f2; }
+  .Quote-Aside .Tabs-Bar .Tabs-Bar-Item.active,
+  .Quote-Aside .Tabs-Bar .Tabs-Bar-Item:hover {
+    background-color: #d2e1f2; }
+
+.LongShort-Stock-Five .LongShort-Stock-Five-Head {
+  background-color: #c1d5ec; }
+
+.LongShort-Stock-Five .LongShort-Stock-Five-Market li .tit {
+  color: #748aa1; }
+
+.LongShort-Stock-Five .LongShort-Stock-Five-Market li .percent i {
+  background-color: #599afc; }
+
+.LongShort-Stock-Five .LongShort-Stock-Five-Market.sell {
+  background-color: #e0ebf8; }
+  .LongShort-Stock-Five .LongShort-Stock-Five-Market.sell li:hover {
+    background: #d2e1f2; }
+
+.LongShort-Stock-Five .LongShort-Stock-Five-Market.buy {
+  background-color: #fde9de; }
+  .LongShort-Stock-Five .LongShort-Stock-Five-Market.buy li:hover {
+    background: #f6d7c6; }
+  .LongShort-Stock-Five .LongShort-Stock-Five-Market.buy .percent i {
+    background-color: #dd5839; }
+
+.LongShort-Stock-Five .LongShort-Stock-Info .tit {
+  color: #748aa1; }
+
+.LongShort-Stock-Five .LongShort-Stock-Info.latest {
+  background: #d2e1f2; }
+
+.LongShort-Stock-Five .LongShort-Stock-Info.limit {
+  background: #c1d5ec; }
+
+.Purchase .LongShort-Form,
+.ShareMerge .LongShort-Form,
+.ShareSplit .LongShort-Form {
+  background-color: #dce9f7; }
+
+.ui-switch {
+  border: 1px solid transparent;
+  color: #333; }
+  .ui-switch.on {
+    border-color: #599afc;
+    color: #599afc; }
+
+.LongShort-Form .with-arrow .arrow.arrow-up {
+  border-color: transparent transparent #748aa1 transparent; }
+
+.LongShort-Form .with-arrow .arrow.arrow-down {
+  border-color: #748aa1 transparent transparent transparent; }
+
+.LongShort-Popup.LongShort-Aside-Setting .UpdateAsideQuote .item {
+  border: 1px solid #dddddd; }
+
+.KLinePopup .StockGraph .StockKline .toolBars {
+  background: #ffffff; }
+
+.LongShort-Chart .crossModal {
+  background-color: white;
+  border: 1px solid #dddddd; }
+  .LongShort-Chart .crossModal li > span {
+    color: #333333; }
+  .LongShort-Chart .crossModal li > span:first-child {
+    color: #666666; }
+  .LongShort-Chart .crossModal li:first-child {
+    border-bottom: 1px solid #dddddd;
+    color: #666666; }
+
+.KLine_Popup_Layer {
+  background: rgba(255, 255, 255, 0.5); }
+
+.Popup.RiskTipsPopup .risktips-content {
+  color: #666666; }
+
+.Popup.RiskTipsPopup strong {
+  color: #000000; }
+
+.Popup .riskTips {
+  color: #599afc; }
+
+.order-confirm th, .order-confirm td {
+  border: 1px solid #dddddd; }
+
+@media (min-width: 1600px) {
+  .Quote-Aside .LongShort-Quote .LongShort-Quote-Head {
+    background-color: #d2e1f2; } }
+
+.purchase-popup.lever-popup .special-risk .content {
+  color: #666666; }
+  .purchase-popup.lever-popup .special-risk .content h4 {
+    color: #666666; }
+  .purchase-popup.lever-popup .special-risk .content .inscribe {
+    color: #666666; }
+
+.purchase-popup.lever-popup .agreement > div:first-child {
+  background-color: #e1efff;
+  border-bottom: 1px solid #cccccc; }
+
+.purchase-popup.lever-popup .agreement .content {
+  color: #666666; }
+
+.purchase-popup.lever-popup .agreement + .footer .check .wrong-age {
+  color: #4A75A8; }
+  .purchase-popup.lever-popup .agreement + .footer .check .wrong-age:after {
+    background-image: url(../images/sprite-fa8fba196e.png);
+    background-position: -42px -97px;
+    width: 16px;
+    height: 16px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .purchase-popup.lever-popup .agreement + .footer .check .wrong-age:after {
+        background-image: url(../images/sprite@2x-9d3dc7b014.png);
+        background-size: 165px 150px; } }
+
+.purchase-popup.lever-popup .fund-account .main > div input[type='text'] {
+  border: 1px solid #cccccc; }
+
+.purchase-popup.lever-popup .fund-account .main p {
+  color: #999999;
+  border-top: 1px solid #dddddd; }
+  .purchase-popup.lever-popup .fund-account .main p i {
+    background-image: url(../images/remind_gray.png); }
+
+.purchase-popup .loading .loader > div {
+  background-color: #999999; }
+
+.lever-popup .delegate table td {
+  color: #748aa1;
+  border: 1px solid #dddddd; }
+  .lever-popup .delegate table td.red {
+    color: #ef5b27 !important; }
+  .lever-popup .delegate table td.black {
+    color: #333333; }
+
+.lever-risefall {
+  background-color: #ffffff; }
+  .lever-risefall.trade-piece > header {
+    background-color: #B9CFE9; }
+    .lever-risefall.trade-piece > header .tip::before {
+      background-image: url(../images/sprite-fa8fba196e.png);
+      background-position: -115px 0px;
+      width: 17px;
+      height: 17px; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .lever-risefall.trade-piece > header .tip::before {
+          background-image: url(../images/sprite@2x-9d3dc7b014.png);
+          background-size: 165px 150px; } }
+
+.risefall-opt {
+  background-color: #ffffff; }
+  .risefall-opt .chart-info .rise b::before,
+  .risefall-opt .chart-info .rise > div::before,
+  .risefall-opt .chart-info .fall b::before,
+  .risefall-opt .chart-info .fall > div::before {
+    background-color: #666666; }
+  .risefall-opt .chart-info .rise b,
+  .risefall-opt .chart-info .fall b {
+    color: #ff9000; }
+    .risefall-opt .chart-info .rise b::before,
+    .risefall-opt .chart-info .fall b::before {
+      background-color: #ff9000; }
+  .risefall-opt .chart-info .rise b.count,
+  .risefall-opt .chart-info .fall b.count {
+    color: #b06401; }
+  .risefall-opt .chart-info .rise > div,
+  .risefall-opt .chart-info .fall > div {
+    color: #748aa1; }
+  .risefall-opt .chart-info .fall b {
+    color: #23b4ff; }
+  .risefall-opt .chart-info .fall b.count {
+    color: #0780be; }
+  .risefall-opt .chart-info .fall b::before {
+    background-color: #23b4ff; }
+  .risefall-opt .chart-info .ratio > div {
+    color: #748aa1; }
+  .risefall-opt .opt .button:first-child {
+    background-color: #ff9000;
+    background-image: url(../images/icon_rise.png); }
+  .risefall-opt .opt .button:last-child {
+    background-color: #23b4ff;
+    background-image: url(../images/icon_fall.png); }
+  .risefall-opt .assets {
+    color: #748aa1; }
+    .risefall-opt .assets > div {
+      border-right: 1px solid #dce6f3; }
+      .risefall-opt .assets > div b {
+        color: #4A75A8; }
+        .risefall-opt .assets > div b.worth {
+          color: #936d1c; }
+        .risefall-opt .assets > div b.rise {
+          color: #f41f21; }
+        .risefall-opt .assets > div b.fall {
+          color: #008a00; }
+
+.risefall-quote {
+  background-color: #f4f9fd; }
+  .risefall-quote > .Tabs > .Tabs-Bar {
+    background-color: #c1d5ec; }
+    .risefall-quote > .Tabs > .Tabs-Bar .Tabs-Bar-Item.active {
+      background: transparent; }
+    .risefall-quote > .Tabs > .Tabs-Bar .Tabs-Bar-Item:hover {
+      background: transparent; }
+  .risefall-quote table tr {
+    border-bottom: 1px solid #e9f0f7; }
+    .risefall-quote table tr .rise {
+      color: #f41f21; }
+    .risefall-quote table tr .fall {
+      color: #008a00; }
+  .risefall-quote .quote svg {
+    background-color: #e8f2fa !important; }
+
+.risefall-entrust {
+  background-color: #ffffff; }
+  .risefall-entrust.trade-piece header {
+    background-color: #d2e1f2; }
+  .risefall-entrust table td.prod {
+    color: #936d1c; }
+  .risefall-entrust table td.income.rise {
+    color: #f41f21; }
+  .risefall-entrust table td.income.fall {
+    color: #008a00; }
+
+.risefall-income {
+  background-color: #ffffff; }
+  .risefall-income.trade-piece header {
+    background-color: #d2e1f2; }
+    .risefall-income.trade-piece header .RangePicker {
+      color: #748aa1; }
+  .risefall-income table td.prod {
+    color: #936d1c; }
+  .risefall-income table td.income.rise {
+    color: #f41f21; }
+  .risefall-income table td.income.fall {
+    color: #008a00; }
+
+.risefall-intro {
+  background-color: #f4f9fd;
+  color: #748aa1; }
+  .risefall-intro h3 {
+    color: #1e3b5b; }
+  .risefall-intro h3::before {
+    background-image: url(../images/sprite-fa8fba196e.png);
+    background-position: 0px -118px;
+    width: 16px;
+    height: 13px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .risefall-intro h3::before {
+        background-image: url(../images/sprite@2x-9d3dc7b014.png);
+        background-size: 165px 150px; } }
+  .risefall-intro table tr td {
+    border: 1px solid #dce6f3; }
+
+.risefall-purchase .main-form {
+  color: #999999; }
+  .risefall-purchase .main-form .remind {
+    color: #000000; }
+    .risefall-purchase .main-form .remind span::before {
+      background-image: url(../images/sprite-fa8fba196e.png);
+      background-position: -42px -97px;
+      width: 16px;
+      height: 16px; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .risefall-purchase .main-form .remind span::before {
+          background-image: url(../images/sprite@2x-9d3dc7b014.png);
+          background-size: 165px 150px; } }
+  .risefall-purchase .main-form .data {
+    border: 1px solid #cccccc; }
+    .risefall-purchase .main-form .data span {
+      border-right: 1px solid #cccccc; }
+  .risefall-purchase .main-form button {
+    background-color: #499aff; }
+  .risefall-purchase .main-form ul li::before {
+    background-color: #999999; }
+
+.risefall-purchase .confirm-form {
+  color: #999999; }
+  .risefall-purchase .confirm-form .remind {
+    color: #333333; }
+    .risefall-purchase .confirm-form .remind:after {
+      background-image: url(../images/sprite-fa8fba196e.png);
+      background-position: -42px -97px;
+      width: 16px;
+      height: 16px; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .risefall-purchase .confirm-form .remind:after {
+          background-image: url(../images/sprite@2x-9d3dc7b014.png);
+          background-size: 165px 150px; } }
+
+.risefall-purchase .Loader .loader > div {
+  background-color: #999999; }
+
+.Columns-Settings.Popup .Content .Tabs .Tabs-Content {
+  border: 1px solid #cccccc; }
+  .Columns-Settings.Popup .Content .Tabs .Tabs-Content > div .EditListWrap header {
+    color: #666;
+    background-color: #eee; }
+  .Columns-Settings.Popup .Content .Tabs .Tabs-Content > div .EditListWrap i.ico svg {
+    fill: #000000; }
+  .Columns-Settings.Popup .Content .Tabs .Tabs-Content > div .EditListWrap li {
+    border-bottom: 1px solid #eee; }
+  .Columns-Settings.Popup .Content .Tabs .Tabs-Content > div .EditListWrap li:last-child {
+    border-bottom: none; }
+  .Columns-Settings.Popup .Content .Tabs .Tabs-Content > div .EditListWrap li.visible .visibility svg {
+    fill: #599afc; }
+  .Columns-Settings.Popup .Content .Tabs .Tabs-Content > div .EditListWrap li.invisible {
+    color: #666; }
+    .Columns-Settings.Popup .Content .Tabs .Tabs-Content > div .EditListWrap li.invisible svg {
+      fill: #666; }
+
+.Columns-Settings.Popup .Footer button:first-child {
+  background: none;
+  color: #599afc; }
+
+.trade-piece header {
+  color: #1f3c5c;
+  background-color: #c1d5ec; }
+  .trade-piece header small {
+    color: #748aa1; }
+  .trade-piece header .right.red {
+    color: #ef5b27 !important; }
+
+.Popup.process .footer {
+  border-top: 1px solid #f0f0f0; }
+  .Popup.process .footer .check {
+    color: #666666; }
+  .Popup.process .footer .btns .button {
+    background-color: #499aff; }
+  .Popup.process .footer .btns .button.disabled {
+    color: #eeeeee; }
+  .Popup.process .footer .btns .button:nth-child(2) {
+    width: 120px;
+    color: #499aff;
+    border: 1px solid #499aff;
+    background-color: #ffffff; }
+  .Popup.process .footer .btns .button:nth-child(2):hover {
+    color: #ffffff;
+    background-color: #499aff; }
+
+.Steps-Bar {
+  border-bottom: 1px solid #cccccc; }
+  .Steps-Bar .Steps-Bar-Item {
+    color: #999999; }
+    .Steps-Bar .Steps-Bar-Item.finish, .Steps-Bar .Steps-Bar-Item.finish::before, .Steps-Bar .Steps-Bar-Item.active, .Steps-Bar .Steps-Bar-Item.active::before {
+      color: #599afc;
+      background-image: url(../images/step_dot_1.png); }
+    .Steps-Bar .Steps-Bar-Item.finish::after, .Steps-Bar .Steps-Bar-Item.active::after {
+      border-color: #599afc; }
+    .Steps-Bar .Steps-Bar-Item.specialRisk-bar {
+      background-image: url(../images/step_specialRisk.png); }
+    .Steps-Bar .Steps-Bar-Item.finish.specialRisk-bar, .Steps-Bar .Steps-Bar-Item.active.specialRisk-bar {
+      background-image: url(../images/step_specialRisk_1.png); }
+    .Steps-Bar .Steps-Bar-Item.riskWarning-bar {
+      background-image: url(../images/step_riskWarning.png); }
+    .Steps-Bar .Steps-Bar-Item.writeDownInfo-bar {
+      background-image: url(../images/step_writeDownInfo.png); }
+    .Steps-Bar .Steps-Bar-Item.finish.riskWarning-bar, .Steps-Bar .Steps-Bar-Item.active.riskWarning-bar {
+      background-image: url(../images/step_riskWarning_1.png); }
+    .Steps-Bar .Steps-Bar-Item.agreement-bar {
+      background-image: url(../images/step_agreement.png); }
+    .Steps-Bar .Steps-Bar-Item.finish.agreement-bar, .Steps-Bar .Steps-Bar-Item.active.agreement-bar {
+      background-image: url(../images/step_agreement_1.png); }
+    .Steps-Bar .Steps-Bar-Item.fundAccount-bar {
+      background-image: url(../images/step_fundAccount.png); }
+    .Steps-Bar .Steps-Bar-Item.finish.fundAccount-bar, .Steps-Bar .Steps-Bar-Item.active.fundAccount-bar {
+      background-image: url(../images/step_fundAccount_1.png); }
+    .Steps-Bar .Steps-Bar-Item.delegate-bar {
+      background-image: url(../images/step_delegate.png); }
+    .Steps-Bar .Steps-Bar-Item.finish.delegate-bar, .Steps-Bar .Steps-Bar-Item.active.delegate-bar {
+      background-image: url(../images/step_delegate_1.png); }
+    .Steps-Bar .Steps-Bar-Item.success-bar {
+      background-image: url(../images/step_success.png); }
+    .Steps-Bar .Steps-Bar-Item.finish.success-bar, .Steps-Bar .Steps-Bar-Item.active.success-bar {
+      background-image: url(../images/step_success_1.png); }
+    .Steps-Bar .Steps-Bar-Item.fail-bar {
+      background-image: url(../images/step_success.png); }
+    .Steps-Bar .Steps-Bar-Item.finish.fail-bar, .Steps-Bar .Steps-Bar-Item.active.fail-bar {
+      background-image: url(../images/step_success_1.png); }
+  .Steps-Bar .Steps-Bar-Item::before {
+    background-image: url(../images/step_dot.png); }
+  .Steps-Bar .Steps-Bar-Item::after {
+    border-top: 2px solid #cccccc;
+    border-right: 2px solid #cccccc; }
+
+.step-prompt {
+  color: #333333; }
+  .step-prompt i {
+    background-image: url(../images/order_status.png); }
+
+.Tabs.vertical > .Tabs-Bar {
+  background-color: #f4f9fd; }
+  .Tabs.vertical > .Tabs-Bar .Tabs-Bar-Item.active, .Tabs.vertical > .Tabs-Bar .Tabs-Bar-Item:hover {
+    color: #0156c0;
+    background-color: #dce9f7; }
+
+.trade-locker .remind {
+  color: #748aa1;
+  background-color: #f4f9fd; }
+  .trade-locker .remind i {
+    background-image: url(../images/sprite-fa8fba196e.png);
+    background-position: -42px -97px;
+    width: 16px;
+    height: 16px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .trade-locker .remind i {
+        background-image: url(../images/sprite@2x-9d3dc7b014.png);
+        background-size: 165px 150px; } }
+
+.login-opt .user {
+  border-right: 1px solid #D7E2F1; }
+
+.login-opt a {
+  color: #5979A0; }
+
+.RiskAssess .inform,
+.RiskWarning .inform {
+  color: #666666; }
+  .RiskAssess .inform ul b,
+  .RiskWarning .inform ul b {
+    color: #ef5b27; }
+  .RiskAssess .inform .inscribe,
+  .RiskWarning .inform .inscribe {
+    color: #999999; }
+  .RiskAssess .inform .info,
+  .RiskWarning .inform .info {
+    color: #333333;
+    border: 1px solid #d6d2b8;
+    background-color: #fffdee; }
+    .RiskAssess .inform .info i,
+    .RiskWarning .inform .info i {
+      background: url(../images/icon_light.png); }
+    .RiskAssess .inform .info ul,
+    .RiskWarning .inform .info ul {
+      color: #666666; }
+  .RiskAssess .inform .appro-main .appro-client b,
+  .RiskAssess .inform .appro-main .appro-p b,
+  .RiskWarning .inform .appro-main .appro-client b,
+  .RiskWarning .inform .appro-main .appro-p b {
+    color: #ef5b27; }
+  .RiskAssess .inform .appro-main .appro-tip,
+  .RiskWarning .inform .appro-main .appro-tip {
+    border: 1px solid #d6d2b8;
+    background-color: #fffdee; }
+    .RiskAssess .inform .appro-main .appro-tip::before,
+    .RiskWarning .inform .appro-main .appro-tip::before {
+      background: url(../images/icon_light.png); }
+
+.RiskAssess .loading .loader > div,
+.RiskWarning .loading .loader > div {
+  background-color: #999999; }
+
+.RiskWarning.error .inform > span {
+  background: url(../images/order_status.png) no-repeat 65px -50px; }
+
+.RiskAssess .intro {
+  color: #999999;
+  background-color: #eeeeee; }
+
+.RiskAssess .questions-list h3 {
+  color: #333333;
+  background-color: #eef6ff;
+  border: 1px solid #d1e4f9; }
+  .RiskAssess .questions-list h3 b {
+    color: #ef5b27; }
+  .RiskAssess .questions-list h3 b::before {
+    background-image: url(../images/sprite-fa8fba196e.png);
+    background-position: -42px -97px;
+    width: 16px;
+    height: 16px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .RiskAssess .questions-list h3 b::before {
+        background-image: url(../images/sprite@2x-9d3dc7b014.png);
+        background-size: 165px 150px; } }
+
+.RiskAssess .questions-list ul li {
+  color: #666666; }
+
+.RiskAssess .questions-list .i-checks > i {
+  background-color: #4A75A8;
+  border: 4px solid #cccccc; }
+
+.RiskAssess .questions-list .i-checks > i:before {
+  background-color: transparent; }
+
+.RiskAssess .questions-list .i-checks input:checked + i {
+  border-color: #599afc; }
+
+.RiskAssess .questions-list .i-checks input:checked + i:before {
+  background-color: #23b7e5; }
+
+.tradeSettings:after {
+  display: inline-block;
+  content: '';
+  margin: 5px 0 0 5px; }
+
+.tabs-opt .ui-checkbox .label-ui {
+  border: 1px solid #97c9f0;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-image: none;
+  background-color: #f2f9ff; }
+
+.tabs-opt .ui-checkbox input:checked + .label-ui {
+  border: none;
+  border-radius: 0; }
+
+.QuickOrder-Wrap .tradeSettings:after {
+  margin: 0; }
+
+.QuickOrder-Wrap .general-order .remind {
+  background-color: #f4f9fd; }
+
+.QuickOrder-Wrap .general-order.Buy .content .code ul {
+  background: #fff7f4;
+  border-color: #ffb195; }
+  .QuickOrder-Wrap .general-order.Buy .content .code ul li:hover,
+  .QuickOrder-Wrap .general-order.Buy .content .code ul li.active {
+    background: #e9f0f7; }
+
+.QuickOrder-Wrap .general-order.Sell .content .code ul {
+  background: #f2f9ff;
+  border-color: #97c9f0; }
+  .QuickOrder-Wrap .general-order.Sell .content .code ul li:hover,
+  .QuickOrder-Wrap .general-order.Sell .content .code ul li.active {
+    background: #e9f0f7; }
+
+.tradeSettings:after,
+.trade-piece header .right i.tradeSettings:after,
+.trade-piece header .right i.openSettings:after,
+.general-entrust-board .op-area .openSettings:after,
+.general-position-board .openSettings:after,
+.Quote-Aside .Quote-Aside-Head .setting {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -19px -136px;
+  width: 13px;
+  height: 14px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .tradeSettings:after,
+    .trade-piece header .right i.tradeSettings:after,
+    .trade-piece header .right i.openSettings:after,
+    .general-entrust-board .op-area .openSettings:after,
+    .general-position-board .openSettings:after,
+    .Quote-Aside .Quote-Aside-Head .setting {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.QuickOrder-Wrap .tradeSettings:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -19px -136px;
+  width: 13px;
+  height: 14px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .QuickOrder-Wrap .tradeSettings:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.tradeSettings:hover:after,
+.trade-piece header .right i.tradeSettings:hover:after,
+.trade-piece header .right i.openSettings:hover:after,
+.general-entrust-board .op-area .openSettings:hover:after,
+.general-position-board .openSettings:hover:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -55px -136px;
+  width: 13px;
+  height: 14px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .tradeSettings:hover:after,
+    .trade-piece header .right i.tradeSettings:hover:after,
+    .trade-piece header .right i.openSettings:hover:after,
+    .general-entrust-board .op-area .openSettings:hover:after,
+    .general-position-board .openSettings:hover:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.Quote-Aside .Quote-Aside-Head .setting:hover {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -55px -136px;
+  width: 13px;
+  height: 14px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .Quote-Aside .Quote-Aside-Head .setting:hover {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.StockTrade .refresh:after,
+.StockTrade .ico-refresh:after {
+  display: inline-block;
+  vertical-align: top;
+  content: '';
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -60px -118px;
+  width: 13px;
+  height: 13px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .StockTrade .refresh:after,
+    .StockTrade .ico-refresh:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.StockTrade .refresh:hover:after,
+.StockTrade .ico-refresh:hover:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -42px -118px;
+  width: 13px;
+  height: 13px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .StockTrade .refresh:hover:after,
+    .StockTrade .ico-refresh:hover:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.QuickOrder-Wrap .refresh:after {
+  display: inline-block;
+  vertical-align: top;
+  content: '';
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -60px -118px;
+  width: 13px;
+  height: 13px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .QuickOrder-Wrap .refresh:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.QuickOrder-Wrap .refresh:hover:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -42px -118px;
+  width: 13px;
+  height: 13px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .QuickOrder-Wrap .refresh:hover:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.Dark.Tabs .Tabs-Bar-ToolBtns .refresh:after,
+.trade-piece header .refresh:after {
+  margin: 6px 0 0 6px; }
+
+.zoom {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -115px -22px;
+  width: 16px;
+  height: 17px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .zoom {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+  .zoom:hover {
+    background-image: url(../images/sprite-fa8fba196e.png);
+    background-position: -115px -44px;
+    width: 16px;
+    height: 17px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .zoom:hover {
+        background-image: url(../images/sprite@2x-9d3dc7b014.png);
+        background-size: 165px 150px; } }
+
+.delete {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -82px -97px;
+  width: 14px;
+  height: 16px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .delete {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+  .delete:hover {
+    background-image: url(../images/sprite-fa8fba196e.png);
+    background-position: -101px -97px;
+    width: 14px;
+    height: 16px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      .delete:hover {
+        background-image: url(../images/sprite@2x-9d3dc7b014.png);
+        background-size: 165px 150px; } }
+
+.tab-change-pass .inner .remind i {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -42px -97px;
+  width: 16px;
+  height: 16px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .tab-change-pass .inner .remind i {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.general-order.Buy .magnifier:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -46px -74px;
+  width: 17px;
+  height: 17px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .general-order.Buy .magnifier:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.general-order.Sell .magnifier:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -68px -74px;
+  width: 17px;
+  height: 17px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .general-order.Sell .magnifier:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.ui-checkbox .label-ui {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: 0px -136px;
+  width: 14px;
+  height: 14px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ui-checkbox .label-ui {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.ui-checkbox input:checked + .label-ui {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -137px -19px;
+  width: 14px;
+  height: 14px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ui-checkbox input:checked + .label-ui {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.transfer-in .ui-checkbox .label-ui {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -137px -114px;
+  width: 14px;
+  height: 14px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .transfer-in .ui-checkbox .label-ui {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.transfer-in .ui-checkbox input:checked + .label-ui {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -137px 0px;
+  width: 14px;
+  height: 14px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .transfer-in .ui-checkbox input:checked + .label-ui {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.dialog-content .dialog-icon.suc {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: 0px 0px;
+  width: 40px;
+  height: 40px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .dialog-content .dialog-icon.suc {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.dialog-content .dialog-icon.err {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -45px 0px;
+  width: 40px;
+  height: 40px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .dialog-content .dialog-icon.err {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.login-opt .user:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -29px -45px;
+  width: 24px;
+  height: 24px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .login-opt .user:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.general-entrust-board th,
+.general-position-board th,
+.tab-transfer th,
+.data-table th,
+.LongShort-DataList-Wrap th,
+.lever-home .assets-operate th,
+.risefall-entrust th,
+.risefall-income th,
+.OpenFund-MyFundsInfo th,
+.tab-entrust-query th,
+.TodayDeal th,
+.HistoryDeal th,
+.HistoryDelegate th,
+.CashFlow th {
+  border: 1px solid #dce6f3;
+  color: #748aa1; }
+
+.general-entrust-board td,
+.general-position-board td,
+.tab-transfer td,
+.data-table td,
+.LongShort-DataList-Wrap td,
+.lever-home .assets-operate td,
+.risefall-entrust td,
+.risefall-income td,
+.OpenFund-MyFundsInfo td,
+.tab-entrust-query td,
+.TodayDeal td,
+.HistoryDeal td,
+.HistoryDelegate td,
+.CashFlow td {
+  border: 1px solid #e9f0f7 !important; }
+
+.LongShort-DataList-Header td {
+  border: 1px solid #dce6f3;
+  color: #748aa1;
+  background-color: #f4f9fd; }
+
+.StockTickFive table th, .StockTickFive table td {
+  border: none; }
+
+.general-inventory .inner footer:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -21px -97px;
+  width: 16px;
+  height: 16px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .general-inventory .inner footer:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.ico.ico-info:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -90px 0px;
+  width: 20px;
+  height: 20px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ico.ico-info:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.ico.ico-info:hover:after {
+  background-image: url(../images/sprite-fa8fba196e.png);
+  background-position: -58px -45px;
+  width: 20px;
+  height: 20px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ico.ico-info:hover:after {
+      background-image: url(../images/sprite@2x-9d3dc7b014.png);
+      background-size: 165px 150px; } }
+
+.tab-self-option .order-main .info,
+.tab-fixed-income .order-main .info {
+  background: #f7eee9;
+  color: #748aa1; }
+  .tab-self-option .order-main .info > ul,
+  .tab-fixed-income .order-main .info > ul {
+    background-image: linear-gradient(#748aa1 60%, rgba(255, 255, 255, 0) 0%); }
+  .tab-self-option .order-main .info.Sell,
+  .tab-fixed-income .order-main .info.Sell {
+    background: #e8f2fa; }
+
+.StockTrade.Dark .NumberInput > .sub-value {
+  color: #748aa1; }
+
+.selfOptionEntrust {
+  background: #f7eee9; }
+  .selfOptionEntrust .tab.active,
+  .selfOptionEntrust .tab.active:after {
+    background: #f7eee9;
+    color: #ef5b27; }
+  .selfOptionEntrust div.header {
+    background: #f4f9fd;
+    color: #1f3c5c; }
+  .selfOptionEntrust .content .doOrder {
+    background: #ef5b27;
+    color: #ffffff; }
+    .selfOptionEntrust .content .doOrder.disabled {
+      color: white;
+      background-color: #bbb;
+      cursor: default; }
+    .selfOptionEntrust .content .doOrder.disabled:hover {
+      background: #bbb; }
+    .selfOptionEntrust .content .doOrder:hover {
+      background: #cf3b06; }
+  .selfOptionEntrust .content input {
+    border: 1px solid #ffb195;
+    background-color: #fff7f4;
+    color: #333333; }
+    .selfOptionEntrust .content input:focus {
+      border-color: #ef5b27; }
+  .selfOptionEntrust .content .code ul {
+    background: #fff7f4;
+    border: 1px solid #ffb195; }
+    .selfOptionEntrust .content .code ul li {
+      color: #748aa1; }
+    .selfOptionEntrust .content .code ul li:hover,
+    .selfOptionEntrust .content .code ul li.active {
+      background: #e9f0f7; }

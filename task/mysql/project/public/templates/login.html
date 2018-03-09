@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>学生管理系统登录</title>
+</head>
+<body>
+<!-- 1.从用户的角度来说:用户需要看到一个登录页面：登录表单是HTML文件
+所有的HTML文件都是放在Project/templates/文件夹下：所有的html文件，
+浏览器都不允许直接 访问，只允许访问PHP文件-->
+<!--3.用户会选择输入用户信息，提交：确定表单提交对象  -->
+<form action="login.php" method="post">
+	<table style="margin: 100px auto"  border="1">
+	<tr>
+		<td>用户名：</td>	
+		<td><input type="text" name="username" /></td>	
+	</tr>
+	<tr>
+		<td>密码：</td>	
+		<td><input type="password" name="password" /></td>	
+	</tr>
+	<tr>
+		<td colspan=2 align="center">
+			<input type="submit" name="submit" value="登录"/>
+		</td>
+	</tr>
+s
+	</table>
+</form>
+</body>
+</html>

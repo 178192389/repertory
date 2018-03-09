@@ -1,0 +1,105 @@
+getenc     WD-WCC6Y6TE9RR3
+
+IW*0F*D3*E8*EF*3B*3DS*0E*83s*3B*F3U*23G*97*883*91G*16bw*22*A05*A8*CCL8G*97*883*91G*16bw*22*A05*A8*CCL8G*97*883*91G*16bw*22*A05*A8*CCL8*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00*00
+
+
+
+
+getmac  1C:1B:0D:5A:2D:39,192.168.1.113
+
+
+
+
+
+
+
+
+
+"{"data":
+	{"userType":"trade",
+	 "token":
+	 	{"expireKey":"7f221d8825058c3cee6ede29b512bc8fa7af17844c23f018129fd71f7da73038",
+	 	 "encryptData":"be24cba3be2050cb8e928cca455b3a51e0c8fd00446c8cf7c21e38f51ce313717b684958c8cea7301a059b35752b2b4ad91bfd82afc8e4ad73eeacfe4c4380641d6e4c34d2143286a051a215a8271cd2c45b737ca7c19a3cd80d4683396645fcc24b1a16846309a5c4b435f44d3715a6fe103abf8480117c4871741e9dd70087d46b7a3e110c5847477c1459a00e864f6e382063178f8bcd5dfed3bd8df7987c"
+	 	}
+	},
+	"topic":"sys.userManager"
+}"
+
+�����<۝9���y�u�o�vm�k��׿8�ͷM|�o_w�_�ֻ�M�
+
+m�q��m��G��v���[ݮu{G<}�4㎜���sm^����Ƿ�~�����|s�k��խ9���پw�[}�6i�<{���w�i����7�N��ޞ���wmx�o:kNukmykͻ��vs�[�~�k�5���w��7�޺��snխz��ֹs��ߗ����ז�}�tݦ��4�^�����^��{�O;w�����]��;��׎}kM�����N�׿����wv�������
+
+
+
+
+
+
+
+ https://skynet.gf.com.cn/apm/v1/log.gif?os=browser&
+version=&
+channel=apm&
+app=gf-trader&
+appid=cn.com.gf.gf-trader&
+tid=&
+stamp=1505266176329&
+ref_url=&
+ref_tid=&
+url=&                                                                                               	 https://localhost.gf.com.cn:37022/getenc
+param=%7B%22
+trade_id %22%3A%22  1212121  %22%7D&                                                                   %22= "  %7D= }  %7B= {   %3A= :  %2C= ,  %5B= [  %5D= ] 
+data= %7B%22
+meta %22%3A%7B%22  id %22%3A%22 1C %3A 1B %3A 0D %3A 5A %3A 2D %3A 39 %22%2C%22
+systemVersion %22%3A%22  %22%2C%22
+appVersion    %22%3A%22  %22%2C%22
+contentVersion %22%3A%22 %22%2C%22
+mac  %22%3A%22 1C %3A 1B %3A 0D %3A 5A %3A 2D %3A 39 %22%2C%22
+platform %22%3A%22  browser  %22%2C%22
+browser  %22%3A%22 %22%2C%22
+os       %22%3A%22
+browser  %22%2C%22
+ip     %22%3A%22 %22%2C%22
+tn   %22%3A%22%22   %7D%2C%22
+logHead  %22%3A%7B%22
+logType  %22%3A%22
+gf_trader_tradeLogin  %22%2C%22
+logTime  %22%3A%22  2017-09-13+09   %3A 29 %3A 36  %22%7D%2C%22
+logMsg%22%3A%7B%22
+portal_id %22%3A%22 %22%2C%22
+trade_id %22%3A%22  %22%2C%22
+source  %22%3A%22 - %22%7D%7D&
+ct=124&
+dtype=&
+userid=&
+deviceid= 1C %3A 1B %3A 0D %3A 5A %3A 2D %3A 39 &
+type=&
+desc=gf_trader_tradeLogin&
+suc=0&
+scd=-2&
+sdc= %5B 150168 %5D %5B %E6%97%A0%E6%AD%A4%E5%AE%A2%E6%88%B7%E5%8F%B7 %5D
+
+
+
+os:browser
+version:
+channel:apm
+app:gf-trader
+appid:cn.com.gf.gf-trader
+tid:
+stamp:1505266176329
+ref_url:
+ref_tid:
+url:
+param:{"trade_id":"1212121"}
+data:{"meta":{"id":"1C:1B:0D:5A:2D:39","systemVersion":"","appVersion":"","contentVersion":"","mac":"1C:1B:0D:5A:2D:39","platform":"browser","browser":"","os":"browser","ip":"","tn":""},"logHead":{"logType":"gf_trader_tradeLogin","logTime":"2017-09-13 09:29:36"},"logMsg":{"portal_id":"","trade_id":"","source":"-"}}
+ct:124
+dtype:
+userid:
+deviceid:1C:1B:0D:5A:2D:39
+type:
+desc:gf_trader_tradeLogin
+suc:0
+scd:-2
+sdc:[150168][无此客户号]
+
+scd:-2
+sdc:[120047][客户交易密码错误]

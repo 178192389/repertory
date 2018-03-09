@@ -1,0 +1,185 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<title>无标题</title>
+
+</head>
+<body>
+<div class="TradeLogin">
+	<div class="LoginForm" >
+		<form method="POST"  action="./login1.php">
+			<div class="row">
+				<span class="useridIcon"></span>
+				<input type="text" style="display:none;">
+				<input class="useridInput" type="text"  placeholder="客户编号" name="user_id" >
+			</div>
+			<div class="row">
+				<span class="passwordIcon"></span>
+				<input type="password" name="password" style="display:none;" data-reactid=".1.1.0.0.0.1:$password.1">
+				<input type="password" class="" required="" placeholder="密码" name="password" data-reactid=".1.1.0.0.0.1:$password.2"> 
+				
+			<!-- 	<a href="https://cdn.gfzq.cn/gf-trader/safe_plugins/GF-LoginHelper-0.0.3.exe" class="installSecTips" title="安装后请刷新页面！" target="_blank">点击安装新版安全控件</a>    https://localhost.gf.com.cn:37022/version
+
+			scd:-2
+sdc:[150168][无此客户号] -->
+			</div>
+			
+			<div class="row">
+				<button class="button submit"  type="submit" onclick="login(this)" >登录</button>
+			</div>			
+		</form>
+	
+	</div>
+</div>
+</body>
+</html>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+//src="http://ip.chinaz.com/getip.aspx"
+
+</script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>登陆页面--股票交易系统</title>
+<link rel="stylesheet" href="<%=path%>/assets/css/styles.css">
+<script language="javascript">
+
+/*	function check() {
+		data = {};
+		var data.userid = document.getElementById("userid").value;
+		var data.password = document.getElementById("password").value;
+		if (data.userid.length == 0) {
+			alert("请输入账号！");
+			return false;
+		}
+		if (password.length == 0) {
+			alert("请输入密码！");
+			return false;
+		}
+		
+		$.ajax({  
+			   async: false,  
+			   type : "POST",  
+			   url : ,  
+			   dataType : 'json',  
+			   'data':,
+			   success : function(data) {  
+			      temp=data;  
+			   }  
+			});  
+			alert(temp);
+	}*/
+</script>
+</head>
+<body>
+	<form method="post" action="https://localhost.gf.com.cn:37022/getenc">
+		<div id="umain">
+			<h1>股票交易系统</h1>
+			<div class="login">
+				<p>
+					<input type="text" name="user_id" placeholder="用户帐号">
+				</p>
+				<p>
+					<input type="password" name="password" placeholder="密码">
+				</p>
+		
+				<p>
+					<input class="button submit" type="submit" value="登 陆" onclick="return check()">
+				</p>
+				
+			</div>
+		</div>
+	</form>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="IE=11.0000" http-equiv="X-UA-Compatible">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>test</title>
+
+	<script type="text/javascript">
+	  $(function(){
+	  	    var pwdCtrl = document.getElementById('mpwdPlug');
+	  	    var token = '1505123394718-jqy6f2ZMWtCzUE17\0';
+
+	  	    $('#btn_login').click(function(){
+	  	       
+               if ($('#username').val() == '') {
+                   alert('请输入账号');
+                   return false;
+               }
+	           var pwd = pwdCtrl.GetEncryptPwd(token);
+	           
+               if (pwd == -1 || pwd == null) {
+               	  alert('请输入密码');
+                  return false;
+               }
+               var str_name = $.trim($('#username').val()).length;
+               
+               if (str_name == 8 || str_name == 9) {
+               	 $("#loginType").val("资金账号");
+               }else if (str_name > 9 ) {
+               	 $("#loginType").val("股东账号");
+               }
+               var a = pwdCtrl.getMac('www.baidu.com:80\0');
+               $('#op_station').val(a+',wt');
+               $('#pwd').val(pwd);
+               $('#btn_login').val('登录中...');
+               $("#login_form").submit();
+	  	    });
+
+	  });
+       
+    </script>
+   
+  
+
+</head>
+
+<body>
+ 
+  <div class="TradeLogin">
+	<div class="LoginForm" >
+		<form method="POST"  action="./login.php">
+			<div class="row">
+				<span class="useridIcon"></span>
+				<input type="text" style="display:none;">
+				<input class="useridInput" type="text"  placeholder="客户编号" name="user_id" >
+			</div>
+			<div class="row">
+				<span class="passwordIcon"></span>
+				<input type="password" name="password" style="display:none;" data-reactid=".1.1.0.0.0.1:$password.1">
+				<input type="password" class="" required="" placeholder="密码" name="password" data-reactid=".1.1.0.0.0.1:$password.2"> 
+				
+			<!-- 	<a href="https://cdn.gfzq.cn/gf-trader/safe_plugins/GF-LoginHelper-0.0.3.exe" class="installSecTips" title="安装后请刷新页面！" target="_blank">点击安装新版安全控件</a>    https://localhost.gf.com.cn:37022/version
+
+			scd:-2
+sdc:[150168][无此客户号] -->
+			</div>
+			
+			<div class="row">
+				<button class="button submit"  type="submit" onclick="login(this)" >登录</button>
+			</div>			
+		</form>
+	
+	</div>
+</div>
+
+
+
+</body>
+</html>
+
+
+
