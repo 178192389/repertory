@@ -1,0 +1,70 @@
+<?php if (!defined('THINK_PATH')) exit();?><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"> 
+<title>登录页面</title>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Js/bootstrap.min.js"></script>
+<link type="text/css" rel="stylesheet" href="__PUBLIC__/Css/bootstrap.min.css"> 
+</head>
+<style>
+.modal-dialog{opacity:0.9;background:#fff; border-radius:9px;}
+</style>
+<body>
+<div class="modal fade" id="mymodal"  data-backdrop="static" role="dialog"  aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="content">
+				<form action="__URL__/" method="post" class="form-horizontal">
+					<div class="modal-header">
+						<button class="close" data-dismiss="modal" aria-label="Close">x</button>
+						   <h3 class="modal-title text-center"  id="myModalLabel">用户注册</h3>
+					</div>
+					<div class="container">
+					<div class="modal-body">
+						<div class="form-group">
+					      <div class="input-group ">
+					        <span class="input-group-addon">用户名：</span>
+					        <input type="text" class="form-control " name="name" value="">
+					      </div>
+			  			</div>
+						<div class="form-group ">
+					      <div class="input-group">
+					        <span class="input-group-addon">密码：</span>
+					        <input type="text" class="form-control" name="pwd" value="">
+					      </div>
+			  			</div>
+			  			<div class="form-group">
+					      <div class="input-group">
+					        <span class="input-group-addon">确认密码：</span>
+					        <input type="text" class="form-control" name="pwds" value="">
+					      </div>
+			  			</div>
+			  			<div class="form-group">
+					      <div class="input-group">
+					        <span class="input-group-addon">email@：</span>
+					        <input type="text" class="form-control" name="email" value="">
+					      </div>
+			  			</div>
+						<div class="form-group">
+					      <div class="input-group">
+					        <span class="input-group-addon">验证码：</span>
+					        <input type="text" class="form-control" name="fcode">
+					        <span class="input-group-addon" style="padding:0px;border:0px;">
+					        	<img src="__APP__/Common/verify" onclick="this.src=this.src+'?c='+Math.random()" height="34"/>
+					        </span>
+					      </div>
+			  			</div>
+			  			 <div class="form-group">
+							<div class="col-sm-6">
+								<button type="submit" class="btn btn-primary  form-control">提交</button>
+							</div>
+							<div class="col-sm-6">
+								<button type="reset" class="btn btn-danger  form-control">重置</button>
+							</div>
+						</div> 	
+					</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+	</div>
+</body>
+</html>

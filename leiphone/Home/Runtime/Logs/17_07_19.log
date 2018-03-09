@@ -1,0 +1,57 @@
+[ 2017-07-19T10:25:51+08:00 ] 127.0.0.1 /leiphone/index.php/Category/sponsor
+ERR: 非法操作:sponsor
+
+[ 2017-07-19T11:27:33+08:00 ] 127.0.0.1 /leiphone/index.php/Category/index?id=9
+ERR: XML标签语法错误
+
+[ 2017-07-19T11:27:33+08:00 ] 127.0.0.1 /leiphone/index.php/Category/index?id=9
+ERR: XML标签语法错误
+
+[ 2017-07-19T11:27:34+08:00 ] 127.0.0.1 /leiphone/index.php/Category/index?id=9
+ERR: XML标签语法错误
+
+[ 2017-07-19T11:27:34+08:00 ] 127.0.0.1 /leiphone/index.php/Category/index?id=9
+ERR: XML标签语法错误
+
+[ 2017-07-19T11:27:35+08:00 ] 127.0.0.1 /leiphone/index.php/Category/index?id=9
+ERR: XML标签语法错误
+
+[ 2017-07-19T19:19:58+08:00 ] 127.0.0.1 /leiphone/index.php/Category/newsType
+ERR: 模板不存在[./Home/Tpl/Category/newsType.html]
+
+[ 2017-07-19T22:17:00+08:00 ] 127.0.0.1 /leiphone/index.php/News/index?id=4
+ERR: Action:commonWay您所请求的方法不存在！
+
+[ 2017-07-19T22:17:03+08:00 ] 127.0.0.1 /leiphone/index.php/News/index?id=4
+ERR: Action:commonWay您所请求的方法不存在！
+
+[ 2017-07-19T22:17:03+08:00 ] 127.0.0.1 /leiphone/index.php/News/index?id=4
+ERR: Action:commonWay您所请求的方法不存在！
+
+[ 2017-07-19T22:17:03+08:00 ] 127.0.0.1 /leiphone/index.php/News/index?id=4
+ERR: Action:commonWay您所请求的方法不存在！
+
+[ 2017-07-19T22:17:04+08:00 ] 127.0.0.1 /leiphone/index.php/News/index?id=4
+ERR: Action:commonWay您所请求的方法不存在！
+
+[ 2017-07-19T22:17:04+08:00 ] 127.0.0.1 /leiphone/index.php/News/index?id=4
+ERR: Action:commonWay您所请求的方法不存在！
+
+[ 2017-07-19T22:17:13+08:00 ] 127.0.0.1 /leiphone/index.php/News/index?id=4
+ERR: Action:commonWay您所请求的方法不存在！
+
+[ 2017-07-19T22:17:14+08:00 ] 127.0.0.1 /leiphone/index.php/News/index?id=4
+ERR: Action:commonWay您所请求的方法不存在！
+
+[ 2017-07-19T22:17:14+08:00 ] 127.0.0.1 /leiphone/index.php/News/index?id=4
+ERR: Action:commonWay您所请求的方法不存在！
+
+[ 2017-07-19T22:17:14+08:00 ] 127.0.0.1 /leiphone/index.php/News/index?id=4
+ERR: Action:commonWay您所请求的方法不存在！
+
+[ 2017-07-19T22:17:33+08:00 ] 127.0.0.1 /leiphone/index.php/News/index?id=4
+ERR: Action:commonWay您所请求的方法不存在！
+
+[ 2017-07-19T22:26:32+08:00 ] 127.0.0.1 /leiphone/index.php/News/index?id=9
+ERR: Action:commonWay您所请求的方法不存在！
+

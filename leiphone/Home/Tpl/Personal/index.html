@@ -1,0 +1,74 @@
+
+<include file="Personal/top"/>
+
+<div class="container container-top">
+	<include file="Personal/left"/>	
+	
+	<div class="col-xs-9 col-sm-10 col-md-10" >
+	
+		<ul class="list-group nav-justified ">
+			<li class="col-md-3 list-group-item">
+					<a href="__URL__/info">
+						<img src="__PUBLIC__/Uploads/<{$data.portrait}>" class="img-circle"  data-src="holder.js/100x100" width="100" height="100"> 
+						&nbsp;&nbsp; <{$data.author_name}>
+					</a>
+			</li>
+				<li class="col-md-2 list-group-item">积分：11分 <a href="#" class="glyphicon glyphicon-question-sign"></a></li>
+				
+				
+			<li class="col-md-4 list-group-item">
+				<a href="#" data-toggle="modal" data-target="#depict">简介: <em class="glyphicon glyphicon-edit"></em></a><br/>
+				 <{$data.depict}>
+				</li>
+			</li>
+			<li class="col-md-3 list-group-item">	
+					上次登录时间:<br/>	<{$_SESSION['update_time']}>
+				 	<h5>上次登录ip:<br/> <{$_SESSION['client_ip']}></h5>
+			</li>
+		</ul>
+	<div class="panel">
+		<div class="panel-heading ">
+			<ul class="list-inline">
+			<li><a href="__URL__/article"><font size="5px">文章发表状态</font></a></li><br/><br/>
+			<li><a href="javascript:;" class="btn btn-warning">草稿<em class="badge"><{$a}></em></a></li>
+			<li><a href="javascript:;" class="btn btn-info">待审核<em class="badge"><{$b}></em></a></li>
+			<li><a href="javascript:;" class="btn btn-success">已审核<em class="badge"><{$c}></em></a></li>
+			<li><a href="javascript:;" class="btn btn-danger">未通过<em class="badge"><{$d}></em></a></li>
+			</ul>		
+			
+			
+					
+		</div>
+		<div class="panel-body">
+			<ul class="list-group">
+				<li class="list-group-item" ><a href="" >评论信息</a></li>
+			</ul>
+		</div>
+		<div class="panel-footer">
+		
+		</div>
+	</div>
+</div>
+	
+<!--简介  -->
+	<div class="modal fode" id="depict">
+		<div class="modal-dialog modal-sm" role="document" style="margin-top:150px;">
+		 	 <div class="modal-content">
+			  	 <div class="modal-header">
+			  		 <button type="button" class="close" data-dismiss="modal">x</button>
+			  		<stong>个人简介</stong>
+			  	</div>
+			<form action="__URL__/depictSave" method="post">
+				<div class="modal-body">
+					<textarea class="form-control" name="depict" style="resize:none; height:100px;"></textarea>
+					<input type="hidden" name="cid" value="<{$_SESSION['cid']}>"/>
+				</div>
+				<div class="modal-footer">
+	        	  <button type="submit" class="btn btn-primary btn-xs">保存</button>
+	        	  <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">取消</button>
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+

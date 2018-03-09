@@ -1,0 +1,283 @@
+@CHARSET "UTF-8";
+*{margin:0; padding:0;}
+
+ a,li{
+	list-style-type:none;
+	text-decoration:none;
+	color: #778;
+ 	
+}
+a:hover{text-decoration:none;}
+body{background-color:#f8f8f8;font-weight:bold; }
+
+/*  .sub_a:hover{border:2px solid #c0c0c0;
+ 	border-radius:30px;
+ 	padding:10px 20px;
+} */
+.navbar{margin-bottom:0px; border-radius:0;}
+.search{border-radius:18px;}
+.header_top{margin-top:6px; padding-right:10px; }
+.header_top a{color:#777; text-decoration:none;}
+/*头部结束  */
+
+./* header{ width:100%; border-bottom: 1px solid #ddd;}
+.header_top{
+	width:1180px;
+	height:60px;
+	margin:0 auto;
+	line-height:60px;
+	} 
+.header_login {float:left;}
+.header_login img{ margin-top:10px; float:left;}
+.header_login span{display:inline; padding-left:15px;}
+
+.header_menu {width:45%;margin-left:50px;float:left}
+.header_menu li{float:left; margin-top:14px; }
+ .sub_a{display:block; line-height:32px; padding:2px 25px;}
+ .sub_a:hover{border:2px solid #c0c0c0;
+ 	border-radius:30px;
+ 	padding:0 23px;
+}
+.header_message a{display:block;width: 50px; height: 60px; float: right;margin-right:5px;}
+ .ico{
+	background:url(../Image/ico_spirit.png) no-repeat -171px -11px;
+	width: 30px;
+	height: 20px;
+	display:block;
+	margin-top:21px; 
+}
+.header_user a{width: 60px;display: block; float: right;margin-top:-4px; text-align:center;}
+.header_user a:hover{background-color:#fff;border:1px solid #f3f3f3; box-shadow:1px 1px 2px 2px #ccc;} */
+/* .header_search{float: left;}
+.header_search .text{height:38px;width: 125px;border-radius:20px 0 0 20px;
+background-color:#E7E7E7; border:0; padding-left:4px; }
+.header_search .submit{height:38px; 
+	width: 40px; 
+	margin-left:-10px; 
+	border-radius:0 20px 20px 0;
+	border:0; 
+	background:url(../Image/ico_spirit.png) no-repeat -116px 6px #E7E7E7;
+}
+
+.form-control{top:13px;}
+.search{border-radius:20px;}
+
+.contribute{
+	border-radius:20px;
+	float: left;
+	background-color: #789;
+	display: block;
+	height:36px;
+	line-height: 37px;
+	font-size: 15px;
+	padding:0 15px ;
+	margin:2px 0 0 20px; 
+	color:white;
+}
+.contribute i{
+	display: block;
+	width: 20px;
+	height: 21px;
+	margin-top:7px; 
+	float: left;
+	background: url(../Image/ico_spirit.png) no-repeat -290px -45px;
+}
+.contribute:hover{background-color:#4c708e; color:#fff;} */
+
+/* 头部结束 */
+
+/* .nav{width: 100%; border-bottom: 1px solid #ddd; clear: both;}
+.border-btm{border-bottom:0;}
+.nav .wrapper{margin: 0 auto; width: 1130px; height:55px;}
+.nav .wrapper a{display: inline-block; float: left; margin-right:48px;  line-height:55px;}
+.nav .wrapper a:hover{color:#312;} 点击 border-bottom: 2px solid #abb;
+.navbar{margin:0 auto;} */
+/* 导航栏结束 */
+
+.main-top{margin-top: 44px;}
+
+.main{width: 100%; clear: both; display: inline-block; margin-bottom: 120px;}
+.main .wrapper{margin: 0 auto; width: 1130px;}
+/*左侧开始*/
+.main_left{width: 780px; float: left;}
+/*照片展示 开始*/
+.picShow{height: 391px; }
+.slides{width: 389px;height: 391px; float: left; position: relative;}
+.slides .arrow{
+	background: url(../Image/ico_spirit.png) no-repeat -119px -48px;
+	width: 30px; height: 36px; position: absolute; top:45%;
+}
+.slides .prev{ left: 16px;}
+.slides .next{background-position:-156px -48px;right:16px;}
+.change_btn{display: none;}
+/* .slides:hover .change_btn{display:block; } */
+
+/*阴影 公用*/
+.shadow{
+	background-image:linear-gradient(180deg,rgba(0,0,0,0),
+		rgba(0,0,0,0.3));
+	position : absolute;height: 40%;width: 100%;
+	bottom: 0px;z-index: 1;
+}
+.slides .picTxt{position: absolute;z-index: 2;width: 328px; bottom:30px;left: 30px;}
+.slides .picTxt a{color: #fff;  line-height: 30px;
+	display:block; font-size:20px;text-shadow: 0 2px 0px #100; 
+ }
+/*轮播特效 结束 */
+
+/*照片样式 开始*/
+.picture{width: 389px; float: left;}
+.rows{clear: both;}
+.rows .column{height: 195px; }
+.rowOne .column{ border-bottom: 1px solid #fff;}
+.main_left .rows .line{border-right:solid 1px #fff; background-color:#333;}
+
+.rows .col{background-color: #D7E0E6;} 
+.rows .col .txt{color: #333;}
+.rows .column .txt{line-height: 35px; padding:0 30px; font-size: 18px; font-weight:bold;}
+.rows .column a{color: #fff;display:block; text-align: center; } /* font-weight:bold;  */
+
+.rows .position{position: relative; overflow: hidden;}
+ .rows .position img{transition: 0.4s linear; }
+.rows .position:hover img{ transform: scale(1.2);  }
+ 
+ .rows .column .picTxt{ line-height: 22px; position: absolute; width: 150px;
+ /* 	padding:0 23px; */ font-size:14px; bottom: 5px; z-index: 2; left:20px;} 
+ .rows .position .shadow{position: absolute; width: 100%; height:100%; background:rgba(20,27,32,0.2); top: 0px;}
+/*照片样式 结束*/
+
+/*精选导读 开始*/
+.sel_read{margin-top:45px;clear: both;}
+.sel_read h4{padding-bottom:10px;  color:#344; margin:0;}
+.sel_read ul{ margin-left:-15px; height: 475px; width:810px;}
+.sel_read .container1 ul .box{ height: 235px; width: 270px;  float: left;}
+.sel_read .container1 ul li{padding:15px;}
+.sel_read .container1 ul li .box1{width: 240px;}
+.sel_read .container1 ul .box li .box1 .txt{
+	padding:15px 5px 0 5px; 
+	display: block; overflow: hidden;
+	line-height: 22px; font-size:14px; height: 60px; 
+}
+
+/*以下二个样式共用*/
+.container1{width:780px;}
+.img img{width: 240px; height: 145px;}
+.container1 ul li:hover {
+	box-shadow:1px 1px 23px 10px #cdc; 
+	border:1px solid #fff;
+ 	background-color:#fff;
+}
+.container1 ul li:hover .txt{color:#e52;}
+
+/*最新文章 开始*/
+.new_article{margin-top:20px; width: 100%;}
+.new_article .title{font-weight: bold; font-size:22px; }
+.new_article .title .num{float: right; font-size: 14px;}
+.title .num em{
+	background: url(../Image/ico_spirit.png) no-repeat -15px -391px;
+	width:21px; height: 23px; display: inline-block;
+	margin-right:5px; vertical-align: -5px;
+}
+.title .num span{color: #e52; }
+
+.new_article ul{width: 830px; margin-left: -25px; height: 100%;}
+.new_article ul li{padding: 25px 25px 0 25px; float: left; }
+.new_article .box{padding-bottom:25px; border-bottom: 1px solid #edd;overflow: hidden;}
+.new_article .img{display: block; float: left;}
+.new_article .img span{position:absolute;padding:0 10px; background-color:black; color:#fff; line-height:25px;}
+.new_article .word{padding-left: 28px;  float: left; width: 510px;}
+.new_article .word h3{margin:0;}
+.new_article .word .subhead{font-size: 14px; padding: 12px 0;}
+.new_article .word .message{height: 25px; font-size: 13px; line-height: 25px;}
+.new_article .word .message .time,.message .aut{float: left;margin-right:15px; }
+.new_article .word .message .tags{float: right;}
+.new_article .word .message .tags em{
+	background: url(../Image/ico_spirit.png) no-repeat -215px -46px;
+	width: 14px; height: 13px; display: inline-block;
+}
+.new_article .word .message .aut{}
+.new_article .word .message .aut img{
+	width: 26px; height: 26px; border-radius: 50%;
+	vertical-align:-8px; margin-right:6px; 
+}
+/*左侧结束*/
+/*右侧开始 */
+.main_right{width: 312px;  float:left; margin-left: 38px;}
+.main_right .box{width:304px;height:380px;position: relative;
+  border:1px solid #ccc;background: #fff;right:4px; 
+}
+.main_right .box1{top:4px;  z-index: 1;}
+.main_right .box2{top:-4px; z-index: 2;}
+.main_right .box3{top:-4px; z-index: 3; overflow: hidden;}
+.main_right .box3 .refurbish{float: right;}
+.main_right .refurbish .line{height: 46px; width: 1px; background-color: #39d;position:relative; right: 24px;}
+.refurbish .line .circle,.circle em{background: url(../Image/ico_spirit.png)no-repeat; position:absolute;}
+.refurbish .line .circle{background-position: -405px -8px; width: 35px; height: 30px; top:22px;right:-20px;}
+.refurbish .line .circle em{background-position: -388px -12px; width: 15px; height: 15px; display:block; left:9px; top:3px;}
+.main_right .info_title{padding-top: 14px;}
+.main_right .info_title span{ background-color:#39d; border-top-right-radius:20px; border-bottom-right-radius:20px;
+	padding:0 15px; height: 34px;  display: inline-block; color: #fff; font-weight: bold; line-height: 34px;
+}
+.contents{font-size: 14px; padding-bottom: 15px; padding:15px 10px 0 20px; overflow:hidden; height: 306px;}
+.contents ul{padding-left:15px; border-left:1px solid #6ad; float: left;}
+
+.contents ul li .left_move{margin-left:-18px;}
+/*.contents .scroll{width: 5px;height: 100%; background: #6ad;float:left;}*/
+.scroll {
+ 	background-color: red;
+  	height: 100%;
+    position: absolute;
+    right: -1px;
+	z-index: 4;
+    width: 5px;
+}
+ /*最新资讯结束*/
+
+.yc_lessons{margin-top: 8px;}
+.yc_lessons .lessons_link a{ position: relative; display: block;}
+.yc_lessons .lessons_link a .tag, .lessons_link p{position: absolute;}
+.yc_lessons .lessons_link a p{bottom: 8px; z-index: 2;left:25px; color: #fff;}
+/*硬创公开课结束*/
+
+.hot_author .list li .img img{width: 70px; height: 70px;float: left;}
+.hot_author .list li .txt {float: left;width:175px; padding-left: 15px;}
+.hot_author .list li .txt a {color: #e52;}
+.hot_author .list li .txt a i{
+	background: url(../Image/ico_spirit.png) no-repeat -235px -46px;
+	width: 22px; height: 25px; display: inline-block; vertical-align:-5px; margin-left: 8px;
+}
+.hot_author .list li .txt .intro{ padding-top:5px;}
+/*热门作者 结束*/
+
+.weekly_choice .list li{padding-bottom:0;}
+.weekly_choice .picTxt{ padding:14px 0; text-align: center;}
+.weekly_choice .list .just_txt{width: 260px; float: left; padding:15px 0;}
+.weekly_choice .picTxt:hover,.just_txt a:hover{color: #e52;}
+.weekly_choice .just_txt a{display:block;white-space:nowrap; 
+ 	text-overflow:ellipsis;overflow: hidden; margin: 5px 0; 
+}
+	/*这个样式共用*/
+ .just_txt em{display: inline-block; width: 5px; vertical-align: middle;
+ background-color:#49d; border-radius: 50%; height: 5px; margin-right:5px; }	
+/*每周精选 结束*/
+
+.good_comments .comment{background: #eee; padding:8px 12px; }
+.good_comments .comment_user {padding-top: 15px;}
+.good_comments .comment_user a img{padding-right: 7px; float: left;}
+.good_comments .comment_user .depict{ float: left;width: 213px; font-size: 12px;}
+.good_comments .comment_user .depict  .user_name .time{float: right; max-width: 69px;}
+.good_comments .comment_user .depict .user_name a i{margin-right: 4px; max-width: 80px;float: left;}
+.good_comments .comment_user .depict .user_name a i,.depict  .user_name .time{ white-space:nowrap; overflow: hidden;}
+.good_comments li:hover .user_name a i{color:#e52;}
+.news_title{ white-space:nowrap; text-overflow:ellipsis;overflow: hidden;}
+/*优质评论结束*/
+
+/*右侧公用 标题样式*/
+.main_right .title{padding:28px 0 12px 0; font-weight: bold; }
+.main_right .list{ border:1px solid #eee;	padding:0 25px;font-size: 14px; 
+	background-color: #fff;  overflow: hidden;line-height: 20px; 
+}
+.main_right .list li{width: 260px; padding-top:25px; 
+	padding-bottom:25px;float: left; border-bottom:1px solid #eee;
+}
+

@@ -1,0 +1,121 @@
+@CHARSET "UTF-8";
+*{margin:0; padding:0;}
+
+a,li{
+	list-style-type:none;
+	text-decoration:none;
+	color: #778;
+ 	font-weight:bold; 
+}
+a:hover{text-decoration:none;}
+body{background-color:#f7f7f7; font-family:"microsoft yahei",Arial;}
+
+.header{ width:100%; /* border-bottom: 1px solid #ddd; */}
+.header_top{
+	width:1180px;
+	height:60px;
+	margin:0 auto;
+	line-height:60px;
+	} 
+.header_login {float:left;}
+.header_login img{ margin-top:10px; float:left;}
+.header_login span{display:inline; padding-left:15px;}
+
+.header_menu {width:45%;margin-left:50px;float:left}
+.header_menu li{float:left; margin-top:14px; }
+ .sub_a{display:block; line-height:32px; padding:2px 25px;}
+ .sub_a:hover{border:2px solid #c0c0c0;
+ 	border-radius:30px;
+ 	padding:0 23px;
+}
+.header_message a{display:block;width: 50px; height: 60px; float: right;margin-right:5px;}
+ .ico{
+	background:url(../Image/ico_spirit.png) no-repeat -171px -11px;
+	width: 30px;
+	height: 20px;
+	display:block;
+	margin-top:21px; 
+}
+.header_user a{width: 60px;display: block; float: right;margin-top:-4px; text-align:center;}
+.header_user a:hover{background-color:#fff;border:1px solid #eee; box-shadow:1px 1px 2px 2px #ccc;}
+/* .header_search{float: left;}
+.header_search .text{height:38px;width: 125px;border-radius:20px 0 0 20px;
+background-color:#E7E7E7; border:0; padding-left:4px; }
+.header_search .submit{height:38px; 
+	width: 40px; 
+	margin-left:-10px; 
+	border-radius:0 20px 20px 0;
+	border:0; 
+	background:url(../Image/ico_spirit.png) no-repeat -116px 6px #E7E7E7;
+}
+ */
+.form-control{top:13px;}
+.search{border-radius:20px;}
+
+.contribute{
+	border-radius:20px;
+	float: left;
+	background-color: #789;
+	display: block;
+	height:36px;
+	line-height: 37px;
+	font-size: 15px;
+	padding:0 15px ;
+	margin:2px 0 0 20px; 
+	color:white;
+}
+.contribute i{
+	display: block;
+	width: 20px;
+	height: 21px;
+	margin-top:7px; 
+	float: left;
+	background: url(../Image/ico_spirit.png) no-repeat -290px -45px;
+}
+.contribute:hover{background-color:#4c708e; color:#fff;}
+
+/* 头部结束 */
+
+/* .nav{width: 100%; border-bottom: 1px solid #ddd; clear: both;}
+.border-btm{border-bottom:0;}
+.nav .wrapper{margin: 0 auto; width: 1130px; height:55px;}
+.nav .wrapper a{display: inline-block; float: left; margin-right:48px;  line-height:55px;}
+.nav .wrapper a:hover{color:#312;} 点击 border-bottom: 2px solid #abb; */
+.navbar{border:1px solid #ccc;margin-bottom:0;}
+
+.nav-active{border-bottom:2px solid #abb; color: #31424e;}
+/* 导航栏结束 */
+
+/*左侧开始*/
+.jumbotron{background-color:#f7f7f7;}
+/*轮播图开始  */
+.main_left{width: 788px; float: left;}
+.col-xs-8,.col-md-8,.col-xs-4,.col-md-4{padding:0px;}
+.col-xs-4,.col-md-4{padding-left:10px;}
+.thumbnail{padding:0px;margin:0px; border:0px; position:relative; }
+.thumbnail img{width:260px; height:156px;} 
+.spacing{margin:10px;}
+.shadow{
+	position : absolute;height: 17%;width: 100%;
+	bottom: 0px;z-index: 1;
+	transition:height 0.4s ease;
+}
+.shadow span{overflow:hidden;padding:0 15px; height:20px; display:block; color:#fff;}
+.thumbnail:hover .shadow span{overflow:visible;}
+.thumbnail:hover .shadow{height:100%;background:rgba(20,27,32,0.6); }
+
+/*本类文章开始  */
+.wrapper{margin-top:50px;}
+.list-group-item{min-height:160px; transition: ease; background-color:#f7f7f7;padding:20px 15px;}
+.list-group-item:hover{box-shadow:1px 1px 23px 10px #c2c2c280; transform:scale(1.02);z-index:3; background-color:#fff;} 
+.list-group-item:hover h3{color: #e52; }
+.list-group-item .img{display: block; float: left;}
+.list-group-item .img span{position:absolute;padding:0 10px; left:15px;background-color:black; color:#fff; line-height:25px;}
+.glyphicon-tag a{vertical-align:2px;}
+.list-group-item h3{margin-top:0px;}
+
+/* 左侧结束 */
+
+/*右侧开始  */
+.main_right{width: 312px;  float:right; margin-left: 38px;  background:#06a;}
+

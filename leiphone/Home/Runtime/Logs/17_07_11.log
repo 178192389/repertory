@@ -1,0 +1,9 @@
+[ 2017-07-11T17:43:03+08:00 ] 127.0.0.1 /leiphone/index.php/Category/zhongqi
+ERR: 模板不存在[./Home/Tpl/Category/zhongqi.html]
+
+[ 2017-07-11T17:51:16+08:00 ] 127.0.0.1 /leiphone/index.php/Category/ai
+ERR: 模板不存在[./Home/Tpl/Category/ai.html]
+
+[ 2017-07-11T18:04:32+08:00 ] 127.0.0.1 /leiphone/index.php/Category/aiadd
+ERR: 模板不存在[./Home/Tpl/Category/aiadd.html]
+

@@ -1,0 +1,45 @@
+[ 2017-07-27T14:40:34+08:00 ] 127.0.0.1 /leiphone/admin.php/User/admin
+ERR: 模板不存在[./Admin/Tpl/User/admin.html]
+
+[ 2017-07-27T14:40:44+08:00 ] 127.0.0.1 /leiphone/admin.php/User/memebr
+ERR: 非法操作:memebr
+
+[ 2017-07-27T14:41:11+08:00 ] 127.0.0.1 /leiphone/admin.php/User/admin
+ERR: 模板不存在[./Admin/Tpl/User/admin.html]
+
+[ 2017-07-27T15:05:58+08:00 ] 127.0.0.1 /leiphone/admin.php/User/memebr
+ERR: 非法操作:memebr
+
+[ 2017-07-27T15:06:23+08:00 ] 127.0.0.1 /leiphone/admin.php/User/memebr
+ERR: 非法操作:memebr
+
+[ 2017-07-27T15:07:06+08:00 ] 127.0.0.1 /leiphone/admin.php/User/memebr
+ERR: 非法操作:memebr
+
+[ 2017-07-27T16:10:26+08:00 ] 127.0.0.1 /leiphone/admin.php/User/mDel?id=1
+ERR: 非法操作:mDel
+
+[ 2017-07-27T16:10:37+08:00 ] 127.0.0.1 /leiphone/admin.php/User/mDel?id=33
+ERR: 非法操作:mDel
+
+[ 2017-07-27T16:10:46+08:00 ] 127.0.0.1 /leiphone/admin.php/User/mDel?id=1
+ERR: 非法操作:mDel
+
+[ 2017-07-27T21:46:08+08:00 ] 127.0.0.1 /leiphone/admin.php/User/__URL__/mDel?uid=undefined1,2,32,33,34,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,
+ERR: 非法操作:__URL__
+
+[ 2017-07-27T22:31:34+08:00 ] 127.0.0.1 /leiphone/admin.php/User/__URL__/mDel?uid=1,2,32,33,34,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52
+ERR: 非法操作:__URL__
+
+[ 2017-07-27T22:32:27+08:00 ] 127.0.0.1 /leiphone/admin.php/User/__URL__/mDel?uid=1,2,32,33,34,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52
+ERR: 非法操作:__URL__
+
+[ 2017-07-27T23:45:58+08:00 ] 127.0.0.1 /leiphone/admin.php/User/__URL__/mDel?id=
+ERR: 非法操作:__URL__
+
+[ 2017-07-27T23:46:04+08:00 ] 127.0.0.1 /leiphone/admin.php/User/__URL__/mDel?id=
+ERR: 非法操作:__URL__
+
+[ 2017-07-27T23:48:40+08:00 ] 127.0.0.1 /leiphone/admin.php/User/__URL__/mDel?id=
+ERR: 非法操作:__URL__
+

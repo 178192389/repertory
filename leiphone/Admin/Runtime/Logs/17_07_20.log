@@ -1,0 +1,9 @@
+[ 2017-07-20T14:58:45+08:00 ] 127.0.0.1 /leiphone/admin.php/Login/dologin
+ERR: 模板不存在[./Admin/Tpl/Login/dologin.html]
+
+[ 2017-07-20T15:11:24+08:00 ] 127.0.0.1 /leiphone/admin.php/Login/
+ERR: 非法操作:index
+
+[ 2017-07-20T15:34:07+08:00 ] 127.0.0.1 /leiphone/admin.php/Category/
+ERR: 非法操作:index
+

@@ -1,0 +1,73 @@
+	<include file="Site/top"/>
+
+<div class="container container-top">
+		<include file="Site/left"/>	
+		<style>
+		.table tbody tr td{border-top:0;}
+		</style>	
+	<div class="col-xs-8 col-md-10" >
+		<div class="panel">	
+			<div class="panel-heading ">
+				<h3>请填写您的基础资料</h3>
+			</div>	
+			<div class="panel-body">
+				<form action="__URL__/update" method="post" style="width:60%; ">
+					<table class="table table-responsive text-right" >
+					 <tr>
+		                <td>用户名:</td>
+		                <td>
+		                	<input type="text" value="<{$info.member_name}>" class="form-control" name="member_name"/>
+		                </td>
+		             </tr>
+		             <tr class="text-center">  
+			           	  <td></td>
+			              <if condition="$info.member_gender eq 1">
+				              <td  class="radio-inline ">
+				                	<input type="radio" name="member_gender" value="1" checked/>男
+				              </td>
+				               <td  class="radio-inline ">
+				                	<input type="radio"  name="member_gender" value="0"/>女
+				                </td>
+			              <else />
+				               <td  class="radio-inline ">
+				                	<input type="radio" name="member_gender" value="1"/>男
+				              </td>
+				               <td  class="radio-inline ">
+				                	<input type="radio"  name="member_gender" value="0" checked/>女
+				                </td>
+			              </if>
+		              </tr>
+	                <tr>
+	               		<td>电话:</td>
+	                	<td><input type="text" name="phone" value="<{$info.phone}>" class="form-control"  maxlength="11"/></td>
+	                </tr>
+	                <tr>
+	              	  	<td>邮箱:</td>
+	              		<td>
+	              			<input type="text" name="email"  value="<{$_SESSION['email']}>" class="form-control" placeholder="必填，便于找回密码" readonly/>
+	              		</td>
+	                </tr>
+	        	    <tr>
+	                	<td>微信号:</td>
+	               		<td>
+	               			<input type="text" class="form-control" name="wechat" value="<{$info.wechat}>"/>
+	               		</td>
+	                </tr> 
+	                <tr>
+		                <td>简介:</td>
+		                <td>
+		                	<textarea class="form-control"   style="resize:none;"  name="depict" ><{$info.depict}></textarea>
+		                </td>
+	           		</tr>
+	             	<tr class="text-center">
+	             		<td></td>
+	             		<td>
+	             			<button type="submit" class="btn btn-primary" name="sub">保存修改</button>
+	             			<button type="reset" class="btn btn-danger">重置</button>
+	             		</td>
+	             	</tr>
+		    	</table>      
+        	</form>
+    	</div>
+	</div>
+</div>

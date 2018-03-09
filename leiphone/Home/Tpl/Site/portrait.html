@@ -1,0 +1,40 @@
+<include file="Site/top"/>
+
+	<div class="container container-top">
+		<include file="Site/left"/>
+		
+		<div class="col-xs-8 col-md-10" >
+			<div class="panel padding-top text-center row">
+				<form action="__URL__/picCheck" method="post" enctype="multipart/form-data" target="mywin" class="col-md-5">
+						<ul class="list-inline">
+							<li>
+								<img  data-src="holder.js/100x100" src="__PUBLIC__/Uploads/<{$pic}>" >
+							</li>
+							<li>
+								<br/><input  type="file" name="member_portrait" value="" id="fileid" />
+								<br/><p>建议上传尺寸100px*100px</p>
+							</li>
+						</ul>
+					<input type="submit" class="btn-lg btn btn-primary " value="保存设置">
+				</form>
+				<div class=" col-md-5">
+					<img src=""  id="imgid" >
+				</div>	
+						<!-- 	<iframe name="mywin" src="" frameborder="1" style="display:none;"></iframe> -->
+			</div>
+	</div>
+
+<script>
+	$(function(){
+        $(":file").change(function(){
+            var path=$(this).val();
+            var path1 = path.lastIndexOf("\\");
+            var name = path.substring(path1+1);
+            
+			$imgid=document.getElementById('imgid');
+			$imgid.src ="__PUBLIC__/Image/"+name;
+		});
+	
+	})
+</script>
+

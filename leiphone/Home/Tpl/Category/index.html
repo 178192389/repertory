@@ -1,0 +1,113 @@
+
+
+<include file="Category/common"/>
+
+	
+	<div class="container  left-main">
+		<div class="row">
+			<div class="col-xs-8 col-md-8">
+				<div class="row car">
+					<div id="mycarousel" class="carousel slide col-xs-8 col-md-8" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#mycarousel" data-slide-to="1"></li>
+							<li data-target="#mycarousel" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+							<volist name="pic" id="vo" offset="0" length="3">
+								<if condition="$key eq 0">
+									<div class="item active"><a href="__APP__/News/index?type=<{$vo.category_name}>&nid=<{$vo.id}>" target="_blank">
+										<img src="__PUBLIC__/Uploads/<{$vo.file_name}>" style="width:510px; height:322px;">
+										<div class="carousel-caption"><{$vo.headline}></div>
+									</a></div>
+								<else/>
+									<div class="item "><a href="__APP__/News/index?type=<{$vo.category_name}>&nid=<{$vo.id}>" target="_blank">
+										<img src="__PUBLIC__/Uploads/<{$vo.file_name}>" style="width:510px; height:322px;" >
+										<div class="carousel-caption"><{$vo.headline}></div>
+									</a></div>	
+								</if>
+								
+								</volist>
+						<!-- 	<div class="item active">
+								<a href="#" target="_blank"><img src="__PUBLIC__/Uploads/20170712/583c0257dd26d.jpg" >
+								<div class="carousel-caption">33应急指南|petya 勒索病毒来袭，小白用户看这里</div>
+								</a>
+							</div>
+							<div class="item">
+								<a href="#" target="_blank"><img src="__PUBLIC__/Uploads/20170712/583c0257dd26d.jpg" >
+								<div class="carousel-caption">22应急指南|petya 勒索病毒来袭，小白用户看这里</div>
+								</a>
+							</div> -->
+							
+							<a class="left carousel-control" href="#mycarousel" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+							</a>
+							<a class="right carousel-control" href="#mycarousel" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-4 col-md-4">
+						<volist name="pic" id="vo" offset="3">
+						    <a href="__APP__/News/index?type=<{$vo.category_name}>&nid=<{$vo.id}>" class="thumbnail">
+						      	<img src="__PUBLIC__/Uploads/<{$vo.file_name}>" class="img-responsive"  />
+						      <div class="shadow">   	
+						     	 <span class="center-block"><{$vo.headline}></span>
+						      </div>
+						    </a>
+						    <div class="spacing"></div>
+					    </volist>
+					 <!--     <a href="#" class="thumbnail">
+					      	<img src="__PUBLIC__/Image/yc_lessons.jpg" class="img-responsive" />
+					      	<div class="shadow">
+					      	<span class="center-block">探秘 | 比朝鲜核武器更炸裂更神秘的，是朝鲜黑客部队</span>
+					      	</div>
+					    </a> -->
+				   </div>
+				</div>
+
+				<!-- 图片展示结束 -->
+				<!-- 本类 文章加载 -->
+				<div class="wrapper row">
+					<h3><strong><{$dis[0].category_name}></strong></h3>
+					<ul class="list-group">
+					<volist  name="dis" id="vo">
+						<li class="list-group-item">
+							<a class="img" href="__APP__/News/index?type=<{$vo.category_name}>&nid=<{$vo.id}>">
+								<img src="__PUBLIC__/Uploads/<{$vo.file_name}>" width="240" style="height:145px;" class="img-responsive"/>
+								<span ><{$vo.category_name}></span>
+							</a>
+							<div class="media-body media-right">
+								<a href="__APP__/News/index?type=<{$vo.category_name}>&nid=<{$vo.id}>">
+									<stong><font size="4px"><{$vo.headline}></font></stong>
+								</a>
+									<p><{$vo.subheading}></p>
+								<div>
+									<a href="">
+									<img class="img-circle"  src="__PUBLIC__/Uploads/<{$vo.portrait}>" width="25" height="25">
+									&nbsp; 作者：<{$vo.author_name}>
+									</a>
+									 &nbsp;<span class="">发布时间：<{$vo.time}></span>
+									<span class="pull-right glyphicon glyphicon-tag">
+										<a href="">关联标签</a>
+									</span>
+								</div>
+							</div>
+						</li>
+					</volist>	
+					</ul>
+					<ul class="pagination page">
+						<{$page}>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="col-xs-3 col-md-4 pull-right" style="width:28%;">
+				<div>
+				
+						
+				</div>
+				
+			</div>
+		</div>
+	</div>

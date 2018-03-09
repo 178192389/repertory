@@ -1,0 +1,66 @@
+[ 2017-07-09T10:35:39+08:00 ] 127.0.0.1 /leiphone/admin.php/News/select
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-07-09T10:35:44+08:00 ] 127.0.0.1 /leiphone/admin.php/News/add
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-07-09T10:35:49+08:00 ] 127.0.0.1 /leiphone/admin.php/Category/read
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-07-09T15:42:04+08:00 ] 127.0.0.1 /leiphone/admin.php/News/select
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-07-09T15:42:06+08:00 ] 127.0.0.1 /leiphone/admin.php/News/add
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-07-09T15:45:42+08:00 ] 127.0.0.1 /leiphone/admin.php/News/select
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-07-09T15:49:58+08:00 ] 127.0.0.1 /leiphone/admin.php/Category/select
+ERR: 非法操作:select
+
+[ 2017-07-09T15:50:11+08:00 ] 127.0.0.1 /leiphone/admin.php/Category/rand
+ERR: 非法操作:rand
+
+[ 2017-07-09T15:50:16+08:00 ] 127.0.0.1 /leiphone/admin.php/Category/
+ERR: 非法操作:index
+
+[ 2017-07-09T15:50:38+08:00 ] 127.0.0.1 /leiphone/admin.php/Category/read
+ERR: Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2017-07-09T15:51:05+08:00 ] 127.0.0.1 /leiphone/admin.php/Category/
+ERR: 非法操作:index
+
+[ 2017-07-09T15:51:06+08:00 ] 127.0.0.1 /leiphone/admin.php/Category/
+ERR: 非法操作:index
+
+[ 2017-07-09T15:51:06+08:00 ] 127.0.0.1 /leiphone/admin.php/Category/rand
+ERR: 非法操作:rand
+
+[ 2017-07-09T15:55:24+08:00 ] 127.0.0.1 /leiphone/admin.php/News/select
+ERR: 没有定义数据库配置
+
+[ 2017-07-09T15:55:28+08:00 ] 127.0.0.1 /leiphone/admin.php/News/add
+ERR: 没有定义数据库配置
+
+[ 2017-07-09T15:55:31+08:00 ] 127.0.0.1 /leiphone/admin.php/Category/read
+ERR: 没有定义数据库配置
+
+[ 2017-07-09T15:55:32+08:00 ] 127.0.0.1 /leiphone/admin.php/News/select
+ERR: 没有定义数据库配置
+
+[ 2017-07-09T15:55:52+08:00 ] 127.0.0.1 /leiphone/admin.php/News/add
+ERR: 没有定义数据库配置
+
+[ 2017-07-09T15:55:53+08:00 ] 127.0.0.1 /leiphone/admin.php/News/select
+ERR: 没有定义数据库配置
+
+[ 2017-07-09T15:55:55+08:00 ] 127.0.0.1 /leiphone/admin.php/Category/read
+ERR: 没有定义数据库配置
+
+[ 2017-07-09T15:55:56+08:00 ] 127.0.0.1 /leiphone/admin.php/News/add
+ERR: 没有定义数据库配置
+
+[ 2017-07-09T23:18:23+08:00 ] 127.0.0.1 /leiphone/admin.php/create
+ERR: 无法加载模块:create
+
