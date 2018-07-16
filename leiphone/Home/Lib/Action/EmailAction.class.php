@@ -27,14 +27,14 @@ class EmailAction extends Action{
         //设置smtp的helo消息头 这个可有可无 内容任意
         $mail->Helo = 'Hello smtp.sina.com Server';
         //设置发件人的主机域 可有可无 默认为localhost 内容任意，建议使用你的域名
-        $mail->Hostname = '192.168.10.53';
+        $mail->Hostname = '';
         //设置发送的邮件的编码 可选GB2312 我喜欢utf-8 据说utf8在某些客户端收信下会乱码
         $mail->CharSet = 'UTF-8';
         //设置发件人姓名（昵称） 任意内容，显示在收件人邮件的发件人邮箱地址前的发件人姓名
         $mail->FromName = '江洪苇';
         //smtp登录的账号
-        $mail->Username ='jianghongwei_php@sina.com';
-        $mail->Password = 'hongweijiang1';
+        $mail->Username =';
+        $mail->Password = '';
         //设置发件人邮箱地址 这里填入上述提到的“发件人邮箱”
         $mail->From = 'jianghongwei_php@sina.com';
  
